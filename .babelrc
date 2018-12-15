@@ -1,0 +1,8 @@
+{
+  "plugins": ["emotion"],
+  "env": {
+    "test": {
+      "plugins": ["istanbul"]
+    }
+  }
+}

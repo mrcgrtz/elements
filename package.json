@@ -1,25 +1,122 @@
 {
-  "name": "elements",
+  "name": "@dreamseer/elements",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.5",
+    "@emotion/styled": "^10.0.5",
+    "@storybook/addon-actions": "^4.1.1",
+    "@storybook/addon-knobs": "^4.1.1",
+    "@storybook/addon-links": "^4.1.1",
+    "@storybook/addons": "^4.1.1",
+    "@storybook/react": "^4.1.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-emotion": "^10.0.5",
+    "babel-plugin-istanbul": "^5.1.0",
+    "coveralls": "^3.0.2",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.0",
+    "flow-bin": "^0.89.0",
+    "flow-coverage-report": "^0.6.0",
+    "husky": "^1.2.1",
+    "jest-emotion": "^10.0.5",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "react-test-renderer": "^16.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --silent --coverage",
+    "coveralls": "react-scripts test --silent --coverage --coverageReporters=text-lcov | coveralls",
+    "flow": "flow",
+    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/**/*.test.*'",
+    "lint": "eslint --fix --max-warnings 0 ./src/**/*.{js,jsx}",
+    "storybook:start": "start-storybook -p 9009 -s public",
+    "storybook:build": "build-storybook -s public",
+    "precommit": "lint-staged"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "jest": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "react-app",
+      "airbnb",
+      "plugin:flowtype/recommended",
+      "prettier",
+      "prettier/flowtype",
+      "prettier/react"
+    ],
+    "plugins": [
+      "flowtype",
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "trailingComma": "es5"
+        }
+      ],
+      "react/require-default-props": "off"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ],
+    "snapshotSerializers": [
+      "jest-emotion"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
+    "last 2 versions"
   ]
 }
