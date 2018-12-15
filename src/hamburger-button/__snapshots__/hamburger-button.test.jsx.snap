@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HamburgerButton /> renders a hamburger button 1`] = `
+Array [
+  .emotion-0 {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 1px;
+  height: 1px;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  overflow: hidden;
+}
+
+<input
+    checked={false}
+    className="emotion-0 emotion-1"
+    id="toggle"
+    onChange={[Function]}
+    type="checkbox"
+  />,
+  .emotion-4 {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.emotion-2 {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 1.5em;
+  vertical-align: bottom;
+}
+
+.emotion-0 {
+  top: 50%;
+  margin-top: -2px;
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-0::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  top: -10px;
+  -webkit-transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+}
+
+.emotion-0::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  width: 100%;
+  height: 4px;
+  background-color: currentColor;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  bottom: -10px;
+  -webkit-transition: bottom 0.1s 0.25s ease-in,-webkit-transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+}
+
+<label
+    aria-label="Menü anzeigen"
+    className="emotion-4 emotion-5"
+    htmlFor="toggle"
+  >
+    <span
+      className="emotion-2 emotion-3"
+    >
+      <span
+        className="emotion-0 emotion-1"
+      />
+    </span>
+  </label>,
+]
+`;
