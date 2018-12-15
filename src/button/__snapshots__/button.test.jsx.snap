@@ -1,7 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> renders a button 1`] = `
+.emotion-0 {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 1rem;
+  border: 0;
+  font-size: inherit;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+  line-height: inherit;
+  color: white;
+  background-color: lightgrey;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  background-color: #008ec0;
+}
+
 <button
+  className="emotion-0 emotion-1"
   disabled={false}
   type="button"
 />
