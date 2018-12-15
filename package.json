@@ -46,8 +46,7 @@
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/**/*.test.*'",
     "lint": "eslint --fix --max-warnings 0 ./src/**/*.{js,jsx}",
     "storybook:start": "start-storybook -p 9009 -s public",
-    "storybook:build": "build-storybook -s public",
-    "precommit": "lint-staged"
+    "storybook:build": "build-storybook -s public"
   },
   "eslintConfig": {
     "env": {
@@ -112,11 +111,16 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
-      "prettier --config .prettierrc --write",
+      "prettier --write",
       "git add"
     ]
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
