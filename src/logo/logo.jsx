@@ -5,14 +5,14 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, { Fragment } from "react";
-import styled from "@emotion/styled/macro";
+import React, { Fragment } from 'react';
+import styled from '@emotion/styled/macro';
 
 type Props = {
   title?: string,
   url?: string,
   urlRelations?: string[],
-  solidColor?: string
+  solidColor?: string,
 };
 
 const Svg = styled.svg`
@@ -27,14 +27,14 @@ const Svg = styled.svg`
 `;
 
 const Logo = ({
-  title = "Marc Görtz",
-  url = "https://marcgoertz.de/",
-  urlRelations = ["start", "me"],
-  solidColor = ""
+  title = 'Marc Görtz',
+  url = 'https://marcgoertz.de/',
+  urlRelations = ['start', 'me'],
+  solidColor = '',
 }: Props) => (
   <a
     href={url}
-    rel={urlRelations.join(" ")}
+    rel={urlRelations.join(' ')}
     className="h-card"
     aria-label={title}
   >
