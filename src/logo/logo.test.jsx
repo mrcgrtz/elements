@@ -1,6 +1,6 @@
 /**
- * Button Hamburger Test
- * @author Marc Görtz <marc.goertz@comvel.de>
+ * Logo Test
+ * @author Marc Görtz <https://marcgoertz.de/>
  */
 
 import React from 'react';
