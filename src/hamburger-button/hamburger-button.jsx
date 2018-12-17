@@ -44,15 +44,9 @@ const Hamburger = styled.label`
   left: ${p => p.position.left || null};
   right: ${p => p.position.right || null};
   z-index: 1;
-  cursor: pointer;
-`;
-
-const Box = styled.span`
-  position: relative;
-  display: block;
   width: 2em;
   height: 1.5em;
-  vertical-align: bottom;
+  cursor: pointer;
 `;
 
 const LinesCommon = `
@@ -72,7 +66,7 @@ const Lines = styled.span`
   margin-top: -2px;
   ${LinesCommon}
   ${p =>
-    p.isToggled
+    p.isX
       ? `
         transform: rotate(225deg);
         transition-delay: 0.12s;
@@ -87,7 +81,7 @@ const Lines = styled.span`
     content: '';
     ${LinesCommon}
     ${p =>
-      p.isToggled
+      p.isX
         ? `
         top: 0;
         opacity: 0;
@@ -103,7 +97,7 @@ const Lines = styled.span`
     content: '';
     ${LinesCommon}
     ${p =>
-      p.isToggled
+      p.isX
         ? `
         bottom: 0;
         transform: rotate(-90deg);
@@ -152,11 +146,8 @@ class HamburgerButton extends PureComponent<Props, State> {
           htmlFor={id}
           aria-label={checked ? labelActive : label}
           position={position}
-          isToggled={checked}
         >
-          <Box isToggled={checked}>
-            <Lines isToggled={checked} />
-          </Box>
+          <Lines isX={checked} />
         </Hamburger>
       </Fragment>
     );
