@@ -35,7 +35,7 @@ const StyledButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #008ec0;
+    background-color: dodgerblue;
   }
 `;
 
