@@ -20,20 +20,14 @@ Array [
     onChange={[Function]}
     type="checkbox"
   />,
-  .emotion-4 {
+  .emotion-2 {
   position: absolute;
   top: 1em;
   left: 1em;
   z-index: 1;
-  cursor: pointer;
-}
-
-.emotion-2 {
-  position: relative;
-  display: block;
   width: 2em;
   height: 1.5em;
-  vertical-align: bottom;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -101,16 +95,12 @@ Array [
 
 <label
     aria-label="Menü anzeigen"
-    className="emotion-4 emotion-5"
+    className="emotion-2 emotion-3"
     htmlFor="toggle"
   >
     <span
-      className="emotion-2 emotion-3"
-    >
-      <span
-        className="emotion-0 emotion-1"
-      />
-    </span>
+      className="emotion-0 emotion-1"
+    />
   </label>,
 ]
 `;
