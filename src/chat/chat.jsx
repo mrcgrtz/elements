@@ -1,7 +1,7 @@
 // @flow
 
 /**
- * Dialog Component
+ * Chat Component
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
@@ -94,7 +94,7 @@ const Time = styled.time`
   white-space: nowrap;
 `;
 
-const Dialog = ({ history = [] }: Props) => {
+const Chat = ({ history = [] }: Props) => {
   if (history.length === 0) {
     return null;
   }
@@ -146,4 +146,4 @@ const Dialog = ({ history = [] }: Props) => {
   );
 };
 
-export default Dialog;
+export default Chat;
