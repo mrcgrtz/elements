@@ -1,5 +1,5 @@
-// flow-typed signature: 04c5870b5fe5aee349b372d22630ffcc
-// flow-typed version: 43bc56fd02/@storybook/react_v4.x.x/flow_>=v0.72.x
+// flow-typed signature: 9a5dabc68709bcf07f1b2c7f56a60413
+// flow-typed version: 56bf22e6ef/@storybook/react_v5.x.x/flow_>=v0.72.x
 
 type NodeModule = typeof module;
 
