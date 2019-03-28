@@ -2,7 +2,7 @@
 
 exports[`<HamburgerButton /> renders a hamburger button 1`] = `
 Array [
-  .emotion-0 {
+  .c0 {
   position: absolute;
   top: 1em;
   left: 1em;
@@ -15,12 +15,12 @@ Array [
 
 <input
     checked={false}
-    className="emotion-0 emotion-1"
+    className="c0"
     id="toggle"
     onChange={[Function]}
     type="checkbox"
   />,
-  .emotion-2 {
+  .c0 {
   position: absolute;
   top: 1em;
   left: 1em;
@@ -30,7 +30,7 @@ Array [
   cursor: pointer;
 }
 
-.emotion-0 {
+.c1 {
   top: 50%;
   margin-top: -2px;
   display: block;
@@ -52,7 +52,7 @@ Array [
   transition-timing-function: ease;
 }
 
-.emotion-0::before {
+.c1::before {
   content: '';
   display: block;
   position: absolute;
@@ -72,7 +72,7 @@ Array [
   transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
 }
 
-.emotion-0::after {
+.c1::after {
   content: '';
   display: block;
   position: absolute;
@@ -95,11 +95,11 @@ Array [
 
 <label
     aria-label="Menü anzeigen"
-    className="emotion-2 emotion-3"
+    className="c0"
     htmlFor="toggle"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c1"
     />
   </label>,
 ]

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Chat /> renders a basic chat 1`] = `
-.emotion-4 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@ exports[`<Chat /> renders a basic chat 1`] = `
   line-height: 1.25;
 }
 
-.emotion-2 {
+.c1 {
   position: relative;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -29,28 +29,28 @@ exports[`<Chat /> renders a basic chat 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-2 + li {
+.c1 + li {
   margin-top: 0.5rem;
 }
 
-.emotion-2:active time {
+.c1:active time {
   display: block;
 }
 
-.emotion-0 {
+.c2 {
   display: block;
   quotes: none;
 }
 
 <ol
-  className="emotion-4 emotion-5"
+  className="c0"
 >
   <li
-    className="emotion-2 emotion-3"
+    className="c1"
     tabIndex={null}
   >
     <q
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       O HAI! 👋🏼
     </q>
@@ -59,7 +59,7 @@ exports[`<Chat /> renders a basic chat 1`] = `
 `;
 
 exports[`<Chat /> renders a full-featured chat 1`] = `
-.emotion-58 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,7 +73,23 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   line-height: 1.25;
 }
 
-.emotion-6 {
+.c7 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0.5rem 0;
+  text-align: center;
+  max-width: 80%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.c7 i {
+  font-style: normal;
+}
+
+.c1 {
   position: relative;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -87,40 +103,15 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6 + li {
+.c1 + li {
   margin-top: 0.5rem;
 }
 
-.emotion-6:active time {
+.c1:active time {
   display: block;
 }
 
-.emotion-2 {
-  display: block;
-  quotes: none;
-}
-
-.emotion-0 {
-  display: block;
-  margin-bottom: 0.25em;
-  font-size: 0.75rem;
-  font-weight: bold;
-}
-
-.emotion-4 {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0.666667em;
-  margin-top: 0.25em;
-  text-align: left;
-  font-size: 0.75rem;
-  color: gray;
-  opacity: 0.75;
-  white-space: nowrap;
-}
-
-.emotion-14 {
+.c5 {
   position: relative;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -134,44 +125,15 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-14 + li {
+.c5 + li {
   margin-top: 0.5rem;
 }
 
-.emotion-14:active time {
+.c5:active time {
   display: block;
 }
 
-.emotion-12 {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0.666667em;
-  margin-top: 0.25em;
-  text-align: right;
-  font-size: 0.75rem;
-  color: gray;
-  opacity: 0.75;
-  white-space: nowrap;
-}
-
-.emotion-32 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin: 0.5rem 0;
-  text-align: center;
-  max-width: 80%;
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: gray;
-}
-
-.emotion-32 i {
-  font-style: normal;
-}
-
-.emotion-56 {
+.c8 {
   position: relative;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -188,172 +150,210 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   background-color: transparent;
 }
 
-.emotion-56 + li {
+.c8 + li {
   margin-top: 0.5rem;
 }
 
-.emotion-56:active time {
+.c8:active time {
   display: block;
 }
 
-.emotion-50 {
+.c2 {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.c9 {
   display: none;
   margin-bottom: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
 }
 
+.c3 {
+  display: block;
+  quotes: none;
+}
+
+.c4 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0.666667em;
+  margin-top: 0.25em;
+  text-align: left;
+  font-size: 0.75rem;
+  color: gray;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+.c6 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0.666667em;
+  margin-top: 0.25em;
+  text-align: right;
+  font-size: 0.75rem;
+  color: gray;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
 <ol
-  className="emotion-58 emotion-59"
+  className="c0"
 >
   <li
-    className="emotion-6 emotion-7"
+    className="c1"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Costello
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       Look, you gotta first baseman?
     </q>
     <time
-      className="emotion-4 emotion-5"
+      className="c4"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-14 emotion-7"
+    className="c5"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Abbott
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       Certainly.
     </q>
     <time
-      className="emotion-12 emotion-5"
+      className="c6"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-6 emotion-7"
+    className="c1"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Costello
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       Who’s playing first?
     </q>
     <time
-      className="emotion-4 emotion-5"
+      className="c4"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-14 emotion-7"
+    className="c5"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Abbott
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       That’s right.
     </q>
     <time
-      className="emotion-12 emotion-5"
+      className="c6"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-32 emotion-33"
+    className="c7"
   >
     Costello becomes exasperated.
   </li>
   <li
-    className="emotion-6 emotion-7"
+    className="c1"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Costello
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       When you pay off the first baseman every month, who gets the money?
     </q>
     <time
-      className="emotion-4 emotion-5"
+      className="c4"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-14 emotion-7"
+    className="c5"
     tabIndex="0"
   >
     <span
-      className="emotion-0 emotion-1"
+      className="c2"
     >
       Abbott
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       Every dollar of it.
     </q>
     <time
-      className="emotion-12 emotion-5"
+      className="c6"
       dateTime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="emotion-56 emotion-57"
+    className="c8"
     tabIndex="0"
   >
     <span
-      className="emotion-50 emotion-1"
+      className="c9"
       hidden={true}
     >
       Abbott
     </span>
     <q
-      className="emotion-2 emotion-3"
+      className="c3"
     >
       😁
     </q>
     <time
-      className="emotion-12 emotion-5"
+      className="c6"
       dateTime="1938-03-24"
     >
       03/24/1938

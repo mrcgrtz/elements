@@ -6,7 +6,7 @@
  */
 
 import React, { PureComponent, Fragment } from 'react';
-import styled from '@emotion/styled/macro';
+import styled from 'styled-components/macro';
 
 type Props = {
   label?: string,

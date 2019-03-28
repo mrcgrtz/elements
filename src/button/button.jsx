@@ -7,7 +7,7 @@
  */
 
 import * as React from 'react';
-import styled from '@emotion/styled/macro';
+import styled from 'styled-components/macro';
 
 type ButtonType = 'submit' | 'reset' | 'button';
 

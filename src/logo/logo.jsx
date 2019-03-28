@@ -6,7 +6,7 @@
  */
 
 import React, { Fragment } from 'react';
-import styled from '@emotion/styled/macro';
+import styled from 'styled-components/macro';
 
 type Props = {
   title?: string,

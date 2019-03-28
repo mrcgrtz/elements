@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> renders a button 1`] = `
-.emotion-0 {
+.c0 {
   display: inline-block;
   margin: 0;
   padding: 0.25rem 1rem;
@@ -18,13 +18,13 @@ exports[`<Button /> renders a button 1`] = `
   cursor: pointer;
 }
 
-.emotion-0:hover,
-.emotion-0:focus {
+.c0:hover,
+.c0:focus {
   background-color: dodgerblue;
 }
 
 <button
-  className="emotion-0 emotion-1"
+  className="c0"
   disabled={false}
   type="button"
 />

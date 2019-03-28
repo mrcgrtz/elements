@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> renders a logo 1`] = `
-.emotion-0 {
+.c0 {
   width: 340px;
   height: 190px;
   vertical-align: bottom;
@@ -15,7 +15,7 @@ exports[`<Logo /> renders a logo 1`] = `
 >
   <svg
     aria-labelledby="logo-title"
-    className="emotion-0 emotion-1"
+    className="c0"
     role="img"
     viewBox="0 0 340 190"
     xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ exports[`<Logo /> renders a logo 1`] = `
 `;
 
 exports[`<Logo /> renders a logo with a solid color 1`] = `
-.emotion-0 {
+.c0 {
   width: 340px;
   height: 190px;
   vertical-align: bottom;
@@ -212,7 +212,7 @@ exports[`<Logo /> renders a logo with a solid color 1`] = `
 >
   <svg
     aria-labelledby="logo-title"
-    className="emotion-0 emotion-1"
+    className="c0"
     role="img"
     viewBox="0 0 340 190"
     xmlns="http://www.w3.org/2000/svg"
