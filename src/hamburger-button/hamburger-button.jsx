@@ -5,7 +5,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import styled from 'styled-components/macro';
 
 type Props = {
@@ -18,11 +18,6 @@ type Props = {
     left?: string,
     right?: string,
   },
-  onChange?: () => void,
-};
-
-type State = {
-  checked: boolean,
 };
 
 const Input = styled.input`
@@ -110,48 +105,31 @@ const Lines = styled.span`
   }
 `;
 
-class HamburgerButton extends PureComponent<Props, State> {
-  static defaultProps = {
-    label: 'Menü anzeigen',
-    labelActive: 'Menü ausblenden',
-    id: 'toggle',
-  };
-
-  constructor(props: Props) {
-    super(props);
-    this.state = { checked: false };
-  }
-
-  toggle = () => {
-    const { onChange = a => a } = this.props;
-    this.setState(state => ({ checked: !state.checked }), onChange);
-  };
-
-  props: Props;
-
-  render() {
-    const { label, labelActive, id, position } = this.props;
-    const { checked } = this.state;
-
-    return (
-      <Fragment>
-        <Input
-          type="checkbox"
-          id={id}
-          position={position}
-          checked={checked}
-          onChange={this.toggle}
-        />
-        <Hamburger
-          htmlFor={id}
-          aria-label={checked ? labelActive : label}
-          position={position}
-        >
-          <Lines isX={checked} />
-        </Hamburger>
-      </Fragment>
-    );
-  }
-}
+const HamburgerButton = ({
+  label = 'Menü anzeigen',
+  labelActive = 'Menü ausblenden',
+  id = 'toggle',
+  position,
+}: Props) => {
+  const [checked, toggle] = useState(false);
+  return (
+    <Fragment>
+      <Input
+        type="checkbox"
+        id={id}
+        position={position}
+        checked={checked}
+        onChange={() => toggle(!checked)}
+      />
+      <Hamburger
+        htmlFor={id}
+        aria-label={checked ? labelActive : label}
+        position={position}
+      >
+        <Lines isX={checked} />
+      </Hamburger>
+    </Fragment>
+  );
+};
 
 export default HamburgerButton;
