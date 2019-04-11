@@ -9,8 +9,6 @@
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
     "date-fns": "^2.0.0-alpha.27",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
     "jest-styled-components": "^6.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -36,10 +34,12 @@
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "react-test-renderer": "^16.8.6",
+    "react-testing-library": "^6.1.2",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.6.0"
+    "stylelint-processor-styled-components": "^1.6.0",
+    "user-event": "^1.4.7"
   },
   "scripts": {
     "start": "react-scripts start",
