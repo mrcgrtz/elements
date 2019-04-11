@@ -23,7 +23,7 @@
     "coveralls": "^3.0.3",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-flowtype": "^3.6.0",
+    "eslint-plugin-flowtype": "^3.6.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.0.1",
@@ -54,7 +54,7 @@
     "lint:css": "stylelint --max-warnings 0 ./src/**/*.{js,jsx}",
     "lint:js": "eslint --fix --max-warnings 0 ./src/**/*.{js,jsx}",
     "storybook:start": "start-storybook -p 9009 -s public",
-    "storybook:build": "build-storybook -s public"
+    "storybook:build": "build-storybook -c .storybook -o docs"
   },
   "eslintConfig": {
     "env": {
