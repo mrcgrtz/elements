@@ -15,6 +15,7 @@ type Props = {
     name?: string,
     timestamp?: Date,
     isMe?: boolean,
+    isEmoji?: boolean,
     isAction?: boolean,
   }>,
 };
