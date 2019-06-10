@@ -5,8 +5,8 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render } from 'react-testing-library';
-import userEvent from 'user-event';
+import { render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import HamburgerButton from '.';
 
 describe('<HamburgerButton />', () => {
