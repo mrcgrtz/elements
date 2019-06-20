@@ -6,7 +6,7 @@
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
-    "@storybook/addons": "^5.1.8",
+    "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.8",
     "date-fns": "^2.0.0-alpha.27",
     "jest-styled-components": "^6.3.1",
