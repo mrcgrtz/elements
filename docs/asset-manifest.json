@@ -1,11 +1,13 @@
 {
-  "main.js": "/main.39007279d31082602340.bundle.js",
-  "main.js.map": "/main.39007279d31082602340.bundle.js.map",
-  "runtime~main.js": "/runtime~main.39007279d31082602340.bundle.js",
-  "runtime~main.js.map": "/runtime~main.39007279d31082602340.bundle.js.map",
-  "vendors~main.js": "/vendors~main.39007279d31082602340.bundle.js",
-  "vendors~main.js.map": "/vendors~main.39007279d31082602340.bundle.js.map",
-  "iframe.html": "/iframe.html",
-  "precache-manifest.7ffe77f1297032e8b919e35d8f216f98.js": "/precache-manifest.7ffe77f1297032e8b919e35d8f216f98.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.js": "/main.2ea9ac2bdaff2d2132a8.bundle.js",
+    "main.js.map": "/main.2ea9ac2bdaff2d2132a8.bundle.js.map",
+    "runtime~main.js": "/runtime~main.2ea9ac2bdaff2d2132a8.bundle.js",
+    "runtime~main.js.map": "/runtime~main.2ea9ac2bdaff2d2132a8.bundle.js.map",
+    "vendors~main.js": "/vendors~main.2ea9ac2bdaff2d2132a8.bundle.js",
+    "vendors~main.js.map": "/vendors~main.2ea9ac2bdaff2d2132a8.bundle.js.map",
+    "iframe.html": "/iframe.html",
+    "precache-manifest.ecbae83abe10f9e7630daa61e8389522.js": "/precache-manifest.ecbae83abe10f9e7630daa61e8389522.js",
+    "service-worker.js": "/service-worker.js"
+  }
 }
