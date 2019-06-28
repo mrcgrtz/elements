@@ -21,7 +21,7 @@
     "@testing-library/user-event": "^4.1.0",
     "babel-loader": "8.0.5",
     "babel-plugin-istanbul": "^5.1.4",
-    "babel-plugin-styled-components": "^1.10.3",
+    "babel-plugin-styled-components": "^1.10.4",
     "coveralls": "^3.0.4",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.0.0",
