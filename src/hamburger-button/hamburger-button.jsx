@@ -6,7 +6,7 @@
  */
 
 import React, { Fragment, useState } from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 type Props = {
   label?: string,
@@ -63,14 +63,14 @@ const Lines = styled.span`
   ${p =>
     p.isX
       ? `
-        transform: rotate(225deg);
-        transition-delay: 0.12s;
-        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      `
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  `
       : `
-        transition-duration: 0.2s;
-        transition-timing-function: ease;
-      `}
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+  `}
 
   &::before {
     content: '';
@@ -78,14 +78,14 @@ const Lines = styled.span`
     ${p =>
       p.isX
         ? `
-        top: 0;
-        opacity: 0;
-        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-      `
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    `
         : `
-        top: -10px;
-        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-      `}
+      top: -10px;
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    `}
   }
 
   &::after {
@@ -94,14 +94,14 @@ const Lines = styled.span`
     ${p =>
       p.isX
         ? `
-        bottom: 0;
-        transform: rotate(-90deg);
-        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-      `
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    `
         : `
-        bottom: -10px;
-        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-      `}
+      bottom: -10px;
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    `}
   }
 `;
 

@@ -9,52 +9,59 @@
     "@storybook/addons": "^5.1.9",
     "@storybook/react": "^5.1.9",
     "date-fns": "^2.0.0-alpha.27",
-    "jest-styled-components": "^6.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "@testing-library/react": "^8.0.4",
     "@testing-library/user-event": "^4.1.0",
-    "babel-loader": "8.0.5",
+    "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
     "babel-plugin-istanbul": "^5.1.4",
-    "babel-plugin-styled-components": "^1.10.4",
+    "babel-plugin-styled-components": "^1.10.6",
     "coveralls": "^3.0.4",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-flowtype": "^3.11.1",
     "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-jsx-a11y": "^6.2.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.5.0",
     "flow-bin": "^0.102.0",
     "flow-coverage-report": "^0.6.0",
     "husky": "^3.0.0",
-    "lint-staged": "^9.0.1",
+    "jest": "^24.8.0",
+    "jest-styled-components": "^6.3.3",
+    "lint-staged": "^9.1.0",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.8.6",
+    "rimraf": "^2.6.3",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.8.0"
+    "stylelint-processor-styled-components": "^1.8.0",
+    "webpack": "^4.35.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "coverage": "react-scripts test --silent --coverage",
-    "coveralls": "react-scripts test --silent --coverage --coverageReporters=text-lcov | coveralls",
+    "test": "jest --env=jsdom",
+    "test:coverage": "jest --env=jsdom --silent --coverage",
+    "test:watch": "jest --env=jsdom --watchAll",
     "flow": "flow",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/**/*.test.*'",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "stylelint --max-warnings 0 ./src/**/*.{js,jsx}",
     "lint:js": "eslint --fix --max-warnings 0 ./src/**/*.{js,jsx}",
     "storybook:start": "start-storybook -p 9009 -s public",
-    "storybook:build": "build-storybook -c .storybook -o docs"
+    "storybook:build": "rimraf docs && build-storybook -c .storybook -o docs"
   },
   "eslintConfig": {
     "env": {
@@ -64,23 +71,29 @@
       "node": true
     },
     "extends": [
-      "react-app",
       "airbnb",
       "plugin:flowtype/recommended",
-      "plugin:jsx-a11y/recommended",
       "prettier",
       "prettier/flowtype",
       "prettier/react"
     ],
     "plugins": [
+      "react-hooks",
+      "jest",
       "flowtype",
-      "react",
-      "jsx-a11y",
       "prettier"
     ],
+    "settings": {
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    },
     "rules": {
+      "react/require-default-props": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
       "jsx-a11y/label-has-for": [
-        2,
+        "error",
         {
           "required": {
             "some": [
@@ -96,18 +109,7 @@
           "singleQuote": true,
           "trailingComma": "es5"
         }
-      ],
-      "react/require-default-props": "off"
-    },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "settings": {
-      "flowtype": {
-        "onlyFilesWithFlowAnnotation": true
-      }
+      ]
     }
   },
   "stylelint": {
@@ -123,9 +125,19 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "jest": {
+    "setupFilesAfterEnv": [
+      "@testing-library/react/cleanup-after-each",
+      "<rootDir>/src/setupTests.js"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest"
+    },
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
     ],
     "coverageThreshold": {
@@ -138,25 +150,6 @@
     },
     "coverageReporters": [
       "text"
-    ]
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "browserslist": [
-    "last 2 versions"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "greenkeeper": {
-    "ignore": [
-      "babel-loader"
     ]
   }
 }
