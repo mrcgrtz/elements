@@ -1,18 +1,24 @@
 sudo: false
+
 language: node_js
 node_js:
-- '10'
+- node
+
 branches:
   only:
   - master
   - /^greenkeeper/.*$/
+
 cache:
   directories:
   - node_modules
+
 before_install:
 - yarn upgrade
+
 install:
 - yarn
+
 script:
 - yarn run test
-- yarn run coveralls
+- yarn run test --coverage --coverageReporters=text-lcov | ./node_modules/.bin/coveralls
