@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { format, formatRelative } from 'date-fns';
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
     name?: string,
     timestamp?: Date,
     isMe?: boolean,
+    isEmoji?: boolean,
     isAction?: boolean,
   }>,
 };
