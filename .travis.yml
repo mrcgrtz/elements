@@ -1,5 +1,3 @@
-sudo: false
-
 language: node_js
 node_js:
 - node
@@ -9,16 +7,6 @@ branches:
   - master
   - /^greenkeeper/.*$/
 
-cache:
-  directories:
-  - node_modules
-
-before_install:
-- yarn upgrade
-
-install:
-- yarn
-
-script:
-- yarn run test
+after_success:
+- yarn run lint
 - yarn run test --coverage --coverageReporters=text-lcov | ./node_modules/.bin/coveralls
