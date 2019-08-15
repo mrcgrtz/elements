@@ -9,6 +9,7 @@
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
     "date-fns": "^2.0.0-alpha.27",
+    "jest-styled-components": "^6.3.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "styled-components": "^4.3.2"
@@ -40,7 +41,6 @@
     "flow-coverage-report": "^0.6.0",
     "husky": "^3.0.3",
     "jest": "^24.8.0",
-    "jest-styled-components": "^6.3.3",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
     "react-test-renderer": "^16.9.0",

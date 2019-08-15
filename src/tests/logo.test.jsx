@@ -5,7 +5,7 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Logo from '.';
+import Logo from '../logo';
 
 describe('<Logo />', () => {
   it('renders a logo', () => {

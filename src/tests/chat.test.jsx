@@ -5,7 +5,7 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Chat from '.';
+import Chat from '../chat';
 
 const mockHistory = [
   {
