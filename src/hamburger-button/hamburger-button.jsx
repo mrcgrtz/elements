@@ -5,7 +5,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 type Props = {
@@ -113,7 +113,7 @@ const HamburgerButton = ({
 }: Props) => {
   const [checked, toggle] = useState(false);
   return (
-    <Fragment>
+    <>
       <Input
         type="checkbox"
         id={id}
@@ -128,7 +128,7 @@ const HamburgerButton = ({
       >
         <Lines isX={checked} />
       </Hamburger>
-    </Fragment>
+    </>
   );
 };
 
