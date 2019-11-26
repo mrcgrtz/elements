@@ -1,5 +1,5 @@
-// flow-typed signature: 8d711642a0de6e836ca035b721e18f80
-// flow-typed version: e7737a3125/styled-components_v4.x.x/flow_>=v0.104.x
+// flow-typed signature: 2326ecddadf3dc85a1fe1dd91ba9a93c
+// flow-typed version: bac16db19f/styled-components_v4.x.x/flow_>=v0.104.x
 
 // @flow
 
@@ -101,7 +101,7 @@ declare module 'styled-components' {
     value: StyleSheet,
   |}>
 
-  declare export class StylSheetManager extends React$Component<SCMProps> {
+  declare export class StyleSheetManager extends React$Component<SCMProps> {
     getContext(sheet: ?StyleSheet, target: ?HTMLElement): StyleSheet;
     render(): React$Element<StyleSheetProvider>
   }
