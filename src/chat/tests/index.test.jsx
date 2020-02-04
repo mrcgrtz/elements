@@ -1,10 +1,19 @@
+/**
+ * Chat Test
+ * @author Marc Görtz <https://marcgoertz.de/>
+ */
+
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Chat from '../src/chat';
+import renderer from 'react-test-renderer';
+import Chat from '..';
 
-const stories = storiesOf('Chat', module);
+const mockHistory = [
+  {
+    content: 'O HAI! 👋🏼',
+  },
+];
 
-const history = [
+const mockFullHistory = [
   {
     name: 'Costello',
     content: 'Look, you gotta first baseman?',
@@ -49,4 +58,19 @@ const history = [
   },
 ];
 
-stories.add('Chat', () => <Chat history={history} />);
+describe('<Chat />', () => {
+  it('renders no chat by default', () => {
+    const component = renderer.create(<Chat />);
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('renders a basic chat', () => {
+    const component = renderer.create(<Chat history={mockHistory} />);
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('renders a full-featured chat', () => {
+    const component = renderer.create(<Chat history={mockFullHistory} />);
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+});

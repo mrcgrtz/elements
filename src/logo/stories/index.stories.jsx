@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array, color } from '@storybook/addon-knobs';
-import Logo from '../src/logo';
+import Logo from '..';
 
 const stories = storiesOf('Logo', module);
 

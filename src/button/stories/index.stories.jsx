@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-import Button from '../src/button';
+import Button from '..';
 
 const stories = storiesOf('Button', module);
 
