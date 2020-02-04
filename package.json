@@ -59,7 +59,7 @@
     "test:coverage": "jest --env=jsdom --silent --coverage",
     "test:watch": "jest --env=jsdom --watchAll",
     "flow": "flow",
-    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/**/*.test.*'",
+    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -x 'src/**/*.test.*' -x 'src/**/*.stories.*'",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "stylelint --max-warnings 0 ./src/**/*.{js,jsx}",
     "lint:js": "eslint --fix --max-warnings 0 ./src/**/*.{js,jsx}",

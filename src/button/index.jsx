@@ -15,6 +15,7 @@ type Props = {
   children?: React.Node,
   type?: ButtonType,
   disabled?: boolean,
+  rest?: {},
 };
 
 const StyledButton = styled.button`
@@ -46,7 +47,7 @@ const Button = ({
   ...rest
 }: Props) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <StyledButton type={type} disabled={disabled} {...rest}>
+  <StyledButton {...rest} type={type} disabled={disabled}>
     {children}
   </StyledButton>
 );

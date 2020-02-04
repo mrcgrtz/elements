@@ -5,13 +5,10 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
-type Props = {
-  label?: string,
-  labelActive?: string,
-  id?: string,
+type Position = {
   position: {
     top?: string,
     bottom?: string,
@@ -20,12 +17,22 @@ type Props = {
   },
 };
 
+type LinesProps = {
+  isX: boolean,
+};
+
+type Props = {
+  label?: string,
+  labelActive?: string,
+  id?: string,
+} & Position;
+
 const Input = styled.input`
   position: absolute;
-  top: ${p => p.position.top || null};
-  bottom: ${p => p.position.bottom || null};
-  left: ${p => p.position.left || null};
-  right: ${p => p.position.right || null};
+  top: ${(p: Position): string => p.position.top || ''};
+  bottom: ${(p: Position): string => p.position.bottom || ''};
+  left: ${(p: Position): string => p.position.left || ''};
+  right: ${(p: Position): string => p.position.right || ''};
   width: 1px;
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
@@ -34,10 +41,10 @@ const Input = styled.input`
 
 const Hamburger = styled.label`
   position: absolute;
-  top: ${p => p.position.top || null};
-  bottom: ${p => p.position.bottom || null};
-  left: ${p => p.position.left || null};
-  right: ${p => p.position.right || null};
+  top: ${(p: Position): string => p.position.top || ''};
+  bottom: ${(p: Position): string => p.position.bottom || ''};
+  left: ${(p: Position): string => p.position.left || ''};
+  right: ${(p: Position): string => p.position.right || ''};
   z-index: 1;
   width: 2em;
   height: 1.5em;
@@ -56,11 +63,11 @@ const LinesCommon = `
   transition-timing-function: ease;
 `;
 
-const Lines = styled.span`
+const Lines = (styled.span`
   top: 50%;
   margin-top: -2px;
   ${LinesCommon}
-  ${p =>
+  ${(p: LinesProps): string =>
     p.isX
       ? `
     transform: rotate(225deg);
@@ -75,7 +82,7 @@ const Lines = styled.span`
   &::before {
     content: '';
     ${LinesCommon}
-    ${p =>
+    ${(p: LinesProps): string =>
       p.isX
         ? `
       top: 0;
@@ -91,7 +98,7 @@ const Lines = styled.span`
   &::after {
     content: '';
     ${LinesCommon}
-    ${p =>
+    ${(p: LinesProps): string =>
       p.isX
         ? `
       bottom: 0;
@@ -103,7 +110,7 @@ const Lines = styled.span`
       transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     `}
   }
-`;
+`: React.ComponentType<LinesProps>);
 
 const HamburgerButton = ({
   label = 'Menü anzeigen',
@@ -111,7 +118,7 @@ const HamburgerButton = ({
   id = 'toggle',
   position,
 }: Props) => {
-  const [checked, toggle] = useState(false);
+  const [checked, toggle] = React.useState(false);
   return (
     <>
       <Input
@@ -119,7 +126,7 @@ const HamburgerButton = ({
         id={id}
         position={position}
         checked={checked}
-        onChange={() => toggle(!checked)}
+        onChange={(): void => toggle(!checked)}
       />
       <Hamburger
         htmlFor={id}

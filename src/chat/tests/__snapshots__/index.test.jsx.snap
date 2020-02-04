@@ -47,7 +47,6 @@ exports[`<Chat /> renders a basic chat 1`] = `
 >
   <li
     className="c1"
-    tabIndex={null}
   >
     <q
       className="c2"

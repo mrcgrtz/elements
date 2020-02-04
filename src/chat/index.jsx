@@ -5,7 +5,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { format, formatRelative } from 'date-fns';
 
@@ -45,15 +45,15 @@ const Action = styled.li`
   }
 `;
 
-const Bubble = styled.li`
+const Bubble = (styled.li`
   position: relative;
-  align-self: ${p => (p.isMe ? 'flex-end' : 'flex-start')};
+  align-self: ${(p): string => (p.isMe ? 'flex-end' : 'flex-start')};
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
   max-width: 60%;
-  color: ${p => (p.isMe ? 'white' : 'black')};
-  background-color: ${p => (p.isMe ? 'dodgerblue' : 'gainsboro')};
+  color: ${(p): string => (p.isMe ? 'white' : 'black')};
+  background-color: ${(p): string => (p.isMe ? 'dodgerblue' : 'gainsboro')};
   box-sizing: border-box;
   & + li {
     margin-top: 0.5rem;
@@ -61,7 +61,7 @@ const Bubble = styled.li`
   &:active time {
     display: block;
   }
-`;
+`: React.ComponentType<{ isMe: boolean }>);
 
 const EmojiBubble = styled(Bubble)`
   padding: 0;
@@ -69,31 +69,31 @@ const EmojiBubble = styled(Bubble)`
   background-color: transparent;
 `;
 
-const Name = styled.span`
-  display: ${p => (p.hidden ? 'none' : 'block')};
+const Name = (styled.span`
+  display: ${(p): string => (p.hidden ? 'none' : 'block')};
   margin-bottom: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
-`;
+`: React.ComponentType<{ hidden?: boolean }>);
 
 const Quote = styled.q`
   display: block;
   quotes: none;
 `;
 
-const Time = styled.time`
+const Time = (styled.time`
   display: none;
   position: absolute;
   top: 100%;
-  left: ${p => (p.isMe ? null : '0.666667em')};
-  right: ${p => (p.isMe ? '0.666667em' : null)};
+  left: ${(p): string => (p.isMe ? '' : '0.666667em')};
+  right: ${(p): string => (p.isMe ? '0.666667em' : '')};
   margin-top: 0.25em;
-  text-align: ${p => (p.isMe ? 'right' : 'left')};
+  text-align: ${(p): string => (p.isMe ? 'right' : 'left')};
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;
   white-space: nowrap;
-`;
+`: React.ComponentType<{ isMe: boolean }>);
 
 const Chat = ({ history = [] }: Props) => {
   if (history.length === 0) {
@@ -104,8 +104,8 @@ const Chat = ({ history = [] }: Props) => {
       {history.map(
         ({
           content,
-          name = null,
-          timestamp = null,
+          name = '',
+          timestamp = '',
           isEmoji = false,
           isMe = false,
           isAction = false,
@@ -118,11 +118,11 @@ const Chat = ({ history = [] }: Props) => {
               <EmojiBubble
                 key={content}
                 isMe={isMe}
-                tabIndex={timestamp && '0'}
+                tabIndex={timestamp !== '' ? '0' : undefined}
               >
-                {name && <Name hidden>{name}</Name>}
+                {name !== '' && <Name hidden>{name}</Name>}
                 <Quote>{content}</Quote>
-                {timestamp && (
+                {timestamp !== '' && (
                   <Time isMe={isMe} dateTime={format(timestamp, 'yyyy-MM-dd')}>
                     {formatRelative(timestamp, new Date())}
                   </Time>
@@ -131,10 +131,14 @@ const Chat = ({ history = [] }: Props) => {
             );
           }
           return (
-            <Bubble key={content} isMe={isMe} tabIndex={timestamp && '0'}>
-              {name && <Name>{name}</Name>}
+            <Bubble
+              key={content}
+              isMe={isMe}
+              tabIndex={timestamp !== '' ? '0' : undefined}
+            >
+              {name !== '' && <Name>{name}</Name>}
               <Quote>{content}</Quote>
-              {timestamp && (
+              {timestamp !== '' && (
                 <Time isMe={isMe} dateTime={format(timestamp, 'yyyy-MM-dd')}>
                   {formatRelative(timestamp, new Date())}
                 </Time>

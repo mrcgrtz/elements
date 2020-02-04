@@ -19,11 +19,7 @@ const Svg = styled.svg`
   width: 340px;
   height: 190px;
   vertical-align: bottom;
-  ${p =>
-    p.solidColor &&
-    `
-    fill: ${p.solidColor};
-  `};
+  ${(p): string => (p.solidColor !== '' ? `fill: ${p.solidColor};` : '')};
 `;
 
 const Logo = ({
