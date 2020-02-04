@@ -211,17 +211,17 @@ exports[`<HamburgerButton /> toggles the hamburger button on change 1`] = `
 exports[`<HamburgerButton /> toggles the hamburger button on change 2`] = `
 <div>
   <input
-    class="sc-bdVaJa izyfuy"
+    class="sc-AykKC bXoIqM"
     id="toggle"
     type="checkbox"
   />
   <label
     aria-label="Menü ausblenden"
-    class="sc-bwzfXH jyruoN"
+    class="sc-AykKD eMPmuV"
     for="toggle"
   >
     <span
-      class="sc-htpNat bFelPF"
+      class="sc-AykKE ismwBn"
     />
   </label>
 </div>
