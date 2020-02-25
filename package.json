@@ -139,6 +139,7 @@
     },
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{js,jsx}",
+      "!<rootDir>/src/**/*.stories.{js,jsx}",
       "!<rootDir>/node_modules/"
     ],
     "coverageThreshold": {

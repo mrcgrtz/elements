@@ -56,12 +56,18 @@ const mockFullHistory = [
     isMe: true,
     isEmoji: true,
   },
+  {
+    name: 'Costello',
+    content: '😒',
+    isMe: true,
+    isEmoji: true,
+  },
 ];
 
 describe('<Chat />', () => {
   it('renders no chat by default', () => {
     const { container } = render(<Chat />);
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstChild).toBeNull();
   });
 
   it('renders a basic chat', () => {

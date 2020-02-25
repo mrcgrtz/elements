@@ -358,7 +358,20 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
       03/24/1938
     </time>
   </li>
+  <li
+    class="c8"
+  >
+    <span
+      class="c9"
+      hidden=""
+    >
+      Costello
+    </span>
+    <q
+      class="c3"
+    >
+      😒
+    </q>
+  </li>
 </ol>
 `;
-
-exports[`<Chat /> renders no chat by default 1`] = `null`;
