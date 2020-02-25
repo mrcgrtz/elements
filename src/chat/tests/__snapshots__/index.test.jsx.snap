@@ -43,13 +43,13 @@ exports[`<Chat /> renders a basic chat 1`] = `
 }
 
 <ol
-  className="c0"
+  class="c0"
 >
   <li
-    className="c1"
+    class="c1"
   >
     <q
-      className="c2"
+      class="c2"
     >
       O HAI! 👋🏼
     </q>
@@ -203,157 +203,157 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
 }
 
 <ol
-  className="c0"
+  class="c0"
 >
   <li
-    className="c1"
-    tabIndex="0"
+    class="c1"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Costello
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       Look, you gotta first baseman?
     </q>
     <time
-      className="c4"
-      dateTime="1938-03-24"
+      class="c4"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c5"
-    tabIndex="0"
+    class="c5"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Abbott
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       Certainly.
     </q>
     <time
-      className="c6"
-      dateTime="1938-03-24"
+      class="c6"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c1"
-    tabIndex="0"
+    class="c1"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Costello
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       Who’s playing first?
     </q>
     <time
-      className="c4"
-      dateTime="1938-03-24"
+      class="c4"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c5"
-    tabIndex="0"
+    class="c5"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Abbott
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       That’s right.
     </q>
     <time
-      className="c6"
-      dateTime="1938-03-24"
+      class="c6"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c7"
+    class="c7"
   >
     Costello becomes exasperated.
   </li>
   <li
-    className="c1"
-    tabIndex="0"
+    class="c1"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Costello
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       When you pay off the first baseman every month, who gets the money?
     </q>
     <time
-      className="c4"
-      dateTime="1938-03-24"
+      class="c4"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c5"
-    tabIndex="0"
+    class="c5"
+    tabindex="0"
   >
     <span
-      className="c2"
+      class="c2"
     >
       Abbott
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       Every dollar of it.
     </q>
     <time
-      className="c6"
-      dateTime="1938-03-24"
+      class="c6"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>
   </li>
   <li
-    className="c8"
-    tabIndex="0"
+    class="c8"
+    tabindex="0"
   >
     <span
-      className="c9"
-      hidden={true}
+      class="c9"
+      hidden=""
     >
       Abbott
     </span>
     <q
-      className="c3"
+      class="c3"
     >
       😁
     </q>
     <time
-      className="c6"
-      dateTime="1938-03-24"
+      class="c6"
+      datetime="1938-03-24"
     >
       03/24/1938
     </time>

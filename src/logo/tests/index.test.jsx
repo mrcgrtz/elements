@@ -4,16 +4,16 @@
  */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Logo from '..';
 
 describe('<Logo />', () => {
   it('renders a logo', () => {
-    const component = renderer.create(<Logo />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { container } = render(<Logo />);
+    expect(container.firstChild).toMatchSnapshot();
   });
   it('renders a logo with a solid color', () => {
-    const component = renderer.create(<Logo solidColor="#BADA55" />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { container } = render(<Logo solidColor="#BADA55" />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

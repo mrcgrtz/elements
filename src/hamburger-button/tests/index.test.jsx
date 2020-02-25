@@ -4,17 +4,16 @@
  */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import HamburgerButton from '..';
 
 describe('<HamburgerButton />', () => {
   it('renders a hamburger button', () => {
-    const container = renderer.create(
+    const { container } = render(
       <HamburgerButton position={{ top: '1em', left: '1em' }} />
     );
-    expect(container.toJSON()).toMatchSnapshot();
+    expect(container.children).toMatchSnapshot();
   });
   it('toggles the hamburger button on change', () => {
     const { container } = render(

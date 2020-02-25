@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<HamburgerButton /> renders a hamburger button 1`] = `
-Array [
+HTMLCollection [
   .c0 {
   position: absolute;
   top: 1em;
@@ -14,10 +14,8 @@ Array [
 }
 
 <input
-    checked={false}
-    className="c0"
+    class="c0"
     id="toggle"
-    onChange={[Function]}
     type="checkbox"
   />,
   .c0 {
@@ -95,11 +93,11 @@ Array [
 
 <label
     aria-label="Menü anzeigen"
-    className="c0"
-    htmlFor="toggle"
+    class="c0"
+    for="toggle"
   >
     <span
-      className="c1"
+      class="c1"
     />
   </label>,
 ]

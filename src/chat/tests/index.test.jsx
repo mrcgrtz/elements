@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Chat from '..';
 
 const mockHistory = [
@@ -60,17 +60,17 @@ const mockFullHistory = [
 
 describe('<Chat />', () => {
   it('renders no chat by default', () => {
-    const component = renderer.create(<Chat />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { container } = render(<Chat />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('renders a basic chat', () => {
-    const component = renderer.create(<Chat history={mockHistory} />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { container } = render(<Chat history={mockHistory} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('renders a full-featured chat', () => {
-    const component = renderer.create(<Chat history={mockFullHistory} />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const { container } = render(<Chat history={mockFullHistory} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
