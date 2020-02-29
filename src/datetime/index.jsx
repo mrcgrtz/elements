@@ -16,7 +16,6 @@ import {
   TIME,
   DATE,
   DAY,
-  TIMEZONE,
 } from '../constants/date-formats';
 
 type Props = {
@@ -102,7 +101,7 @@ const DateTime = ({ dateTime, ...rest }: Props) => {
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
       dateTime={f(ISO_DATE_TIME)}
-      title={`${f(DAY)}, der ${f(DATE)} um ${f(TIME)} Uhr ${f(TIMEZONE)}`}
+      title={`${f(DAY)}, der ${f(DATE)} um ${f(TIME)} Uhr`}
     >
       <Svg
         xmlns="http://www.w3.org/2000/svg"

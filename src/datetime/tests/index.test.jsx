@@ -16,10 +16,10 @@ describe('<DateTime />', () => {
 
   describe('on different times of the day', () => {
     [...Array(24).keys()].forEach(hour => {
-      it(`renders a date and time information for ${hour} o’clock`, () => {
+      it(`renders a text for ${hour} o’clock`, () => {
         const mockDate = new Date(2020, 1, 12, hour, 0, 0);
         const { container } = render(<DateTime dateTime={mockDate} />);
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.textContent).toMatchSnapshot();
       });
     });
   });
