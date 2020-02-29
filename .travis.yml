@@ -8,5 +8,5 @@ branches:
   - /^greenkeeper/.*$/
 
 after_success:
-- yarn run lint
-- yarn run test --coverage --coverageReporters=text-lcov | ./node_modules/.bin/coveralls
+- yarn lint
+- yarn test --coverage --coverageReporters=text-lcov | ./node_modules/.bin/coveralls
