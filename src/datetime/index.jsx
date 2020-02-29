@@ -9,6 +9,15 @@ import React from 'react';
 import styled from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
+import {
+  ISO_DATE_TIME,
+  HOUR,
+  MINUTE,
+  TIME,
+  DATE,
+  DAY,
+  TIMEZONE,
+} from '../constants/date-formats';
 
 type Props = {
   dateTime: Date,
@@ -92,10 +101,8 @@ const DateTime = ({ dateTime, ...rest }: Props) => {
     <Wrapper
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
-      dateTime={dateTime}
-      title={`${f('eeee')}, der ${f('dd. MMMM yyyy')} um ${f('HH:mm')} Uhr ${f(
-        'z'
-      )}`}
+      dateTime={f(ISO_DATE_TIME)}
+      title={`${f(DAY)}, der ${f(DATE)} um ${f(TIME)} Uhr ${f(TIMEZONE)}`}
     >
       <Svg
         xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +111,7 @@ const DateTime = ({ dateTime, ...rest }: Props) => {
         viewBox="0 0 12 12"
         aria-hidden="true"
       >
-        <title>{f('HH:mm')} Uhr</title>
+        <title>{f(TIME)} Uhr</title>
         <circle
           cx="6"
           cy="6"
@@ -122,7 +129,7 @@ const DateTime = ({ dateTime, ...rest }: Props) => {
           strokeLinecap="round"
           strokeWidth="1.35"
           fill="none"
-          transform={`rotate(${transformHour(f('H'))} 6 6)`}
+          transform={`rotate(${transformHour(f(HOUR))} 6 6)`}
         />
         <line
           x1="6"
@@ -133,10 +140,10 @@ const DateTime = ({ dateTime, ...rest }: Props) => {
           strokeLinecap="round"
           strokeWidth="1.35"
           fill="none"
-          transform={`rotate(${transformMinute(f('m'))} 6 6)`}
+          transform={`rotate(${transformMinute(f(MINUTE))} 6 6)`}
         />
       </Svg>
-      {getTimeOfDay(f('H'))} {f('dd. MMMM yyyy')}
+      {getTimeOfDay(f(HOUR))} {f(DATE)}
     </Wrapper>
   );
 };

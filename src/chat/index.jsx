@@ -8,6 +8,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { format, formatRelative } from 'date-fns';
+import { ISO_DATE } from '../constants/date-formats';
 
 type Props = {
   history?: Array<{
@@ -123,7 +124,7 @@ const Chat = ({ history = [] }: Props) => {
                 {name !== '' && <Name hidden>{name}</Name>}
                 <Quote>{content}</Quote>
                 {timestamp !== '' && (
-                  <Time isMe={isMe} dateTime={format(timestamp, 'yyyy-MM-dd')}>
+                  <Time isMe={isMe} dateTime={format(timestamp, ISO_DATE)}>
                     {formatRelative(timestamp, new Date())}
                   </Time>
                 )}
@@ -139,7 +140,7 @@ const Chat = ({ history = [] }: Props) => {
               {name !== '' && <Name>{name}</Name>}
               <Quote>{content}</Quote>
               {timestamp !== '' && (
-                <Time isMe={isMe} dateTime={format(timestamp, 'yyyy-MM-dd')}>
+                <Time isMe={isMe} dateTime={format(timestamp, ISO_DATE)}>
                   {formatRelative(timestamp, new Date())}
                 </Time>
               )}
