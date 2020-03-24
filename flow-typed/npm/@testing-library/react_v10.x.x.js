@@ -1,5 +1,5 @@
-// flow-typed signature: 38ccc5bbcbb54d21f37adca5cc3ed7a1
-// flow-typed version: 0b0eb4afe9/@testing-library/react_v9.x.x/flow_>=v0.104.x
+// flow-typed signature: c5a23b039940dea7bf66394b5f8ba54d
+// flow-typed version: 51cedc7e49/@testing-library/react_v10.x.x/flow_>=v0.104.x
 
 declare module '@testing-library/react' {
   // This type comes from
@@ -159,6 +159,38 @@ declare module '@testing-library/react' {
 
   declare export var act: ReactDOMTestUtilsAct;
   declare export function cleanup(): void;
+
+  declare export function waitFor<T>(
+    callback?: () => T,
+    options?: {|
+      container?: HTMLElement,
+      timeout?: number,
+      interval?: number,
+      mutationObserverOptions?: MutationObserverInit,
+    |}
+  ): Promise<T>;
+
+  declare export function waitForElementToBeRemoved(
+    callback?: HTMLElement,
+    options?: {|
+      container?: HTMLElement,
+      timeout?: number,
+      interval?: number,
+      mutationObserverOptions?: MutationObserverInit,
+    |}
+  ): Promise<HTMLElement>;
+
+  declare export function waitForElementToBeRemoved<T>(
+    callback?: () => T,
+    options?: {|
+      container?: HTMLElement,
+      timeout?: number,
+      interval?: number,
+      mutationObserverOptions?: MutationObserverInit,
+    |}
+  ): Promise<T>;
+
+  /* Deprecated */
   declare export function wait(
     callback?: () => void,
     options?: {
@@ -167,12 +199,16 @@ declare module '@testing-library/react' {
       ...
     }
   ): Promise<void>;
+
+  /* Deprecated */
   declare export function waitForDomChange<T>(options?: {
     container?: HTMLElement,
     timeout?: number,
     mutationObserverOptions?: MutationObserverInit,
     ...
   }): Promise<T>;
+
+  /* Deprecated */
   declare export function waitForElement<T>(
     callback?: () => T,
     options?: {
@@ -182,10 +218,12 @@ declare module '@testing-library/react' {
       ...
     }
   ): Promise<T>;
+
   declare export function within(
     element: HTMLElement,
     queriesToBind?: GetsAndQueries | Array<GetsAndQueries>
   ): GetsAndQueries;
+
   declare export var fireEvent: {|
     (element: HTMLElement, event: Event): void,
 

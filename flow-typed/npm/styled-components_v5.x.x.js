@@ -1,5 +1,5 @@
-// flow-typed signature: 78e34df09377bc42168eef1ea248b4d6
-// flow-typed version: 2a6c51bed0/styled-components_v5.x.x/flow_>=v0.104.x
+// flow-typed signature: 1f5de1a8acfb1cef787a7062bb304212
+// flow-typed version: 207fb32765/styled-components_v5.x.x/flow_>=v0.104.x
 
 // @flow
 
@@ -523,4 +523,8 @@ declare module 'styled-components/native' {
   }
 
   declare export default Styled & ConvenientShorthands;
+}
+
+declare module 'styled-components/macro' {
+  declare export * from 'styled-components';
 }
