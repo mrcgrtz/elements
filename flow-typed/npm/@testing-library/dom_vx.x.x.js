@@ -1,4 +1,4 @@
-// flow-typed signature: ea920f9ca3504cb3cb387184e592b83a
+// flow-typed signature: b102edc8c34c6079748928865dfb1ec0
 // flow-typed version: <<STUB>>/@testing-library/dom_v^6.12.2/flow_v0.121.0
 
 /**
@@ -39,6 +39,10 @@ declare module '@testing-library/dom/dist/@testing-library/dom.umd.min' {
 }
 
 declare module '@testing-library/dom/dist/config' {
+  declare module.exports: any;
+}
+
+declare module '@testing-library/dom/dist/event-map' {
   declare module.exports: any;
 }
 
@@ -153,6 +157,9 @@ declare module '@testing-library/dom/dist/@testing-library/dom.umd.min.js' {
 }
 declare module '@testing-library/dom/dist/config.js' {
   declare module.exports: $Exports<'@testing-library/dom/dist/config'>;
+}
+declare module '@testing-library/dom/dist/event-map.js' {
+  declare module.exports: $Exports<'@testing-library/dom/dist/event-map'>;
 }
 declare module '@testing-library/dom/dist/events.js' {
   declare module.exports: $Exports<'@testing-library/dom/dist/events'>;
