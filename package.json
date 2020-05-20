@@ -8,7 +8,7 @@
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "date-fns": "^2.13.0",
+    "date-fns": "^2.14.0",
     "jest-styled-components": "^7.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
