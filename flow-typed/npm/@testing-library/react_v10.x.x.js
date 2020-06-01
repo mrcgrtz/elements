@@ -1,5 +1,5 @@
-// flow-typed signature: d54b3ec479528c54170579572f00949f
-// flow-typed version: 913159d1a6/@testing-library/react_v10.x.x/flow_>=v0.104.x
+// flow-typed signature: 33dd9cece301f116aa0387025f5b4345
+// flow-typed version: 7ad57fc095/@testing-library/react_v10.x.x/flow_>=v0.104.x
 
 declare module '@testing-library/react' {
   // This type comes from
@@ -54,10 +54,10 @@ declare module '@testing-library/react' {
     waitForElementOptions?: WaitForElementOptions
   ) => Promise<HTMLElement[]>;
 
-  declare type GetByBoundAttribute = (
+  declare type GetByBoundAttribute = <T: HTMLElement = HTMLElement>(
     text: TextMatch,
     options?: TextMatchOptions
-  ) => HTMLElement;
+  ) => T;
 
   declare type FindByBoundAttribute = (
     text: TextMatch,
@@ -443,5 +443,8 @@ declare module '@testing-library/react' {
     text: TextMatch,
     options?: TextMatchOptions
   ): HTMLElement;
+  declare export function getNodeText(
+    node: HTMLElement,
+  ): string;
   declare export var screen: Screen<>;
 }
