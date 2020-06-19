@@ -1,5 +1,5 @@
-// flow-typed signature: 0ed73a588759fdbd9b6eb09d5ac062b3
-// flow-typed version: 479edd3152/jest_v26.x.x/flow_>=v0.104.x
+// flow-typed signature: 9a1f9054d272cf6383233b8bfb639f84
+// flow-typed version: 4efeddffd8/jest_v26.x.x/flow_>=v0.104.x
 
 type JestMockFn<TArguments: $ReadOnlyArray<*>, TReturn> = {
   (...args: TArguments): TReturn,
@@ -936,7 +936,7 @@ type JestObjectType = {
 type JestSpyType = { calls: JestCallsType, ... };
 
 type JestDoneFn = {|
-  (): void,
+  (error?: Error): void,
   fail: (error: Error) => void,
 |};
 
