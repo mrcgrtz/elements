@@ -4,8 +4,8 @@ node_js:
 
 branches:
   only:
-  - master
-  - /^greenkeeper/.*$/
+  - main
+  - /^snyk-upgrade-[a-z0-9]{32}$/
 
 after_success:
 - yarn lint
