@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@storybook/addon-a11y": "^6.0.0",
-    "@storybook/addon-actions": "^6.0.0",
-    "@storybook/addon-knobs": "^6.0.0",
-    "@storybook/addons": "^6.0.0",
-    "@storybook/react": "^6.0.0",
+    "@storybook/addon-a11y": "^6.0.3",
+    "@storybook/addon-actions": "^6.0.3",
+    "@storybook/addon-knobs": "^6.0.3",
+    "@storybook/addons": "^6.0.3",
+    "@storybook/react": "^6.0.3",
     "date-fns": "^2.15.0",
     "jest-styled-components": "^7.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "snyk": "^1.372.0",
+    "snyk": "^1.373.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
