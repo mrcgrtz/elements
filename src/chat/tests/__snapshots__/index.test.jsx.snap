@@ -133,28 +133,9 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
 }
 
 .c8 {
-  position: relative;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  padding: 0.5rem;
-  border-radius: 0.75rem;
-  outline: 0;
-  max-width: 60%;
-  color: white;
-  background-color: dodgerblue;
-  box-sizing: border-box;
   padding: 0;
   font-size: 4em;
   background-color: transparent;
-}
-
-.c8 + li {
-  margin-top: 0.5rem;
-}
-
-.c8:active time {
-  display: block;
 }
 
 .c2 {
@@ -337,7 +318,7 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
     </time>
   </li>
   <li
-    class="c8"
+    class="c5 c8"
     tabindex="0"
   >
     <span
@@ -359,7 +340,7 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
     </time>
   </li>
   <li
-    class="c8"
+    class="c5 c8"
   >
     <span
       class="c9"
