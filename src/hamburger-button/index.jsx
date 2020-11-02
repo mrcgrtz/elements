@@ -117,7 +117,7 @@ const HamburgerButton = ({
   labelActive = 'Menü ausblenden',
   id = 'toggle',
   position,
-}: Props) => {
+}: Props): React.Node => {
   const [checked, toggle] = React.useState(false);
   return (
     <>

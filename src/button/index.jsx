@@ -45,7 +45,7 @@ const Button = ({
   type = 'button',
   disabled = false,
   ...rest
-}: Props) => (
+}: Props): React.Node => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <StyledButton {...rest} type={type} disabled={disabled}>
     {children}

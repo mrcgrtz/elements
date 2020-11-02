@@ -46,15 +46,17 @@ const Action = styled.li`
   }
 `;
 
-const Bubble = (styled.li`
+const Bubble = styled.li`
   position: relative;
-  align-self: ${(p): string => (p.isMe ? 'flex-end' : 'flex-start')};
+  align-self: ${(p: { isMe: boolean }): string =>
+    p.isMe ? 'flex-end' : 'flex-start'};
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
   max-width: 60%;
-  color: ${(p): string => (p.isMe ? 'white' : 'black')};
-  background-color: ${(p): string => (p.isMe ? 'dodgerblue' : 'gainsboro')};
+  color: ${(p: { isMe: boolean }): string => (p.isMe ? 'white' : 'black')};
+  background-color: ${(p: { isMe: boolean }): string =>
+    p.isMe ? 'dodgerblue' : 'gainsboro'};
   box-sizing: border-box;
   & + li {
     margin-top: 0.5rem;
@@ -62,7 +64,7 @@ const Bubble = (styled.li`
   &:active time {
     display: block;
   }
-`: React.ComponentType<{ isMe: boolean }>);
+`;
 
 const EmojiBubble = styled(Bubble)`
   padding: 0;
@@ -70,33 +72,33 @@ const EmojiBubble = styled(Bubble)`
   background-color: transparent;
 `;
 
-const Name = (styled.span`
-  display: ${(p): string => (p.hidden ? 'none' : 'block')};
+const Name = styled.span`
+  display: ${(p: { hidden: boolean }): string => (p.hidden ? 'none' : 'block')};
   margin-bottom: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
-`: React.ComponentType<{ hidden?: boolean }>);
+`;
 
 const Quote = styled.q`
   display: block;
   quotes: none;
 `;
 
-const Time = (styled.time`
+const Time = styled.time`
   display: none;
   position: absolute;
   top: 100%;
-  left: ${(p): string => (p.isMe ? '' : '0.666667em')};
-  right: ${(p): string => (p.isMe ? '0.666667em' : '')};
+  left: ${(p: { isMe: boolean }): string => (p.isMe ? '' : '0.666667em')};
+  right: ${(p: { isMe: boolean }): string => (p.isMe ? '0.666667em' : '')};
   margin-top: 0.25em;
-  text-align: ${(p): string => (p.isMe ? 'right' : 'left')};
+  text-align: ${(p: { isMe: boolean }): string => (p.isMe ? 'right' : 'left')};
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;
   white-space: nowrap;
-`: React.ComponentType<{ isMe: boolean }>);
+`;
 
-const Chat = ({ history = [] }: Props) => {
+const Chat = ({ history = [] }: Props): React.Node => {
   if (history.length === 0) {
     return null;
   }

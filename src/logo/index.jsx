@@ -5,7 +5,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 type Props = {
@@ -19,7 +19,8 @@ const Svg = styled.svg`
   width: 340px;
   height: 190px;
   vertical-align: bottom;
-  ${(p): string => (p.solidColor !== '' ? `fill: ${p.solidColor};` : '')};
+  ${(p: { solidColor: string }): string =>
+    p.solidColor !== '' ? `fill: ${p.solidColor};` : ''};
 `;
 
 const Logo = ({
@@ -27,7 +28,7 @@ const Logo = ({
   url = 'https://marcgoertz.de/',
   urlRelations = ['start', 'me'],
   solidColor = '',
-}: Props) => (
+}: Props): React.Node => (
   <a
     href={url}
     rel={urlRelations.join(' ')}

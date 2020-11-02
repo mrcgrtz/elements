@@ -5,7 +5,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
@@ -93,7 +93,7 @@ const transformMinute = (minute: string): number => {
   return Number(minute) * degreesPerMinute;
 };
 
-const DateTime = ({ dateTime, ...rest }: Props) => {
+const DateTime = ({ dateTime, ...rest }: Props): React.Node => {
   const f = (as: string): string => format(dateTime, as, { locale: de });
 
   return (
