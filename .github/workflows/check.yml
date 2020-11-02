@@ -12,6 +12,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Installs dependencies
+        run: yarn
   check:
     runs-on: ubuntu-latest
     steps:
@@ -20,5 +26,7 @@ jobs:
         run: yarn lint:js
       - name: Lint CSS
         run: yarn lint:css
+      - name: Check flow coverage
+        run: yarn flow:coverage
       - name: Check test coverage
         run: yarn test --coverage --coverageReporters=text-lcov | ./node_modules/.bin/coveralls
