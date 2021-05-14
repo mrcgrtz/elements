@@ -150,7 +150,8 @@
       }
     },
     "coverageReporters": [
-      "text"
+      "text",
+      "lcov"
     ]
   },
   "snyk": true
