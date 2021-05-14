@@ -1,4 +1,4 @@
-# elements
+# [elements](https://dreamseer.github.io/elements/)
 
 > elements is my personal React components library.
 
@@ -17,19 +17,19 @@ I prefer [yarn](https://yarnpkg.com/), but you can also run these script using [
 ### Install and preview elements in Storybook
 
 ```bash
-yarn && yarn run storybook:start
+yarn && yarn storybook:start
 ```
 
 ## Run tests
 
 ```bash
-yarn run test
+yarn test
 ```
 
 ## Run linters
 
 ```bash
-yarn run lint
+yarn lint
 ```
 
 ## License
