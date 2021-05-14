@@ -3,33 +3,9 @@ name: Build
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16.x
-    - name: Install dependencies
-      run: yarn install
-    - name: Lint CSS
-      run: yarn lint:css
-    - name: Lint JavaScript
-      run: yarn lint:js
-    - name: Run tests
-      run: yarn test:coverage
-    - name: Send coverage report to Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
   build:
-    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout

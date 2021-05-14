@@ -4,6 +4,7 @@
 
 ![Update Status](https://img.shields.io/david/dev/dreamseer/elements.svg)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/dreamseer/elements)
+[![Test Workflow](https://github.com/Dreamseer/elements/actions/workflows/test.yml/badge.svg)](https://github.com/Dreamseer/elements/actions/workflows/test.yml)
 [![Build Workflow](https://github.com/Dreamseer/elements/actions/workflows/build.yml/badge.svg)](https://github.com/Dreamseer/elements/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Dreamseer/elements/badge.svg?branch=main)](https://coveralls.io/github/Dreamseer/elements?branch=main)
 [![MIT license](https://img.shields.io/github/license/dreamseer/elements.svg)](https://github.com/Dreamseer/elements/blob/main/LICENSE.md)
