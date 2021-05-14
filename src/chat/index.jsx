@@ -98,7 +98,7 @@ const Time = styled.time`
   white-space: nowrap;
 `;
 
-const Chat = ({ history = [] }: Props): React.Node => {
+const Chat = ({ history }: Props): React.Node => {
   if (history.length === 0) {
     return null;
   }
@@ -152,6 +152,10 @@ const Chat = ({ history = [] }: Props): React.Node => {
       )}
     </List>
   );
+};
+
+Chat.defaultProps = {
+  history: [],
 };
 
 export default Chat;

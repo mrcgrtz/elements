@@ -12,10 +12,8 @@ import styled from 'styled-components';
 type ButtonType = 'submit' | 'reset' | 'button';
 
 type Props = {
-  children?: React.Node,
+  children: React.Node,
   type?: ButtonType,
-  disabled?: boolean,
-  rest?: {},
 };
 
 const StyledButton = styled.button`
@@ -40,16 +38,15 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({
-  children,
-  type = 'button',
-  disabled = false,
-  ...rest
-}: Props): React.Node => (
+const Button = ({ children, type, ...rest }: Props): React.Node => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <StyledButton {...rest} type={type} disabled={disabled}>
+  <StyledButton type={type} {...rest}>
     {children}
   </StyledButton>
 );
+
+Button.defaultProps = {
+  type: 'button',
+};
 
 export default Button;

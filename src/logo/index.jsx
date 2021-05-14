@@ -23,12 +23,7 @@ const Svg = styled.svg`
     p.solidColor !== '' ? `fill: ${p.solidColor};` : ''};
 `;
 
-const Logo = ({
-  title = 'Marc Görtz',
-  url = 'https://marcgoertz.de/',
-  urlRelations = ['start', 'me'],
-  solidColor = '',
-}: Props): React.Node => (
+const Logo = ({ title, url, urlRelations, solidColor }: Props): React.Node => (
   <a
     href={url}
     rel={urlRelations.join(' ')}
@@ -108,5 +103,12 @@ const Logo = ({
     </Svg>
   </a>
 );
+
+Logo.defaultProps = {
+  title: 'Marc Görtz',
+  url: 'https://marcgoertz.de/',
+  urlRelations: ['start', 'me'],
+  solidColor: '',
+};
 
 export default Logo;

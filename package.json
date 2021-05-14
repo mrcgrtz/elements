@@ -78,6 +78,7 @@
     "extends": [
       "airbnb",
       "plugin:flowtype/recommended",
+      "plugin:react-hooks/recommended",
       "prettier"
     ],
     "plugins": [
@@ -92,9 +93,6 @@
       }
     },
     "rules": {
-      "react/require-default-props": "off",
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
       "jsx-a11y/label-has-for": [
         "error",
         {

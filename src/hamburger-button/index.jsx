@@ -113,9 +113,9 @@ const Lines = (styled.span`
 `: React.ComponentType<LinesProps>);
 
 const HamburgerButton = ({
-  label = 'Menü anzeigen',
-  labelActive = 'Menü ausblenden',
-  id = 'toggle',
+  label,
+  labelActive,
+  id,
   position,
 }: Props): React.Node => {
   const [checked, toggle] = React.useState(false);
@@ -137,6 +137,12 @@ const HamburgerButton = ({
       </Hamburger>
     </>
   );
+};
+
+HamburgerButton.defaultProps = {
+  label: 'Menü anzeigen',
+  labelActive: 'Menü ausblenden',
+  id: 'toggle',
 };
 
 export default HamburgerButton;
