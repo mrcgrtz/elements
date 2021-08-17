@@ -1,5 +1,5 @@
-// flow-typed signature: 6f8a40accb2445e1ba35aa962ded3dfe
-// flow-typed version: 12efeb009c/@testing-library/react_v11.x.x/flow_>=v0.104.x
+// flow-typed signature: a9fafdffa723cd2b3a57636e9e813630
+// flow-typed version: 9f17ca11b4/@testing-library/react_v12.x.x/flow_>=v0.104.x
 
 /**
  * A local copy from:
@@ -167,14 +167,12 @@ declare module '@@aria-query' {
 declare module '@testing-library/react' {
   import type { ARIARole } from '@@aria-query';
 
-  // This type comes from
-  // https://github.com/facebook/flow/blob/v0.104.0/lib/react-dom.js#L64
-  declare type ReactDOMTestUtilsThenable = {
+  // This type comes from react-dom_v17.x.x.js
+  declare interface ReactDOMTestUtilsThenable {
     then(resolve: () => mixed, reject?: () => mixed): mixed,
-    ...
-  };
-  // This type comes from
-  // https://github.com/facebook/flow/blob/v0.104.0/lib/react-dom.js#L116
+  }
+
+  // This type comes from react-dom_v17.x.x.js
   declare type ReactDOMTestUtilsAct = (
     callback: () => void | ReactDOMTestUtilsThenable
   ) => ReactDOMTestUtilsThenable;
@@ -260,6 +258,7 @@ declare module '@testing-library/react' {
   declare type SelectorMatcherOptions = {|
     ...MatcherOptions,
     selector?: string,
+    ignore?: string | boolean
   |};
 
   declare type QueryByBoundAttribute = (
@@ -494,46 +493,6 @@ declare module '@testing-library/react' {
       interval?: number,
       mutationObserverOptions?: MutationObserverInit,
     |}
-  ): Promise<T>;
-
-  /**
-   * @deprecated `wait` has been deprecated and replaced by `waitFor` instead.
-   * In most cases you should be able to find/replace `wait` with `waitFor`.
-   * Learn more: https://testing-library.com/docs/dom-testing-library/api-async#waitfor.
-   */
-  declare export function wait(
-    callback?: () => void,
-    options?: {
-      timeout?: number,
-      interval?: number,
-      ...
-    }
-  ): Promise<void>;
-
-  /**
-   * @deprecated `waitForDomChange` has been deprecated.
-   * Use `waitFor` instead: https://testing-library.com/docs/dom-testing-library/api-async#waitfor.
-   */
-  declare export function waitForDomChange<T>(options?: {
-    container?: HTMLElement,
-    timeout?: number,
-    mutationObserverOptions?: MutationObserverInit,
-    ...
-  }): Promise<T>;
-
-  /**
-   * @deprecated `waitForElement` has been deprecated.
-   * Use a `find*` query (preferred: https://testing-library.com/docs/dom-testing-library/api-queries#findby)
-   * or use `waitFor` instead: https://testing-library.com/docs/dom-testing-library/api-async#waitfor
-   */
-  declare export function waitForElement<T>(
-    callback?: () => T,
-    options?: {
-      container?: HTMLElement,
-      timeout?: number,
-      mutationObserverOptions?: MutationObserverInit,
-      ...
-    }
   ): Promise<T>;
 
   declare export function within(
