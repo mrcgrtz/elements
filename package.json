@@ -44,7 +44,7 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "snyk": "^1.683.0",
+    "snyk": "^1.715.0",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-config-styled-components": "^0.1.1",
