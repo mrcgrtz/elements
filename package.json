@@ -150,6 +150,5 @@
       "text",
       "lcov"
     ]
-  },
-  "snyk": true
+  }
 }
