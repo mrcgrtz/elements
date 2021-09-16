@@ -1,6 +1,4 @@
-/node_modules
-/coverage
-/docs
+node_modules
+coverage
+docs
 .DS_Store
-yarn-debug.log*
-yarn-error.log*

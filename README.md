@@ -13,24 +13,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available scripts
 
-I prefer [yarn](https://yarnpkg.com/), but you can also run these script using [npm](https://www.npmjs.com/get-npm).
-
 ### Install and preview elements in Storybook
 
 ```bash
-yarn && yarn storybook:start
+npm install && npm run storybook:start
 ```
 
 ## Run tests
 
 ```bash
-yarn test
+npm test
 ```
 
 ## Run linters
 
 ```bash
-yarn lint
+npm run lint
 ```
 
 ## License

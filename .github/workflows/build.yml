@@ -15,9 +15,9 @@ jobs:
       with:
         node-version: 16.x
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
     - name: Build Storybook
-      run: yarn storybook:build
+      run: npm run storybook:build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
