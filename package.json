@@ -5,7 +5,7 @@
   "dependencies": {
     "@storybook/addon-a11y": "^6.3.7",
     "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-knobs": "^6.3.0",
+    "@storybook/addon-knobs": "^6.3.1",
     "@storybook/addons": "^6.3.7",
     "@storybook/react": "^6.3.7",
     "date-fns": "^2.23.0",
