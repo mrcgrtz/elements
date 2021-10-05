@@ -41,7 +41,7 @@
     "husky": "^7.0.1",
     "jest": "^27.2.4",
     "jest-styled-components": "^7.0.5",
-    "lint-staged": "^11.1.2",
+    "lint-staged": "^11.2.0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
