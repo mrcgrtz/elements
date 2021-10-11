@@ -1,17 +1,25 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { Story, Meta } from '@storybook/react';
 import Button from '..';
 
-const stories = storiesOf('Button', module);
+const meta = {
+  title: 'Button',
+  component: Button,
+  argTypes: {
+    type: {
+      options: ['button', 'submit', 'reset'],
+      control: { type: 'radio' },
+    },
+  },
+  args: {
+    children: 'Lorem ipsum',
+    type: 'button',
+    disabled: false,
+  },
+} as Meta;
 
-stories.addDecorator(withKnobs);
+// eslint-disable-next-line react/jsx-props-no-spreading
+export const DefaultStory: Story = (args) => <Button {...args} />;
+DefaultStory.storyName = meta.title;
 
-stories.add('Button', () => (
-  <Button
-    type={select('Type', ['button', 'submit', 'reset'], 'button')}
-    disabled={boolean('Disabled', false)}
-  >
-    {text('Content', 'Lorem ipsum')}
-  </Button>
-));
+export default meta;

@@ -1,10 +1,26 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, date } from '@storybook/addon-knobs';
+import { Story, Meta } from '@storybook/react';
 import DateTime from '..';
 
-const stories = storiesOf('Date and Time', module);
+const defaultArgs = {
+  dateTime: new Date(),
+};
 
-stories.addDecorator(withKnobs);
+const meta = {
+  title: 'Date and time',
+  component: DateTime,
+  argTypes: {
+    dateTime: {
+      control: 'date',
+    },
+  },
+  args: defaultArgs,
+} as Meta;
 
-stories.add('Date and Time', () => <DateTime dateTime={date('Date')} />);
+export const DefaultStory: Story<typeof defaultArgs> = (args) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <DateTime {...args} />
+);
+DefaultStory.storyName = meta.title;
+
+export default meta;

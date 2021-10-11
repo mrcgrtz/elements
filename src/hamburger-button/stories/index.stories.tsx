@@ -1,16 +1,23 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { Story, Meta } from '@storybook/react';
 import HamburgerButton from '..';
 
-const stories = storiesOf('Button', module);
+const defaultArgs = {
+  label: 'Menü anzeigen',
+  labelActive: 'Menü ausblenden',
+  position: { top: '20px', left: '20px' },
+};
 
-stories.addDecorator(withKnobs);
+const meta = {
+  title: 'Hamburger Button',
+  component: HamburgerButton,
+  args: defaultArgs,
+} as Meta;
 
-stories.add('Hamburger Button', () => (
-  <HamburgerButton
-    label={text('Label', 'Menü anzeigen')}
-    labelActive={text('Active label', 'Menü ausblenden')}
-    position={{ top: '20px', left: '20px' }}
-  />
-));
+export const DefaultStory: Story<typeof defaultArgs> = (args) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <HamburgerButton {...args} />
+);
+DefaultStory.storyName = meta.title;
+
+export default meta;
