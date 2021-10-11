@@ -1,11 +1,5 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  env: {
-    browser: true,
-    jest: true,
-    es6: true,
-    node: true,
-  },
   extends: [
     'airbnb',
     'plugin:react-hooks/recommended',
@@ -14,10 +8,10 @@ module.exports = {
   ],
   plugins: ['react-hooks', 'jest', '@typescript-eslint', 'prettier'],
   settings: {
-    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/extensions': ['.ts', '.tsx'],
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.ts', '.tsx'],
       },
     },
   },
@@ -28,8 +22,6 @@ module.exports = {
       'error',
       'ignorePackages',
       {
-        js: 'never',
-        jsx: 'never',
         ts: 'never',
         tsx: 'never',
       },
