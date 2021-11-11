@@ -13,6 +13,7 @@
     "@storybook/addon-docs": "^6.3.12",
     "@storybook/addons": "^6.3.12",
     "@storybook/react": "^6.3.12",
+    "@stylelint/postcss-css-in-js": "^0.37.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
@@ -47,7 +48,6 @@
     "stylelint": "^14.0.1",
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.4.4"
   },
   "scripts": {

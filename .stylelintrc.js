@@ -1,9 +1,7 @@
 module.exports = {
-  processors: [
-    'stylelint-processor-styled-components',
-  ],
+  customSyntax: '@stylelint/postcss-css-in-js',
   extends: [
-    'stylelint-config-recommended',
+    'stylelint-config-standard',
     'stylelint-config-styled-components',
   ],
 };
