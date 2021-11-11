@@ -26,6 +26,12 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+      },
+    ],
     'react/jsx-filename-extension': [
       'error',
       {
