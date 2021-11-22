@@ -39,8 +39,19 @@ exports[`<HamburgerButton /> toggles the hamburger button on change 1`] = `
 `;
 
 exports[`<HamburgerButton /> toggles the hamburger button on change 2`] = `
+.c0 {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 1px;
+  height: 1px;
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  overflow: hidden;
+}
+
 <input
-  class="sc-bdvvtL kIArUh"
+  class="c0"
   id="toggle"
   type="checkbox"
 />
