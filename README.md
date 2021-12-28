@@ -2,7 +2,6 @@
 
 > elements is my personal React components library.
 
-![Update Status](https://img.shields.io/david/dev/mrcgrtz/elements.svg)
 [![Test Workflow](https://github.com/mrcgrtz/elements/actions/workflows/test.yml/badge.svg)](https://github.com/mrcgrtz/elements/actions/workflows/test.yml)
 [![Build Workflow](https://github.com/mrcgrtz/elements/actions/workflows/build.yml/badge.svg)](https://github.com/mrcgrtz/elements/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/mrcgrtz/elements/badge.svg?branch=main)](https://coveralls.io/github/mrcgrtz/elements?branch=main)
