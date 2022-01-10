@@ -10,7 +10,7 @@
     "@storybook/addon-a11y": "^6.4.9",
     "@storybook/addon-actions": "^6.4.9",
     "@storybook/addon-controls": "^6.4.10",
-    "@storybook/addon-docs": "^6.4.9",
+    "@storybook/addon-docs": "^6.4.10",
     "@storybook/addons": "^6.4.9",
     "@storybook/react": "^6.4.8",
     "@stylelint/postcss-css-in-js": "^0.37.2",
