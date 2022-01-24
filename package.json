@@ -11,7 +11,7 @@
     "@storybook/addon-actions": "^6.4.13",
     "@storybook/addon-controls": "^6.4.13",
     "@storybook/addon-docs": "^6.4.14",
-    "@storybook/addons": "^6.4.9",
+    "@storybook/addons": "^6.4.14",
     "@storybook/react": "^6.4.8",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@testing-library/react": "^12.1.2",
