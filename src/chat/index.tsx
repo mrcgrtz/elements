@@ -6,7 +6,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { format, formatRelative } from 'date-fns';
-import { ISO_DATE } from '../constants/date-formats';
+import { ISO_DATE } from './date-formats';
 
 type Props = {
   history?: Array<{

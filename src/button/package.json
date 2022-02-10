@@ -1,0 +1,6 @@
+{
+  "name": "@mrcgrtz/button",
+  "dependencies": {
+    "styled-components": "^5.3.3"
+  }
+}

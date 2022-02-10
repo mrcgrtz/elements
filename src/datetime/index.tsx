@@ -7,14 +7,7 @@ import React from 'react';
 import styled from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
-import {
-  ISO_DATE_TIME,
-  HOUR,
-  MINUTE,
-  TIME,
-  DATE,
-  DAY,
-} from '../constants/date-formats';
+import { ISO_DATE_TIME, HOUR, MINUTE, TIME, DATE, DAY } from './date-formats';
 
 type Props = {
   dateTime: Date | number;
