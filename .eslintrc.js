@@ -2,12 +2,12 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
-    'plugin:storybook/recommended',
-    'plugin:react-hooks/recommended',
+    'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
     'prettier',
   ],
-  plugins: ['react-hooks', 'jest', '@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'jest', 'prettier'],
   settings: {
     'import/extensions': ['.ts', '.tsx'],
     'import/resolver': {
@@ -17,8 +17,6 @@ module.exports = {
     },
   },
   rules: {
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -37,14 +35,6 @@ module.exports = {
       'error',
       {
         extensions: ['.tsx'],
-      },
-    ],
-    'jsx-a11y/label-has-for': [
-      'error',
-      {
-        required: {
-          some: ['nesting', 'id'],
-        },
       },
     ],
     'prettier/prettier': [
