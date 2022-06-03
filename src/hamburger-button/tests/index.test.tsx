@@ -15,13 +15,14 @@ describe('<HamburgerButton />', () => {
     );
     expect(container.firstChild).toMatchSnapshot();
   });
-  it('toggles the hamburger button on change', () => {
+  it('toggles the hamburger button on change', async () => {
+    const user = userEvent.setup();
     const { container } = render(
       <HamburgerButton position={{ bottom: '1em', right: '1em' }} />
     );
     expect(container.firstChild).toMatchSnapshot();
     const input = container.querySelector('input') as Element;
-    userEvent.click(input);
+    await user.click(input);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
