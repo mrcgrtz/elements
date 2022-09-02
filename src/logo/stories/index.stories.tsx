@@ -1,9 +1,9 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import Logo from '..';
 
 const meta = {
-  title: 'Logo',
+  title: 'Design System/Logos',
   component: Logo,
   args: {
     title: 'Marc Görtz',
@@ -16,7 +16,7 @@ const meta = {
 const Template: Story = (args) => <Logo {...args} />;
 
 export const LogoStory = Template.bind({});
-LogoStory.storyName = meta.title;
+LogoStory.storyName = 'Default logo';
 
 export const SolidColorLogoStory = Template.bind({});
 SolidColorLogoStory.argTypes = {

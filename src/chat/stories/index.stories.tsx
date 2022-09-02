@@ -1,9 +1,9 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import Chat from '..';
 
 const meta = {
-  title: 'Chat',
+  title: 'Features/Chat',
   component: Chat,
   args: {
     history: [
@@ -54,7 +54,7 @@ const meta = {
 } as Meta;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-export const DefaultStory: Story = (args) => <Chat {...args} />;
-DefaultStory.storyName = meta.title;
+export const ChatStory: Story = (args) => <Chat {...args} />;
+ChatStory.storyName = 'Chat';
 
 export default meta;

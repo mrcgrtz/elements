@@ -1,9 +1,9 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import type { Story, Meta } from '@storybook/react';
 import Button from '..';
 
 const meta = {
-  title: 'Button',
+  title: 'Design System/Components',
   component: Button,
   argTypes: {
     type: {
@@ -19,7 +19,7 @@ const meta = {
 } as Meta;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-export const DefaultStory: Story = (args) => <Button {...args} />;
-DefaultStory.storyName = meta.title;
+export const ButtonStory: Story = (args) => <Button {...args} />;
+ButtonStory.storyName = 'Button';
 
 export default meta;
