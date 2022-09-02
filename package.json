@@ -51,11 +51,11 @@
     "typescript": "^4.8.2"
   },
   "scripts": {
+    "build": "rimraf docs && build-storybook -c .storybook -o docs",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint --max-warnings 0 ./src/**/*.{ts,tsx}",
     "lint:js": "eslint --fix --max-warnings 0 ./src/**/*.{ts,tsx}",
-    "storybook:start": "start-storybook -p 9009 -s public",
-    "storybook:build": "rimraf docs && build-storybook -c .storybook -o docs",
+    "start": "start-storybook -p 9009",
     "test": "jest --env=jsdom",
     "test:coverage": "jest --env=jsdom --silent --coverage",
     "test:watch": "jest --env=jsdom --watchAll"

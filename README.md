@@ -14,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Install and preview elements in Storybook
 
 ```bash
-npm install && npm run storybook:start
+npm install && npm start
 ```
 
 ## Run tests
