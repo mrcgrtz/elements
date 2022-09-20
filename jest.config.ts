@@ -1,4 +1,8 @@
-module.exports = {
+import type { InitialOptionsTsJest } from 'ts-jest';
+
+const config: InitialOptionsTsJest = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   transform: {
     '^.+\\.(ts|tsx)$': '<rootDir>/node_modules/babel-jest',
@@ -16,5 +20,7 @@ module.exports = {
       statements: 100,
     },
   },
-  coverageReporters: ['text', 'lcov'],
+  coverageReporters: ['html', 'text', 'lcov'],
 };
+
+export default config;
