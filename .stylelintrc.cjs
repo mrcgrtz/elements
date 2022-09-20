@@ -1,3 +1,4 @@
+/** @type {import('stylelint').Config} */
 module.exports = {
   customSyntax: '@stylelint/postcss-css-in-js',
   extends: [
