@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import DateTime from '..';
 
 const defaultArgs = {
@@ -15,12 +15,11 @@ const meta = {
     },
   },
   args: defaultArgs,
-} as Meta;
+} as Meta<typeof DateTime>;
 
-export const DateTimeStory: Story<typeof defaultArgs> = (args) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <DateTime {...args} />
-);
+export const DateTimeStory: StoryObj<typeof DateTime> = (
+  args: typeof defaultArgs
+) => <DateTime {...args} />;
 DateTimeStory.storyName = 'Date and time';
 
 export default meta;

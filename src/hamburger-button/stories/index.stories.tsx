@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import HamburgerButton from '..';
 
 const defaultArgs = {
@@ -12,12 +12,11 @@ const meta = {
   title: 'Design System/Components',
   component: HamburgerButton,
   args: defaultArgs,
-} as Meta;
+} as Meta<typeof HamburgerButton>;
 
-export const HamburgerButtonStory: Story<typeof defaultArgs> = (args) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <HamburgerButton {...args} />
-);
+export const HamburgerButtonStory: StoryObj<typeof HamburgerButton> = (
+  args: typeof defaultArgs
+) => <HamburgerButton {...args} />;
 HamburgerButtonStory.storyName = 'Hamburger button';
 
 export default meta;

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import Chat from '..';
 
 const meta = {
@@ -51,10 +51,9 @@ const meta = {
       },
     ],
   },
-} as Meta;
+} as Meta<typeof Chat>;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-export const ChatStory: Story = (args) => <Chat {...args} />;
+export const ChatStory: StoryFn<typeof Chat> = (args) => <Chat {...args} />;
 ChatStory.storyName = 'Chat';
 
 export default meta;

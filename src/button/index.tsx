@@ -3,9 +3,10 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
+import React, { type ButtonHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+const StyledButton = styled.button`
   display: inline-block;
   margin: 0;
   padding: 0.25rem 1rem;
@@ -26,6 +27,11 @@ const Button = styled.button`
     background-color: dodgerblue;
   }
 `;
+
+type Props = ButtonHTMLAttributes<HTMLButtonElement>;
+
+// eslint-disable-next-line react/jsx-props-no-spreading
+const Button = (props: Props) => <StyledButton {...props} />;
 
 Button.defaultProps = {
   type: 'button',

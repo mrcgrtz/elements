@@ -12,7 +12,6 @@ const meta = {
   },
 } as Meta;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: Story = (args) => <Logo {...args} />;
 
 export const LogoStory = Template.bind({});

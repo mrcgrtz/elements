@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import Button from '..';
 
 const meta = {
@@ -16,10 +16,11 @@ const meta = {
     type: 'button',
     disabled: false,
   },
-} as Meta;
+} as Meta<typeof Button>;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-export const ButtonStory: Story = (args) => <Button {...args} />;
+export const ButtonStory: StoryFn<typeof Button> = (args) => (
+  <Button {...args} />
+);
 ButtonStory.storyName = 'Button';
 
 export default meta;
