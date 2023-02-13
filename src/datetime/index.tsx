@@ -35,7 +35,7 @@ const Svg = styled.svg`
   width: 1em;
   height: 1em;
   vertical-align: -2px;
-  fill: currentColor;
+  fill: currentcolor;
 `;
 
 const getTimeOfDay = (hour: string) => {

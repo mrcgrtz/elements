@@ -56,9 +56,11 @@ const Bubble = styled.li`
   background-color: ${(p: { isMe: boolean }): string =>
     p.isMe ? 'dodgerblue' : 'gainsboro'};
   box-sizing: border-box;
+
   & + li {
     margin-top: 0.5rem;
   }
+
   &:active time {
     display: block;
   }
