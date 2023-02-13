@@ -45,7 +45,6 @@
     "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rimraf": "^3.0.2",
     "styled-components": "^5.3.6",
     "stylelint": "^15.1.0",
     "stylelint-config-standard": "^30.0.1",
@@ -59,7 +58,7 @@
     "glob-parent": "^6.0.2"
   },
   "scripts": {
-    "build": "rimraf docs && build-storybook -c .storybook -o docs",
+    "build": "build-storybook -c .storybook -o docs",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint --max-warnings 0 ./src/**/*.{ts,tsx}",
     "lint:js": "eslint --fix --max-warnings 0 ./src/**/*.{ts,tsx}",
