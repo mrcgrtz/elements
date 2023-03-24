@@ -26,7 +26,7 @@ npm test
 ## Run linters
 
 ```bash
-npm run lint
+npm run-script lint
 ```
 
 ## License

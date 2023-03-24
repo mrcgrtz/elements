@@ -4,11 +4,8 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-a11y',
-  ],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
   features: {
     postcss: false,
-  }
+  },
 };
