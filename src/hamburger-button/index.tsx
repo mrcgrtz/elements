@@ -9,10 +9,10 @@ import styled from 'styled-components';
 
 type Position = {
   position: {
-    top?: string;
-    bottom?: string;
-    left?: string;
-    right?: string;
+    blockStart?: string;
+    blockEnd?: string;
+    inlineStart?: string;
+    inlineEnd?: string;
   };
 };
 
@@ -28,25 +28,25 @@ type Props = {
 
 const Input = styled.input`
   position: absolute;
-  top: ${(p: Position): string => p.position.top || ''};
-  bottom: ${(p: Position): string => p.position.bottom || ''};
-  left: ${(p: Position): string => p.position.left || ''};
-  right: ${(p: Position): string => p.position.right || ''};
-  width: 1px;
-  height: 1px;
+  inset-block-start: ${(p: Position) => p.position.blockStart || ''};
+  inset-block-end: ${(p: Position) => p.position.blockEnd || ''};
+  inset-inline-start: ${(p: Position) => p.position.inlineStart || ''};
+  inset-inline-end: ${(p: Position) => p.position.inlineEnd || ''};
+  inline-size: 1px;
+  block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
 `;
 
 const Hamburger = styled.label`
   position: absolute;
-  top: ${(p: Position): string => p.position.top || ''};
-  bottom: ${(p: Position): string => p.position.bottom || ''};
-  left: ${(p: Position): string => p.position.left || ''};
-  right: ${(p: Position): string => p.position.right || ''};
+  inset-block-start: ${(p: Position) => p.position.blockStart || ''};
+  inset-block-end: ${(p: Position) => p.position.blockEnd || ''};
+  inset-inline-start: ${(p: Position) => p.position.inlineStart || ''};
+  inset-inline-end: ${(p: Position) => p.position.inlineEnd || ''};
   z-index: 1;
-  width: 2em;
-  height: 1.5em;
+  inline-size: 2em;
+  block-size: 1.5em;
   cursor: pointer;
 `;
 
@@ -54,19 +54,19 @@ const LinesCommon = `
   display: block;
   position: absolute;
   border-radius: 4px;
-  width: 100%;
-  height: 4px;
+  inline-size: 100%;
+  block-size: 4px;
   background-color: currentColor;
   transition-property: transform;
   transition-duration: 0.2s;
   transition-timing-function: ease;
 `;
 
-const Lines = styled.span`
-  top: 50%;
-  margin-top: -2px;
+const Lines = styled.span<LinesProps>`
+  inset-block-start: 50%;
+  margin-block-start: -2px;
   ${LinesCommon}
-  ${(p: LinesProps): string =>
+  ${(p) =>
     p.isX
       ? `
     transform: rotate(225deg);
@@ -81,32 +81,32 @@ const Lines = styled.span`
   &::before {
     content: '';
     ${LinesCommon}
-    ${(p: LinesProps): string =>
+    ${(p) =>
       p.isX
         ? `
-      top: 0;
+      inset-block-start: 0;
       opacity: 0;
-      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+      transition: inset-block-start 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     `
         : `
-      top: -10px;
-      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+      inset-block-start: -10px;
+      transition: inset-block-start 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     `}
   }
 
   &::after {
     content: '';
     ${LinesCommon}
-    ${(p: LinesProps): string =>
+    ${(p) =>
       p.isX
         ? `
-      bottom: 0;
+      inset-block-end: 0;
       transform: rotate(-90deg);
-      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: inset-block-end 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
     `
         : `
-      bottom: -10px;
-      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      inset-block-end: -10px;
+      transition: inset-block-end 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     `}
   }
 ` as ComponentType<LinesProps>;

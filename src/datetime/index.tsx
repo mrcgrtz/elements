@@ -31,9 +31,9 @@ const Wrapper = styled.time`
 `;
 
 const Svg = styled.svg`
-  margin-right: 0.75ex;
-  width: 1em;
-  height: 1em;
+  margin-inline-end: 0.75ex;
+  inline-size: 1em;
+  block-size: 1em;
   vertical-align: -2px;
   fill: currentcolor;
 `;

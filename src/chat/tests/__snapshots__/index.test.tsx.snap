@@ -23,14 +23,14 @@ exports[`<Chat /> renders a basic chat 1`] = `
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
-  max-width: 60%;
+  max-inline-size: 60%;
   color: black;
   background-color: gainsboro;
   box-sizing: border-box;
 }
 
 .c1 + li {
-  margin-top: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 .c1:active time {
@@ -78,7 +78,7 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   align-self: center;
   margin: 0.5rem 0;
   text-align: center;
-  max-width: 80%;
+  max-inline-size: 80%;
   font-size: 0.75rem;
   font-weight: bold;
   color: gray;
@@ -96,14 +96,14 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
-  max-width: 60%;
+  max-inline-size: 60%;
   color: black;
   background-color: gainsboro;
   box-sizing: border-box;
 }
 
 .c1 + li {
-  margin-top: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 .c1:active time {
@@ -118,14 +118,14 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
-  max-width: 60%;
+  max-inline-size: 60%;
   color: white;
   background-color: dodgerblue;
   box-sizing: border-box;
 }
 
 .c5 + li {
-  margin-top: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 .c5:active time {
@@ -140,14 +140,14 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
 
 .c2 {
   display: block;
-  margin-bottom: 0.25em;
+  margin-block-end: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
 }
 
 .c9 {
   display: none;
-  margin-bottom: 0.25em;
+  margin-block-end: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
 }
@@ -160,10 +160,12 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
 .c4 {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0.666667em;
-  margin-top: 0.25em;
-  text-align: left;
+  -webkit-inset-block-start: 100%;
+  -ms-intb-rlock-start: 100%;
+  inset-block-start: 100%;
+  inset-inline-start: 0.666667em;
+  margin-block-start: 0.25em;
+  text-align: start;
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;
@@ -173,10 +175,12 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
 .c6 {
   display: none;
   position: absolute;
-  top: 100%;
-  right: 0.666667em;
-  margin-top: 0.25em;
-  text-align: right;
+  -webkit-inset-block-start: 100%;
+  -ms-intb-rlock-start: 100%;
+  inset-block-start: 100%;
+  inset-inline-end: 0.666667em;
+  margin-block-start: 0.25em;
+  text-align: end;
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;

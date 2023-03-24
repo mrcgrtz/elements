@@ -34,7 +34,7 @@ const Action = styled.li`
   align-self: center;
   margin: 0.5rem 0;
   text-align: center;
-  max-width: 80%;
+  max-inline-size: 80%;
   font-size: 0.75rem;
   font-weight: bold;
   color: gray;
@@ -44,21 +44,19 @@ const Action = styled.li`
   }
 `;
 
-const Bubble = styled.li`
+const Bubble = styled.li<{ isMe: boolean }>`
   position: relative;
-  align-self: ${(p: { isMe: boolean }): string =>
-    p.isMe ? 'flex-end' : 'flex-start'};
+  align-self: ${(p) => (p.isMe ? 'flex-end' : 'flex-start')};
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
-  max-width: 60%;
-  color: ${(p: { isMe: boolean }): string => (p.isMe ? 'white' : 'black')};
-  background-color: ${(p: { isMe: boolean }): string =>
-    p.isMe ? 'dodgerblue' : 'gainsboro'};
+  max-inline-size: 60%;
+  color: ${(p) => (p.isMe ? 'white' : 'black')};
+  background-color: ${(p) => (p.isMe ? 'dodgerblue' : 'gainsboro')};
   box-sizing: border-box;
 
   & + li {
-    margin-top: 0.5rem;
+    margin-block-start: 0.5rem;
   }
 
   &:active time {
@@ -72,10 +70,9 @@ const EmojiBubble = styled(Bubble)`
   background-color: transparent;
 `;
 
-const Name = styled.span`
-  display: ${(p: { hidden?: boolean }): string =>
-    p.hidden ? 'none' : 'block'};
-  margin-bottom: 0.25em;
+const Name = styled.span<{ hidden?: boolean }>`
+  display: ${(p) => (p.hidden ? 'none' : 'block')};
+  margin-block-end: 0.25em;
   font-size: 0.75rem;
   font-weight: bold;
 `;
@@ -85,21 +82,21 @@ const Quote = styled.q`
   quotes: none;
 `;
 
-const Time = styled.time`
+const Time = styled.time<{ isMe: boolean }>`
   display: none;
   position: absolute;
-  top: 100%;
-  left: ${(p: { isMe: boolean }): string => (p.isMe ? '' : '0.666667em')};
-  right: ${(p: { isMe: boolean }): string => (p.isMe ? '0.666667em' : '')};
-  margin-top: 0.25em;
-  text-align: ${(p: { isMe: boolean }): string => (p.isMe ? 'right' : 'left')};
+  inset-block-start: 100%;
+  inset-inline-start: ${(p) => (p.isMe ? '' : '0.666667em')};
+  inset-inline-end: ${(p) => (p.isMe ? '0.666667em' : '')};
+  margin-block-start: 0.25em;
+  text-align: ${(p) => (p.isMe ? 'end' : 'start')};
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;
   white-space: nowrap;
 `;
 
-const Chat = ({ history }: Props): JSX.Element | null => {
+const Chat = ({ history }: Props) => {
   if (!history || history.length === 0) {
     return null;
   }

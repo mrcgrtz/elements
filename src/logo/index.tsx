@@ -14,8 +14,8 @@ type Props = {
 };
 
 const Svg = styled.svg`
-  width: 340px;
-  height: 190px;
+  inline-size: 340px;
+  block-size: 190px;
   vertical-align: bottom;
 `;
 

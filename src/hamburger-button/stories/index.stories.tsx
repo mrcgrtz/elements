@@ -5,7 +5,7 @@ import HamburgerButton from '..';
 const defaultArgs = {
   label: 'Menü anzeigen',
   labelActive: 'Menü ausblenden',
-  position: { top: '20px', left: '20px' },
+  position: { blockStart: '20px', inlineStart: '20px' },
 };
 
 const meta = {
