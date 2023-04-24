@@ -1,4 +1,4 @@
-/** @type {import('xo').CLIEngineOptions} */
+/** @type {import('xo').Options} */
 module.exports = {
   prettier: true,
   extends: 'xo-react',
