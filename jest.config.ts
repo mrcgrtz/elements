@@ -1,10 +1,11 @@
-import type { InitialOptionsTsJest } from 'ts-jest';
+import type {JestConfigWithTsJest} from 'ts-jest';
 
-const config: InitialOptionsTsJest = {
+const config: JestConfigWithTsJest = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/setup-tests.ts'],
   transform: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     '^.+\\.(ts|tsx)$': '<rootDir>/node_modules/babel-jest',
   },
   collectCoverageFrom: [

@@ -1,8 +1,8 @@
 import React from 'react';
-import type { Meta, StoryFn } from '@storybook/react';
+import type {Meta, StoryFn} from '@storybook/react';
 import Chat from '..';
 
-const meta = {
+const meta: Meta = {
   title: 'Features/Chat',
   component: Chat,
   args: {
@@ -29,7 +29,7 @@ const meta = {
         timestamp: new Date(1938, 2, 24, 12, 12, 4),
         isMe: true,
       },
-      { content: 'Costello becomes exasperated.', isAction: true },
+      {content: 'Costello becomes exasperated.', isAction: true},
       {
         name: 'Costello',
         content:
@@ -51,7 +51,7 @@ const meta = {
       },
     ],
   },
-} as Meta<typeof Chat>;
+};
 
 export const ChatStory: StoryFn<typeof Chat> = (args) => <Chat {...args} />;
 ChatStory.storyName = 'Chat';

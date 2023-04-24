@@ -4,23 +4,24 @@
  */
 
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render} from '@testing-library/react';
 import DateTime from '..';
 
 describe('<DateTime />', () => {
   it('renders a date and time information', () => {
     const mockDate = new Date(1999, 3, 17, 22, 11, 18);
-    const { container } = render(<DateTime dateTime={mockDate} />);
+    const {container} = render(<DateTime dateTime={mockDate} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   describe('on different times of the day', () => {
-    [...Array(24).keys()].forEach((hour) => {
+    for (const hour of Array.from({length: 24}).keys()) {
+      // eslint-disable-next-line @typescript-eslint/no-loop-func
       it(`renders a text for ${hour} o’clock`, () => {
         const mockDate = new Date(2020, 1, 12, hour, 0, 0);
-        const { container } = render(<DateTime dateTime={mockDate} />);
+        const {container} = render(<DateTime dateTime={mockDate} />);
         expect(container.textContent).toMatchSnapshot();
       });
-    });
+    }
   });
 });

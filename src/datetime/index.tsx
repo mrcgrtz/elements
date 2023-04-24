@@ -8,12 +8,12 @@ import styled from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
 import {
-  ISO_DATE_TIME,
-  HOUR,
-  MINUTE,
-  TIME,
-  DATE,
-  DAY,
+  hour,
+  minute,
+  time,
+  date,
+  day,
+  isoDateTime,
 } from '../constants/date-formats';
 
 type Props = {
@@ -38,46 +38,73 @@ const Svg = styled.svg`
   fill: currentcolor;
 `;
 
+// eslint-disable-next-line complexity
 const getTimeOfDay = (hour: string) => {
   switch (Number(hour)) {
     case 0:
     case 1:
     case 2:
-    case 3:
+    case 3: {
       return 'Nachts am';
+    }
+
     case 4:
     case 5:
-    case 6:
+    case 6: {
       return 'Verdammt früh am Morgen des';
+    }
+
     case 7:
     case 8:
-    case 9:
+    case 9: {
       return 'Morgens am';
-    case 10:
+    }
+
+    case 10: {
       return 'Am frühen Vormittag des';
-    case 11:
+    }
+
+    case 11: {
       return 'Vormittags am';
+    }
+
     case 12:
-    case 13:
+    case 13: {
       return 'Zur Mittagszeit am';
-    case 14:
+    }
+
+    case 14: {
       return 'Am frühen Nachmittag des';
+    }
+
     case 15:
-    case 16:
+    case 16: {
       return 'Nachmittags am';
-    case 17:
+    }
+
+    case 17: {
       return 'Am späten Nachmittag des';
+    }
+
     case 18:
-    case 19:
+    case 19: {
       return 'Am frühen Abend des';
+    }
+
     case 20:
-    case 21:
+    case 21: {
       return 'Abends am';
-    case 22:
+    }
+
+    case 22: {
       return 'Spätabends am';
+    }
+
+    // eslint-disable-next-line unicorn/no-useless-switch-case
     case 23:
-    default:
+    default: {
       return 'Kurz vor Mitternacht am';
+    }
   }
 };
 
@@ -91,15 +118,14 @@ const transformMinute = (minute: string) => {
   return Number(minute) * degreesPerMinute;
 };
 
-const DateTime = ({ dateTime, ...rest }: Props): JSX.Element => {
-  const f = (as: string) => format(dateTime, as, { locale: de });
+const DateTime = ({dateTime, ...rest}: Props): JSX.Element => {
+  const f = (as: string) => format(dateTime, as, {locale: de});
 
   return (
     <Wrapper
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
-      dateTime={f(ISO_DATE_TIME)}
-      title={`${f(DAY)}, der ${f(DATE)} um ${f(TIME)} Uhr`}
+      dateTime={f(isoDateTime)}
+      title={`${f(day)}, der ${f(date)} um ${f(time)} Uhr`}
     >
       <Svg
         xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +134,7 @@ const DateTime = ({ dateTime, ...rest }: Props): JSX.Element => {
         viewBox="0 0 12 12"
         aria-hidden="true"
       >
-        <title>{f(TIME)} Uhr</title>
+        <title>{f(time)} Uhr</title>
         <circle
           cx="6"
           cy="6"
@@ -126,7 +152,7 @@ const DateTime = ({ dateTime, ...rest }: Props): JSX.Element => {
           strokeLinecap="round"
           strokeWidth="1.35"
           fill="none"
-          transform={`rotate(${transformHour(f(HOUR))} 6 6)`}
+          transform={`rotate(${transformHour(f(hour))} 6 6)`}
         />
         <line
           x1="6"
@@ -137,10 +163,10 @@ const DateTime = ({ dateTime, ...rest }: Props): JSX.Element => {
           strokeLinecap="round"
           strokeWidth="1.35"
           fill="none"
-          transform={`rotate(${transformMinute(f(MINUTE))} 6 6)`}
+          transform={`rotate(${transformMinute(f(minute))} 6 6)`}
         />
       </Svg>
-      {getTimeOfDay(f(HOUR))} {f(DATE)}
+      {getTimeOfDay(f(hour))} {f(date)}
     </Wrapper>
   );
 };

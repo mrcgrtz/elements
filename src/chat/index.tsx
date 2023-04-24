@@ -5,8 +5,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { format, formatRelative } from 'date-fns';
-import { ISO_DATE } from '../constants/date-formats';
+import {format, formatRelative} from 'date-fns';
+import {isoDate} from '../constants/date-formats';
 
 type Props = {
   history?: Array<{
@@ -44,7 +44,7 @@ const Action = styled.li`
   }
 `;
 
-const Bubble = styled.li<{ isMe: boolean }>`
+const Bubble = styled.li<{isMe: boolean}>`
   position: relative;
   align-self: ${(p) => (p.isMe ? 'flex-end' : 'flex-start')};
   padding: 0.5rem;
@@ -70,7 +70,7 @@ const EmojiBubble = styled(Bubble)`
   background-color: transparent;
 `;
 
-const Name = styled.span<{ hidden?: boolean }>`
+const Name = styled.span<{hidden?: boolean}>`
   display: ${(p) => (p.hidden ? 'none' : 'block')};
   margin-block-end: 0.25em;
   font-size: 0.75rem;
@@ -82,7 +82,7 @@ const Quote = styled.q`
   quotes: none;
 `;
 
-const Time = styled.time<{ isMe: boolean }>`
+const Time = styled.time<{isMe: boolean}>`
   display: none;
   position: absolute;
   inset-block-start: 100%;
@@ -96,7 +96,7 @@ const Time = styled.time<{ isMe: boolean }>`
   white-space: nowrap;
 `;
 
-const Chat = ({ history }: Props) => {
+const Chat = ({history}: Props) => {
   if (!history || history.length === 0) {
     return null;
   }
@@ -115,6 +115,7 @@ const Chat = ({ history }: Props) => {
           if (isAction) {
             return <Action key={content}>{content}</Action>;
           }
+
           if (isEmoji) {
             return (
               <EmojiBubble
@@ -125,13 +126,14 @@ const Chat = ({ history }: Props) => {
                 {name && <Name hidden>{name}</Name>}
                 <Quote>{content}</Quote>
                 {timestamp && (
-                  <Time isMe={isMe} dateTime={format(timestamp, ISO_DATE)}>
+                  <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
                     {formatRelative(timestamp, new Date())}
                   </Time>
                 )}
               </EmojiBubble>
             );
           }
+
           return (
             <Bubble
               key={content}
@@ -141,7 +143,7 @@ const Chat = ({ history }: Props) => {
               {name && <Name>{name}</Name>}
               <Quote>{content}</Quote>
               {timestamp && (
-                <Time isMe={isMe} dateTime={format(timestamp, ISO_DATE)}>
+                <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
                   {formatRelative(timestamp, new Date())}
                 </Time>
               )}

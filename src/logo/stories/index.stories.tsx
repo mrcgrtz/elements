@@ -1,8 +1,8 @@
 import React from 'react';
-import type { Story, Meta } from '@storybook/react';
+import type {Story, Meta} from '@storybook/react';
 import Logo from '..';
 
-const meta = {
+const meta: Meta = {
   title: 'Design System/Logos',
   component: Logo,
   args: {
@@ -10,7 +10,7 @@ const meta = {
     url: 'https://marcgoertz.de/',
     urlRelations: ['start', 'me'],
   },
-} as Meta;
+};
 
 const Template: Story = (args) => <Logo {...args} />;
 

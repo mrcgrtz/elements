@@ -3,8 +3,8 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
-import type { ComponentType } from 'react';
+import React, {useState} from 'react';
+import type {ComponentType} from 'react';
 import styled from 'styled-components';
 
 type Position = {
@@ -28,10 +28,10 @@ type Props = {
 
 const Input = styled.input`
   position: absolute;
-  inset-block-start: ${(p: Position) => p.position.blockStart || ''};
-  inset-block-end: ${(p: Position) => p.position.blockEnd || ''};
-  inset-inline-start: ${(p: Position) => p.position.inlineStart || ''};
-  inset-inline-end: ${(p: Position) => p.position.inlineEnd || ''};
+  inset-block-start: ${(p: Position) => p.position.blockStart ?? ''};
+  inset-block-end: ${(p: Position) => p.position.blockEnd ?? ''};
+  inset-inline-start: ${(p: Position) => p.position.inlineStart ?? ''};
+  inset-inline-end: ${(p: Position) => p.position.inlineEnd ?? ''};
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
@@ -40,10 +40,10 @@ const Input = styled.input`
 
 const Hamburger = styled.label`
   position: absolute;
-  inset-block-start: ${(p: Position) => p.position.blockStart || ''};
-  inset-block-end: ${(p: Position) => p.position.blockEnd || ''};
-  inset-inline-start: ${(p: Position) => p.position.inlineStart || ''};
-  inset-inline-end: ${(p: Position) => p.position.inlineEnd || ''};
+  inset-block-start: ${(p: Position) => p.position.blockStart ?? ''};
+  inset-block-end: ${(p: Position) => p.position.blockEnd ?? ''};
+  inset-inline-start: ${(p: Position) => p.position.inlineStart ?? ''};
+  inset-inline-end: ${(p: Position) => p.position.inlineEnd ?? ''};
   z-index: 1;
   inline-size: 2em;
   block-size: 1.5em;
@@ -117,7 +117,7 @@ const HamburgerButton = ({
   id,
   position,
 }: Props): JSX.Element => {
-  const [checked, toggle] = React.useState(false);
+  const [checked, setChecked] = useState(false);
   return (
     <>
       <Input
@@ -125,7 +125,9 @@ const HamburgerButton = ({
         id={id}
         position={position}
         checked={checked}
-        onChange={(): void => toggle(!checked)}
+        onChange={(): void => {
+          setChecked(!checked);
+        }}
       />
       <Hamburger
         htmlFor={id}

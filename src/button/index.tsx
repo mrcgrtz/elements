@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, { type ButtonHTMLAttributes } from 'react';
+import React, {type ButtonHTMLAttributes} from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -30,8 +30,9 @@ const StyledButton = styled.button`
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement>;
 
-// eslint-disable-next-line react/jsx-props-no-spreading
-const Button = (props: Props) => <StyledButton {...props} />;
+const Button = (props: Props) => {
+  return <StyledButton {...props} />;
+};
 
 Button.defaultProps = {
   type: 'button',

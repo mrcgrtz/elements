@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render} from '@testing-library/react';
 import Chat from '..';
 
 const mockHistory = [
@@ -36,7 +36,7 @@ const mockFullHistory = [
     timestamp: new Date(1938, 2, 24, 12, 12, 4),
     isMe: true,
   },
-  { content: 'Costello becomes exasperated.', isAction: true },
+  {content: 'Costello becomes exasperated.', isAction: true},
   {
     name: 'Costello',
     content:
@@ -66,17 +66,17 @@ const mockFullHistory = [
 
 describe('<Chat />', () => {
   it('renders no chat by default', () => {
-    const { container } = render(<Chat />);
+    const {container} = render(<Chat />);
     expect(container.firstChild).toBeNull();
   });
 
   it('renders a basic chat', () => {
-    const { container } = render(<Chat history={mockHistory} />);
+    const {container} = render(<Chat history={mockHistory} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it('renders a full-featured chat', () => {
-    const { container } = render(<Chat history={mockFullHistory} />);
+    const {container} = render(<Chat history={mockFullHistory} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 });
