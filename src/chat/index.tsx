@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import React, {StrictMode} from 'react';
 import styled from 'styled-components';
 import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
@@ -102,56 +102,58 @@ const Chat = ({history}: Props) => {
   }
 
   return (
-    <List>
-      {history.map(
-        ({
-          content,
-          name,
-          timestamp,
-          isEmoji = false,
-          isMe = false,
-          isAction = false,
-        }) => {
-          if (isAction) {
-            return <Action key={content}>{content}</Action>;
-          }
+    <StrictMode>
+      <List>
+        {history.map(
+          ({
+            content,
+            name,
+            timestamp,
+            isEmoji = false,
+            isMe = false,
+            isAction = false,
+          }) => {
+            if (isAction) {
+              return <Action key={content}>{content}</Action>;
+            }
 
-          if (isEmoji) {
+            if (isEmoji) {
+              return (
+                <EmojiBubble
+                  key={content}
+                  isMe={isMe}
+                  tabIndex={timestamp ? 0 : undefined}
+                >
+                  {name && <Name hidden>{name}</Name>}
+                  <Quote>{content}</Quote>
+                  {timestamp && (
+                    <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
+                      {formatRelative(timestamp, new Date())}
+                    </Time>
+                  )}
+                </EmojiBubble>
+              );
+            }
+
             return (
-              <EmojiBubble
+              <Bubble
                 key={content}
                 isMe={isMe}
                 tabIndex={timestamp ? 0 : undefined}
               >
-                {name && <Name hidden>{name}</Name>}
+                {name && <Name>{name}</Name>}
                 <Quote>{content}</Quote>
                 {timestamp && (
                   <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
                     {formatRelative(timestamp, new Date())}
                   </Time>
                 )}
-              </EmojiBubble>
+              </Bubble>
             );
           }
-
-          return (
-            <Bubble
-              key={content}
-              isMe={isMe}
-              tabIndex={timestamp ? 0 : undefined}
-            >
-              {name && <Name>{name}</Name>}
-              <Quote>{content}</Quote>
-              {timestamp && (
-                <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
-                  {formatRelative(timestamp, new Date())}
-                </Time>
-              )}
-            </Bubble>
-          );
-        }
-      )}
-    </List>
+        )}
+      </List>
+    </StrictMode>
   );
 };
 

@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import React, {StrictMode} from 'react';
 import styled from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
@@ -122,52 +122,54 @@ const DateTime = ({dateTime, ...rest}: Props): JSX.Element => {
   const f = (as: string) => format(dateTime, as, {locale: de});
 
   return (
-    <Wrapper
-      {...rest}
-      dateTime={f(isoDateTime)}
-      title={`${f(day)}, der ${f(date)} um ${f(time)} Uhr`}
-    >
-      <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="12"
-        height="12"
-        viewBox="0 0 12 12"
-        aria-hidden="true"
+    <StrictMode>
+      <Wrapper
+        {...rest}
+        dateTime={f(isoDateTime)}
+        title={`${f(day)}, der ${f(date)} um ${f(time)} Uhr`}
       >
-        <title>{f(time)} Uhr</title>
-        <circle
-          cx="6"
-          cy="6"
-          r="5.425"
-          stroke="currentColor"
-          strokeWidth="1.15"
-          fill="none"
-        />
-        <line
-          x1="6"
-          y1="6"
-          x2="6"
-          y2="4"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="1.35"
-          fill="none"
-          transform={`rotate(${transformHour(f(hour))} 6 6)`}
-        />
-        <line
-          x1="6"
-          y1="6"
-          x2="6"
-          y2="2.5"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeWidth="1.35"
-          fill="none"
-          transform={`rotate(${transformMinute(f(minute))} 6 6)`}
-        />
-      </Svg>
-      {getTimeOfDay(f(hour))} {f(date)}
-    </Wrapper>
+        <Svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          aria-hidden="true"
+        >
+          <title>{f(time)} Uhr</title>
+          <circle
+            cx="6"
+            cy="6"
+            r="5.425"
+            stroke="currentColor"
+            strokeWidth="1.15"
+            fill="none"
+          />
+          <line
+            x1="6"
+            y1="6"
+            x2="6"
+            y2="4"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeWidth="1.35"
+            fill="none"
+            transform={`rotate(${transformHour(f(hour))} 6 6)`}
+          />
+          <line
+            x1="6"
+            y1="6"
+            x2="6"
+            y2="2.5"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeWidth="1.35"
+            fill="none"
+            transform={`rotate(${transformMinute(f(minute))} 6 6)`}
+          />
+        </Svg>
+        {getTimeOfDay(f(hour))} {f(date)}
+      </Wrapper>
+    </StrictMode>
   );
 };
 

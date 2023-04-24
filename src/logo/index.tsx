@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React from 'react';
+import React, {StrictMode} from 'react';
 import styled from 'styled-components';
 
 type Props = {
@@ -19,8 +19,8 @@ const Svg = styled.svg`
   vertical-align: bottom;
 `;
 
-const Logo = ({title, url, urlRelations, solidColor}: Props): JSX.Element => {
-  return (
+const Logo = ({title, url, urlRelations, solidColor}: Props): JSX.Element => (
+  <StrictMode>
     <a
       href={url}
       rel={urlRelations?.join(' ')}
@@ -99,8 +99,8 @@ const Logo = ({title, url, urlRelations, solidColor}: Props): JSX.Element => {
         )}
       </Svg>
     </a>
-  );
-};
+  </StrictMode>
+);
 
 Logo.defaultProps = {
   title: 'Marc Görtz',

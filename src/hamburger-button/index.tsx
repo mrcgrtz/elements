@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {useState} from 'react';
+import React, {StrictMode, useState} from 'react';
 import type {ComponentType} from 'react';
 import styled from 'styled-components';
 
@@ -118,8 +118,9 @@ const HamburgerButton = ({
   position,
 }: Props): JSX.Element => {
   const [checked, setChecked] = useState(false);
+
   return (
-    <>
+    <StrictMode>
       <Input
         type="checkbox"
         id={id}
@@ -136,7 +137,7 @@ const HamburgerButton = ({
       >
         <Lines isX={checked} />
       </Hamburger>
-    </>
+    </StrictMode>
   );
 };
 

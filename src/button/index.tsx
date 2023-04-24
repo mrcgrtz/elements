@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {type ButtonHTMLAttributes} from 'react';
+import React, {StrictMode, type ButtonHTMLAttributes} from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -30,9 +30,11 @@ const StyledButton = styled.button`
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = (props: Props) => {
-  return <StyledButton {...props} />;
-};
+const Button = (props: Props) => (
+  <StrictMode>
+    <StyledButton {...props} />
+  </StrictMode>
+);
 
 Button.defaultProps = {
   type: 'button',
