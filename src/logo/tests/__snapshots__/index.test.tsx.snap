@@ -3,8 +3,6 @@
 exports[`<Logo /> renders a logo 1`] = `
 .c0 {
   inline-size: 340px;
-  -webkit-block-size: 190px;
-  -ms-flex-block-size: 190px;
   block-size: 190px;
   vertical-align: bottom;
 }
@@ -202,8 +200,6 @@ exports[`<Logo /> renders a logo 1`] = `
 exports[`<Logo /> renders a logo with a solid color 1`] = `
 .c0 {
   inline-size: 340px;
-  -webkit-block-size: 190px;
-  -ms-flex-block-size: 190px;
   block-size: 190px;
   vertical-align: bottom;
 }

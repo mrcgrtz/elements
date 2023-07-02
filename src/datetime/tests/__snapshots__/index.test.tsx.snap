@@ -50,7 +50,7 @@ exports[`<DateTime /> on different times of the day renders a text for 23 o’cl
 
 exports[`<DateTime /> renders a date and time information 1`] = `
 .c0 {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto, Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-size: 0.75rem;
   line-height: 1.5;
   color: dimgrey;
@@ -60,8 +60,6 @@ exports[`<DateTime /> renders a date and time information 1`] = `
 .c1 {
   margin-inline-end: 0.75ex;
   inline-size: 1em;
-  -webkit-block-size: 1em;
-  -ms-flex-block-size: 1em;
   block-size: 1em;
   vertical-align: -2px;
   fill: currentcolor;

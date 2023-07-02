@@ -4,7 +4,7 @@
  */
 
 import React, {StrictMode} from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
 import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
 
@@ -44,15 +44,15 @@ const Action = styled.li`
   }
 `;
 
-const Bubble = styled.li<{isMe: boolean}>`
+const Bubble = styled.li<{$isMe: boolean}>`
   position: relative;
-  align-self: ${(p) => (p.isMe ? 'flex-end' : 'flex-start')};
+  align-self: ${(p) => (p.$isMe ? 'flex-end' : 'flex-start')};
   padding: 0.5rem;
   border-radius: 0.75rem;
   outline: 0;
   max-inline-size: 60%;
-  color: ${(p) => (p.isMe ? 'white' : 'black')};
-  background-color: ${(p) => (p.isMe ? 'dodgerblue' : 'gainsboro')};
+  color: ${(p) => (p.$isMe ? 'white' : 'black')};
+  background-color: ${(p) => (p.$isMe ? 'dodgerblue' : 'gainsboro')};
   box-sizing: border-box;
 
   & + li {
@@ -82,14 +82,14 @@ const Quote = styled.q`
   quotes: none;
 `;
 
-const Time = styled.time<{isMe: boolean}>`
+const Time = styled.time<{$isMe: boolean}>`
   display: none;
   position: absolute;
   inset-block-start: 100%;
-  inset-inline-start: ${(p) => (p.isMe ? '' : '0.666667em')};
-  inset-inline-end: ${(p) => (p.isMe ? '0.666667em' : '')};
+  inset-inline-start: ${(p) => (p.$isMe ? '' : '0.666667em')};
+  inset-inline-end: ${(p) => (p.$isMe ? '0.666667em' : '')};
   margin-block-start: 0.25em;
-  text-align: ${(p) => (p.isMe ? 'end' : 'start')};
+  text-align: ${(p) => (p.$isMe ? 'end' : 'start')};
   font-size: 0.75rem;
   color: gray;
   opacity: 0.75;
@@ -121,13 +121,13 @@ const Chat = ({history}: Props) => {
               return (
                 <EmojiBubble
                   key={content}
-                  isMe={isMe}
+                  $isMe={isMe}
                   tabIndex={timestamp ? 0 : undefined}
                 >
                   {name && <Name hidden>{name}</Name>}
                   <Quote>{content}</Quote>
                   {timestamp && (
-                    <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
+                    <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
                       {formatRelative(timestamp, new Date())}
                     </Time>
                   )}
@@ -138,13 +138,13 @@ const Chat = ({history}: Props) => {
             return (
               <Bubble
                 key={content}
-                isMe={isMe}
+                $isMe={isMe}
                 tabIndex={timestamp ? 0 : undefined}
               >
                 {name && <Name>{name}</Name>}
                 <Quote>{content}</Quote>
                 {timestamp && (
-                  <Time isMe={isMe} dateTime={format(timestamp, isoDate)}>
+                  <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
                     {formatRelative(timestamp, new Date())}
                   </Time>
                 )}
