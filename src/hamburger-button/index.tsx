@@ -5,45 +5,44 @@
 
 import React, {StrictMode, useState} from 'react';
 import type {ComponentType} from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
 
 type Position = {
-  position: {
-    blockStart?: string;
-    blockEnd?: string;
-    inlineStart?: string;
-    inlineEnd?: string;
-  };
+  blockStart?: string;
+  blockEnd?: string;
+  inlineStart?: string;
+  inlineEnd?: string;
 };
 
 type LinesProps = {
-  isX: boolean;
+  $isX: boolean;
 };
 
 type Props = {
   label?: string;
   labelActive?: string;
   id?: string;
-} & Position;
+  position: Position;
+};
 
-const Input = styled.input`
+const Input = styled.input<{$position: Position}>`
   position: absolute;
-  inset-block-start: ${(p: Position) => p.position.blockStart ?? ''};
-  inset-block-end: ${(p: Position) => p.position.blockEnd ?? ''};
-  inset-inline-start: ${(p: Position) => p.position.inlineStart ?? ''};
-  inset-inline-end: ${(p: Position) => p.position.inlineEnd ?? ''};
+  inset-block-start: ${(p) => p.$position.blockStart ?? ''};
+  inset-block-end: ${(p) => p.$position.blockEnd ?? ''};
+  inset-inline-start: ${(p) => p.$position.inlineStart ?? ''};
+  inset-inline-end: ${(p) => p.$position.inlineEnd ?? ''};
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
 `;
 
-const Hamburger = styled.label`
+const Hamburger = styled.label<{$position: Position}>`
   position: absolute;
-  inset-block-start: ${(p: Position) => p.position.blockStart ?? ''};
-  inset-block-end: ${(p: Position) => p.position.blockEnd ?? ''};
-  inset-inline-start: ${(p: Position) => p.position.inlineStart ?? ''};
-  inset-inline-end: ${(p: Position) => p.position.inlineEnd ?? ''};
+  inset-block-start: ${(p) => p.$position.blockStart ?? ''};
+  inset-block-end: ${(p) => p.$position.blockEnd ?? ''};
+  inset-inline-start: ${(p) => p.$position.inlineStart ?? ''};
+  inset-inline-end: ${(p) => p.$position.inlineEnd ?? ''};
   z-index: 1;
   inline-size: 2em;
   block-size: 1.5em;
@@ -67,7 +66,7 @@ const Lines = styled.span<LinesProps>`
   margin-block-start: -2px;
   ${LinesCommon}
   ${(p) =>
-    p.isX
+    p.$isX
       ? `
     transform: rotate(225deg);
     transition-delay: 0.12s;
@@ -82,7 +81,7 @@ const Lines = styled.span<LinesProps>`
     content: '';
     ${LinesCommon}
     ${(p) =>
-      p.isX
+      p.$isX
         ? `
       inset-block-start: 0;
       opacity: 0;
@@ -98,7 +97,7 @@ const Lines = styled.span<LinesProps>`
     content: '';
     ${LinesCommon}
     ${(p) =>
-      p.isX
+      p.$isX
         ? `
       inset-block-end: 0;
       transform: rotate(-90deg);
@@ -124,7 +123,7 @@ const HamburgerButton = ({
       <Input
         type="checkbox"
         id={id}
-        position={position}
+        $position={position}
         checked={checked}
         onChange={(): void => {
           setChecked(!checked);
@@ -133,9 +132,9 @@ const HamburgerButton = ({
       <Hamburger
         htmlFor={id}
         aria-label={checked ? labelActive : label}
-        position={position}
+        $position={position}
       >
-        <Lines isX={checked} />
+        <Lines $isX={checked} />
       </Hamburger>
     </StrictMode>
   );

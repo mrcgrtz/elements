@@ -4,7 +4,7 @@
  */
 
 import React, {StrictMode, type ButtonHTMLAttributes} from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
 
 const StyledButton = styled.button`
   display: inline-block;

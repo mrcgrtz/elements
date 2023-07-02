@@ -4,7 +4,7 @@
  */
 
 import React, {StrictMode} from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
 
 type Props = {
   title?: string;

@@ -4,7 +4,7 @@
  */
 
 import React, {StrictMode} from 'react';
-import styled from 'styled-components';
+import {styled} from 'styled-components';
 import format from 'date-fns/format';
 import de from 'date-fns/locale/de';
 import {
