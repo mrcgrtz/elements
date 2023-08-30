@@ -12,6 +12,10 @@ updates:
         patterns:
           - "storybook"
           - "@storybook/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
 
   # Check for updates to GitHub Actions
   - package-ecosystem: 'github-actions'
