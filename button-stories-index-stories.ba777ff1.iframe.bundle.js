@@ -4,8 +4,17 @@
   padding: 0.25rem 1rem;
   border: 0;
   font-size: inherit;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: inherit;
   color: white;
@@ -19,4 +28,4 @@
     background-color: dodgerblue;
   }
 `,Button=props=>(0,jsx_runtime.jsx)(react.StrictMode,{children:(0,jsx_runtime.jsx)(StyledButton,{...props})});Button.displayName="Button",Button.defaultProps={type:"button"};var src_button=Button;try{button.displayName="button",button.__docgenInfo={description:"",displayName:"button",props:{}},"undefined"!=typeof STORYBOOK_REACT_CLASSES&&(STORYBOOK_REACT_CLASSES["src/button/index.tsx#button"]={docgenInfo:button.__docgenInfo,name:"button",path:"src/button/index.tsx#button"})}catch(__react_docgen_typescript_loader_error){}const meta={title:"Design System/Components",component:src_button,argTypes:{type:{options:["button","submit","reset"],control:{type:"radio"}}},args:{children:"Lorem ipsum",type:"button",disabled:!1}},ButtonStory=args=>(0,jsx_runtime.jsx)(src_button,{...args});ButtonStory.displayName="ButtonStory",ButtonStory.storyName="Button";var index_stories=meta;ButtonStory.parameters={...ButtonStory.parameters,docs:{...ButtonStory.parameters?.docs,source:{originalSource:"args => <Button {...args} />",...ButtonStory.parameters?.docs?.source}}};const __namedExportsOrder=["ButtonStory"]}}]);
-//# sourceMappingURL=button-stories-index-stories.2943c058.iframe.bundle.js.map
+//# sourceMappingURL=button-stories-index-stories.ba777ff1.iframe.bundle.js.map
