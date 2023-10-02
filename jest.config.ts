@@ -2,7 +2,7 @@ import type {JestConfigWithTsJest} from 'ts-jest';
 
 const config: JestConfigWithTsJest = {
   preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  testEnvironment: '@happy-dom/jest-environment',
   setupFilesAfterEnv: ['<rootDir>/src/setup-tests.ts'],
   transform: {
     // eslint-disable-next-line @typescript-eslint/naming-convention
