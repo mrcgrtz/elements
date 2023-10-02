@@ -7,10 +7,10 @@ import React, {StrictMode} from 'react';
 import {styled} from 'styled-components';
 
 type Props = {
-  title?: string;
-  url?: string;
-  urlRelations?: string[];
-  solidColor?: string;
+  readonly title?: string;
+  readonly url?: string;
+  readonly urlRelations?: string[];
+  readonly solidColor?: string;
 };
 
 const Svg = styled.svg`

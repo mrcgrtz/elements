@@ -19,10 +19,10 @@ type LinesProps = {
 };
 
 type Props = {
-  label?: string;
-  labelActive?: string;
-  id?: string;
-  position: Position;
+  readonly label?: string;
+  readonly labelActive?: string;
+  readonly id?: string;
+  readonly position: Position;
 };
 
 const Input = styled.input<{$position: Position}>`

@@ -17,7 +17,7 @@ import {
 } from '../constants/date-formats';
 
 type Props = {
-  dateTime: Date | number;
+  readonly dateTime: Date | number;
 };
 
 const Wrapper = styled.time`
