@@ -9,7 +9,7 @@ import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
 
 type Props = {
-  history?: Array<{
+  readonly history?: Array<{
     content: string;
     name?: string;
     timestamp?: Date;
