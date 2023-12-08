@@ -27,10 +27,13 @@ type Props = {
 
 const Input = styled.input<{$position: Position}>`
   position: absolute;
-  inset-block-start: ${(p) => p.$position.blockStart ?? ''};
-  inset-block-end: ${(p) => p.$position.blockEnd ?? ''};
-  inset-inline-start: ${(p) => p.$position.inlineStart ?? ''};
-  inset-inline-end: ${(p) => p.$position.inlineEnd ?? ''};
+  inset: ${(p) =>
+    [
+      p.$position.blockStart ?? 'auto',
+      p.$position.inlineEnd ?? 'auto',
+      p.$position.blockEnd ?? 'auto',
+      p.$position.inlineStart ?? 'auto',
+    ].join(' ')};
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
@@ -39,10 +42,13 @@ const Input = styled.input<{$position: Position}>`
 
 const Hamburger = styled.label<{$position: Position}>`
   position: absolute;
-  inset-block-start: ${(p) => p.$position.blockStart ?? ''};
-  inset-block-end: ${(p) => p.$position.blockEnd ?? ''};
-  inset-inline-start: ${(p) => p.$position.inlineStart ?? ''};
-  inset-inline-end: ${(p) => p.$position.inlineEnd ?? ''};
+  inset: ${(p) =>
+    [
+      p.$position.blockStart ?? 'auto',
+      p.$position.inlineEnd ?? 'auto',
+      p.$position.blockEnd ?? 'auto',
+      p.$position.inlineStart ?? 'auto',
+    ].join(' ')};
   z-index: 1;
   inline-size: 2em;
   block-size: 1.5em;

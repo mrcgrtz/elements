@@ -95,8 +95,7 @@ const Time = styled.time<{$isMe: boolean}>`
   display: none;
   position: absolute;
   inset-block-start: 100%;
-  inset-inline-start: ${(p) => (p.$isMe ? '' : '0.666667em')};
-  inset-inline-end: ${(p) => (p.$isMe ? '0.666667em' : '')};
+  inset-inline: ${(p) => (p.$isMe ? 'auto 0.666667em' : '0.666667em auto')};
   margin-block-start: 0.25em;
   text-align: ${(p) => (p.$isMe ? 'end' : 'start')};
   font-size: 0.75rem;
