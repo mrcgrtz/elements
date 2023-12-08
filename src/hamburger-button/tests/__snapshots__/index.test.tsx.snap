@@ -3,53 +3,251 @@
 exports[`<HamburgerButton /> renders a hamburger button 1`] = `
 .c0 {
   position: absolute;
-  inset-block-start: 1em;
-  inset-inline-start: 1em;
+  inset: 1em auto auto 1em;
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
 }
 
-<input
-  class="c0"
-  id="toggle"
-  type="checkbox"
-/>
+.c1 {
+  position: absolute;
+  inset: 1em auto auto 1em;
+  z-index: 1;
+  inline-size: 2em;
+  block-size: 1.5em;
+  cursor: pointer;
+}
+
+.c2 {
+  inset-block-start: 50%;
+  margin-block-start: -2px;
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.c2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-start: -10px;
+  transition: inset-block-start 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+}
+
+.c2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-end: -10px;
+  transition: inset-block-end 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+<div>
+  <input
+    class="c0"
+    id="toggle"
+    type="checkbox"
+  />
+  <label
+    aria-label="Menü anzeigen"
+    class="c1"
+    for="toggle"
+  >
+    <span
+      class="c2"
+    />
+  </label>
+</div>
 `;
 
 exports[`<HamburgerButton /> toggles the hamburger button on change 1`] = `
 .c0 {
   position: absolute;
-  inset-block-end: 1em;
-  inset-inline-end: 1em;
+  inset: auto 1em 1em auto;
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
 }
 
-<input
-  class="c0"
-  id="toggle"
-  type="checkbox"
-/>
+.c1 {
+  position: absolute;
+  inset: auto 1em 1em auto;
+  z-index: 1;
+  inline-size: 2em;
+  block-size: 1.5em;
+  cursor: pointer;
+}
+
+.c2 {
+  inset-block-start: 50%;
+  margin-block-start: -2px;
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.c2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-start: -10px;
+  transition: inset-block-start 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+}
+
+.c2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-end: -10px;
+  transition: inset-block-end 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+<div>
+  <input
+    class="c0"
+    id="toggle"
+    type="checkbox"
+  />
+  <label
+    aria-label="Menü anzeigen"
+    class="c1"
+    for="toggle"
+  >
+    <span
+      class="c2"
+    />
+  </label>
+</div>
 `;
 
 exports[`<HamburgerButton /> toggles the hamburger button on change 2`] = `
 .c0 {
   position: absolute;
-  inset-block-end: 1em;
-  inset-inline-end: 1em;
+  inset: auto 1em 1em auto;
   inline-size: 1px;
   block-size: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
 }
 
-<input
-  class="c0"
-  id="toggle"
-  type="checkbox"
-/>
+.c1 {
+  position: absolute;
+  inset: auto 1em 1em auto;
+  z-index: 1;
+  inline-size: 2em;
+  block-size: 1.5em;
+  cursor: pointer;
+}
+
+.c2 {
+  inset-block-start: 50%;
+  margin-block-start: -2px;
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.c2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-start: 0;
+  opacity: 0;
+  transition: inset-block-start 0.1s ease-out,opacity 0.1s 0.12s ease-out;
+}
+
+.c2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: currentColor;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  inset-block-end: 0;
+  transform: rotate(-90deg);
+  transition: inset-block-end 0.1s ease-out,transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+<div>
+  <input
+    class="c0"
+    id="toggle"
+    type="checkbox"
+  />
+  <label
+    aria-label="Menü ausblenden"
+    class="c1"
+    for="toggle"
+  >
+    <span
+      class="c2"
+    />
+  </label>
+</div>
 `;

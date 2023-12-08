@@ -143,7 +143,7 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   display: none;
   position: absolute;
   inset-block-start: 100%;
-  inset-inline-start: 0.666667em;
+  inset-inline: 0.666667em auto;
   margin-block-start: 0.25em;
   text-align: start;
   font-size: 0.75rem;
@@ -156,7 +156,7 @@ exports[`<Chat /> renders a full-featured chat 1`] = `
   display: none;
   position: absolute;
   inset-block-start: 100%;
-  inset-inline-end: 0.666667em;
+  inset-inline: auto 0.666667em;
   margin-block-start: 0.25em;
   text-align: end;
   font-size: 0.75rem;
