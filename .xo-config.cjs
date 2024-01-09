@@ -11,6 +11,10 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'n/file-extension-in-import': [
+      'error',
+      'never',
+    ],
     'react/function-component-definition': [
       'error',
       {
