@@ -16,7 +16,7 @@ import {
   isoDateTime,
 } from '../constants/date-formats';
 
-type Props = {
+type Properties = {
   readonly dateTime: Date | number;
 };
 
@@ -127,7 +127,7 @@ const transformMinute = (minute: string) => {
   return Number(minute) * degreesPerMinute;
 };
 
-const DateTime = ({dateTime, ...rest}: Props): JSX.Element => {
+const DateTime = ({dateTime, ...rest}: Properties): JSX.Element => {
   const f = (as: string) => format(dateTime, as, {locale: de});
 
   return (

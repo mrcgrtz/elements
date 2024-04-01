@@ -3,8 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode, useState} from 'react';
-import type {ComponentType} from 'react';
+import React, {StrictMode, useState, type ComponentType} from 'react';
 import {styled} from 'styled-components';
 
 type Position = {
@@ -14,11 +13,11 @@ type Position = {
   inlineEnd?: string;
 };
 
-type LinesProps = {
+type LinesProperties = {
   $isX: boolean;
 };
 
-type Props = {
+type Properties = {
   readonly label?: string;
   readonly labelActive?: string;
   readonly id?: string;
@@ -67,7 +66,7 @@ const LinesCommon = `
   transition-timing-function: ease;
 `;
 
-const Lines = styled.span<LinesProps>`
+const Lines = styled.span<LinesProperties>`
   inset-block-start: 50%;
   margin-block-start: -2px;
   ${LinesCommon}
@@ -114,14 +113,14 @@ const Lines = styled.span<LinesProps>`
       transition: inset-block-end 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     `}
   }
-` as ComponentType<LinesProps>;
+` as ComponentType<LinesProperties>;
 
 const HamburgerButton = ({
   label,
   labelActive,
   id,
   position,
-}: Props): JSX.Element => {
+}: Properties): JSX.Element => {
   const [checked, setChecked] = useState(false);
 
   return (

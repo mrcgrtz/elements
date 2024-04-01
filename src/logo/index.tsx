@@ -6,7 +6,7 @@
 import React, {StrictMode} from 'react';
 import {styled} from 'styled-components';
 
-type Props = {
+type Properties = {
   readonly title?: string;
   readonly url?: string;
   readonly urlRelations?: string[];
@@ -19,7 +19,12 @@ const Svg = styled.svg`
   vertical-align: bottom;
 `;
 
-const Logo = ({title, url, urlRelations, solidColor}: Props): JSX.Element => (
+const Logo = ({
+  title,
+  url,
+  urlRelations,
+  solidColor,
+}: Properties): JSX.Element => (
   <StrictMode>
     <a
       href={url}

@@ -8,7 +8,7 @@ import {styled} from 'styled-components';
 import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
 
-type Props = {
+type Properties = {
   readonly history?: Array<{
     content: string;
     name?: string;
@@ -104,7 +104,7 @@ const Time = styled.time<{$isMe: boolean}>`
   white-space: nowrap;
 `;
 
-const Chat = ({history}: Props) => {
+const Chat = ({history}: Properties) => {
   if (!history || history.length === 0) {
     return null;
   }

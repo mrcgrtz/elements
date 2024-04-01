@@ -37,11 +37,11 @@ const StyledButton = styled.button`
   }
 `;
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement>;
+type Properties = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = (props: Props) => (
+const Button = (properties: Properties) => (
   <StrictMode>
-    <StyledButton {...props} />
+    <StyledButton {...properties} />
   </StrictMode>
 );
 
