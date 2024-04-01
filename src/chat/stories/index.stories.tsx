@@ -53,7 +53,9 @@ const meta: Meta = {
   },
 };
 
-export const ChatStory: StoryFn<typeof Chat> = (args) => <Chat {...args} />;
+export const ChatStory: StoryFn<typeof Chat> = (properties) => (
+  <Chat {...properties} />
+);
 ChatStory.storyName = 'Chat';
 
 export default meta;

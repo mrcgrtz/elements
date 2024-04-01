@@ -18,8 +18,8 @@ const meta: Meta = {
   },
 };
 
-export const ButtonStory: StoryFn<typeof Button> = (args) => (
-  <Button {...args} />
+export const ButtonStory: StoryFn<typeof Button> = (properties) => (
+  <Button {...properties} />
 );
 ButtonStory.storyName = 'Button';
 
