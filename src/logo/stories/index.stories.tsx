@@ -1,5 +1,5 @@
 import React from 'react';
-import type {Story, Meta} from '@storybook/react';
+import type {StoryFn, Meta} from '@storybook/react';
 import Logo from '..';
 
 const meta: Meta = {
@@ -12,7 +12,7 @@ const meta: Meta = {
   },
 };
 
-const Template: Story = (args) => <Logo {...args} />;
+const Template: StoryFn<typeof Logo> = (properties) => <Logo {...properties} />;
 
 export const LogoStory = Template.bind({});
 LogoStory.storyName = 'Default logo';
