@@ -7,7 +7,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.24.1",
-    "@happy-dom/jest-environment": "^12.10.3",
+    "@happy-dom/jest-environment": "^14.7.1",
     "@storybook/addon-a11y": "^8.0.5",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addons": "^7.6.17",
