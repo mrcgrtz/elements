@@ -42,7 +42,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "webpack": "^5.94.0",
-    "xo": "^0.58.0"
+    "xo": "^0.59.3"
   },
   "overrides": {
     "glob-parent": "^6.0.2"
