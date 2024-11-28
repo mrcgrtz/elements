@@ -104,8 +104,8 @@ const Time = styled.time<{$isMe: boolean}>`
   white-space: nowrap;
 `;
 
-const Chat = ({history}: Properties) => {
-  if (!history || history.length === 0) {
+const Chat = ({history = []}: Properties) => {
+  if (history.length === 0) {
     return null;
   }
 
@@ -163,10 +163,6 @@ const Chat = ({history}: Properties) => {
       </List>
     </StrictMode>
   );
-};
-
-Chat.defaultProps = {
-  history: [],
 };
 
 export default Chat;

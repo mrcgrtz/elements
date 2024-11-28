@@ -4,7 +4,7 @@
  */
 
 import React, {StrictMode, useState, type ComponentType} from 'react';
-import {styled} from 'styled-components';
+import {css, styled} from 'styled-components';
 
 type Position = {
   blockStart?: string;
@@ -72,30 +72,34 @@ const Lines = styled.span<LinesProperties>`
   ${LinesCommon}
   ${(p) =>
     p.$isX
-      ? `
-    transform: rotate(225deg);
-    transition-delay: 0.12s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  `
-      : `
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-  `}
+      ? css`
+          transform: rotate(225deg);
+          transition-delay: 0.12s;
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        `
+      : css`
+          transition-duration: 0.2s;
+          transition-timing-function: ease;
+        `}
 
   &::before {
     content: '';
     ${LinesCommon}
     ${(p) =>
       p.$isX
-        ? `
-      inset-block-start: 0;
-      opacity: 0;
-      transition: inset-block-start 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    `
-        : `
-      inset-block-start: -10px;
-      transition: inset-block-start 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    `}
+        ? css`
+            inset-block-start: 0;
+            opacity: 0;
+            transition:
+              inset-block-start 0.1s ease-out,
+              opacity 0.1s 0.12s ease-out;
+          `
+        : css`
+            inset-block-start: -10px;
+            transition:
+              inset-block-start 0.1s 0.25s ease-in,
+              opacity 0.1s ease-in;
+          `}
   }
 
   &::after {
@@ -103,22 +107,26 @@ const Lines = styled.span<LinesProperties>`
     ${LinesCommon}
     ${(p) =>
       p.$isX
-        ? `
-      inset-block-end: 0;
-      transform: rotate(-90deg);
-      transition: inset-block-end 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    `
-        : `
-      inset-block-end: -10px;
-      transition: inset-block-end 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    `}
+        ? css`
+            inset-block-end: 0;
+            transform: rotate(-90deg);
+            transition:
+              inset-block-end 0.1s ease-out,
+              transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+          `
+        : css`
+            inset-block-end: -10px;
+            transition:
+              inset-block-end 0.1s 0.25s ease-in,
+              transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          `}
   }
 ` as ComponentType<LinesProperties>;
 
 const HamburgerButton = ({
-  label,
-  labelActive,
-  id,
+  label = 'Menü anzeigen',
+  labelActive = 'Menü ausblenden',
+  id = 'toggle',
   position,
 }: Properties): JSX.Element => {
   const [checked, setChecked] = useState(false);
@@ -143,12 +151,6 @@ const HamburgerButton = ({
       </Hamburger>
     </StrictMode>
   );
-};
-
-HamburgerButton.defaultProps = {
-  label: 'Menü anzeigen',
-  labelActive: 'Menü ausblenden',
-  id: 'toggle',
 };
 
 export default HamburgerButton;

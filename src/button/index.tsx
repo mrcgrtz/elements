@@ -39,14 +39,10 @@ const StyledButton = styled.button`
 
 type Properties = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = (properties: Properties) => (
+const Button = ({type = 'button', ...rest}: Properties) => (
   <StrictMode>
-    <StyledButton {...properties} />
+    <StyledButton type={type} {...rest} />
   </StrictMode>
 );
-
-Button.defaultProps = {
-  type: 'button',
-};
 
 export default Button;

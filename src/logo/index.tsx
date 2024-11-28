@@ -20,9 +20,9 @@ const Svg = styled.svg`
 `;
 
 const Logo = ({
-  title,
-  url,
-  urlRelations,
+  title = 'Marc Görtz',
+  url = 'https://marcgoertz.de/',
+  urlRelations = ['start', 'me'],
   solidColor,
 }: Properties): JSX.Element => (
   <StrictMode>
@@ -106,12 +106,5 @@ const Logo = ({
     </a>
   </StrictMode>
 );
-
-Logo.defaultProps = {
-  title: 'Marc Görtz',
-  url: 'https://marcgoertz.de/',
-  urlRelations: ['start', 'me'],
-  solidColor: '',
-};
 
 export default Logo;

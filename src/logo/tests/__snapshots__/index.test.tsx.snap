@@ -16,7 +16,6 @@ exports[`<Logo /> renders a logo 1`] = `
   <svg
     aria-labelledby="logo-title"
     class="c0"
-    fill=""
     role="img"
     viewBox="0 0 340 190"
     xmlns="http://www.w3.org/2000/svg"
