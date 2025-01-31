@@ -59,5 +59,8 @@
     "test": "jest",
     "test:coverage": "jest --silent --coverage",
     "test:watch": "jest --watchAll"
+  },
+  "devDependencies": {
+    "stylelint-prettier": "^5.0.3"
   }
 }
