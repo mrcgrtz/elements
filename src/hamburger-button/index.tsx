@@ -3,7 +3,14 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode, useState, type ComponentType} from 'react';
+import React, {
+  memo,
+  StrictMode,
+  useCallback,
+  useState,
+  type ComponentType,
+  type FC,
+} from 'react';
 import {css, styled} from 'styled-components';
 
 type Position = {
@@ -123,13 +130,17 @@ const Lines = styled.span<LinesProperties>`
   }
 ` as ComponentType<LinesProperties>;
 
-const HamburgerButton = ({
+const HamburgerButton: FC<Properties> = ({
   label = 'Menü anzeigen',
   labelActive = 'Menü ausblenden',
   id = 'toggle',
   position,
-}: Properties): JSX.Element => {
+}) => {
   const [checked, setChecked] = useState(false);
+
+  const handleChange = useCallback(() => {
+    setChecked((previous) => !previous);
+  }, []);
 
   return (
     <StrictMode>
@@ -138,9 +149,7 @@ const HamburgerButton = ({
         id={id}
         $position={position}
         checked={checked}
-        onChange={(): void => {
-          setChecked(!checked);
-        }}
+        onChange={handleChange}
       />
       <Hamburger
         htmlFor={id}
@@ -153,4 +162,4 @@ const HamburgerButton = ({
   );
 };
 
-export default HamburgerButton;
+export default memo(HamburgerButton);

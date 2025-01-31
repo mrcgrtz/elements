@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode} from 'react';
+import React, {type FC, memo, StrictMode, useMemo} from 'react';
 import {styled} from 'styled-components';
 import {format} from 'date-fns';
 import {de} from 'date-fns/locale/de';
@@ -21,17 +21,7 @@ type Properties = {
 };
 
 const Wrapper = styled.time`
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
+  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 0.75rem;
   line-height: 1.5;
@@ -117,18 +107,17 @@ const getTimeOfDay = (hour: string) => {
   }
 };
 
-const transformHour = (hour: string) => {
-  const degreesPerHour = 360 / 12;
-  return Number(hour) * degreesPerHour;
-};
+const transformHour = (hour: number) => hour * (360 / 12);
+const transformMinute = (minute: number) => minute * (360 / 60);
 
-const transformMinute = (minute: string) => {
-  const degreesPerMinute = 360 / 60;
-  return Number(minute) * degreesPerMinute;
-};
+const DateTime: FC<Properties> = ({dateTime, ...rest}) => {
+  const f = useMemo(
+    () => (as: string) => format(dateTime, as, {locale: de}),
+    [dateTime]
+  );
 
-const DateTime = ({dateTime, ...rest}: Properties): JSX.Element => {
-  const f = (as: string) => format(dateTime, as, {locale: de});
+  const hourValue = Number(f(hour));
+  const minuteValue = Number(f(minute));
 
   return (
     <StrictMode>
@@ -162,7 +151,7 @@ const DateTime = ({dateTime, ...rest}: Properties): JSX.Element => {
             strokeLinecap="round"
             strokeWidth="1.35"
             fill="none"
-            transform={`rotate(${transformHour(f(hour))} 6 6)`}
+            transform={`rotate(${transformHour(hourValue)} 6 6)`}
           />
           <line
             x1="6"
@@ -173,7 +162,7 @@ const DateTime = ({dateTime, ...rest}: Properties): JSX.Element => {
             strokeLinecap="round"
             strokeWidth="1.35"
             fill="none"
-            transform={`rotate(${transformMinute(f(minute))} 6 6)`}
+            transform={`rotate(${transformMinute(minuteValue)} 6 6)`}
           />
         </Svg>
         {getTimeOfDay(f(hour))} {f(date)}
@@ -182,4 +171,4 @@ const DateTime = ({dateTime, ...rest}: Properties): JSX.Element => {
   );
 };
 
-export default DateTime;
+export default memo(DateTime);

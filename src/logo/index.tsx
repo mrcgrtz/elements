@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode} from 'react';
+import React, {type FC, memo, StrictMode} from 'react';
 import {styled} from 'styled-components';
 
 type Properties = {
@@ -19,12 +19,12 @@ const Svg = styled.svg`
   vertical-align: bottom;
 `;
 
-const Logo = ({
+const Logo: FC<Properties> = ({
   title = 'Marc Görtz',
   url = 'https://marcgoertz.de/',
   urlRelations = ['start', 'me'],
   solidColor,
-}: Properties): JSX.Element => (
+}) => (
   <StrictMode>
     <a
       href={url}
@@ -107,4 +107,4 @@ const Logo = ({
   </StrictMode>
 );
 
-export default Logo;
+export default memo(Logo);

@@ -3,20 +3,24 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode} from 'react';
+import React, {type FC, memo, StrictMode, useCallback} from 'react';
 import {styled} from 'styled-components';
 import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
 
+/* eslint-disable react/no-unused-prop-types -- This is a false positive. */
+type ChatMessage = {
+  readonly content: string;
+  readonly name?: string;
+  readonly timestamp?: Date;
+  readonly isMe?: boolean;
+  readonly isEmoji?: boolean;
+  readonly isAction?: boolean;
+};
+/* eslint-enable react/no-unused-prop-types */
+
 type Properties = {
-  readonly history?: Array<{
-    content: string;
-    name?: string;
-    timestamp?: Date;
-    isMe?: boolean;
-    isEmoji?: boolean;
-    isAction?: boolean;
-  }>;
+  readonly history?: ChatMessage[];
 };
 
 const List = styled.ol`
@@ -24,17 +28,7 @@ const List = styled.ol`
   flex-direction: column;
   padding: 0;
   list-style: none;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
+  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: 1.25;
 `;
@@ -104,65 +98,62 @@ const Time = styled.time<{$isMe: boolean}>`
   white-space: nowrap;
 `;
 
-const Chat = ({history = []}: Properties) => {
+const Chat: FC<Properties> = ({history = []}) => {
+  const renderMessage = useCallback(
+    ({
+      content,
+      name,
+      timestamp,
+      isEmoji = false,
+      isMe = false,
+      isAction = false,
+    }: ChatMessage) => {
+      if (isAction) {
+        return <Action key={content}>{content}</Action>;
+      }
+
+      if (isEmoji) {
+        return (
+          <EmojiBubble
+            key={content}
+            $isMe={isMe}
+            tabIndex={timestamp ? 0 : undefined}
+          >
+            {name && <Name hidden>{name}</Name>}
+            <Quote>{content}</Quote>
+            {timestamp && (
+              <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
+                {formatRelative(timestamp, new Date())}
+              </Time>
+            )}
+          </EmojiBubble>
+        );
+      }
+
+      return (
+        <Bubble key={content} $isMe={isMe} tabIndex={timestamp ? 0 : undefined}>
+          {name && <Name>{name}</Name>}
+          <Quote>{content}</Quote>
+          {timestamp && (
+            <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
+              {formatRelative(timestamp, new Date())}
+            </Time>
+          )}
+        </Bubble>
+      );
+    },
+    []
+  );
+
   if (history.length === 0) {
     return null;
   }
 
   return (
     <StrictMode>
-      <List>
-        {history.map(
-          ({
-            content,
-            name,
-            timestamp,
-            isEmoji = false,
-            isMe = false,
-            isAction = false,
-          }) => {
-            if (isAction) {
-              return <Action key={content}>{content}</Action>;
-            }
-
-            if (isEmoji) {
-              return (
-                <EmojiBubble
-                  key={content}
-                  $isMe={isMe}
-                  tabIndex={timestamp ? 0 : undefined}
-                >
-                  {name && <Name hidden>{name}</Name>}
-                  <Quote>{content}</Quote>
-                  {timestamp && (
-                    <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
-                      {formatRelative(timestamp, new Date())}
-                    </Time>
-                  )}
-                </EmojiBubble>
-              );
-            }
-
-            return (
-              <Bubble
-                key={content}
-                $isMe={isMe}
-                tabIndex={timestamp ? 0 : undefined}
-              >
-                {name && <Name>{name}</Name>}
-                <Quote>{content}</Quote>
-                {timestamp && (
-                  <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
-                    {formatRelative(timestamp, new Date())}
-                  </Time>
-                )}
-              </Bubble>
-            );
-          }
-        )}
-      </List>
+      <List>{history.map((message) => renderMessage(message))}</List>
     </StrictMode>
   );
 };
 
-export default Chat;
+export default memo(Chat);

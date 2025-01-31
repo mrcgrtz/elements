@@ -3,7 +3,12 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {StrictMode, type ButtonHTMLAttributes} from 'react';
+import React, {
+  memo,
+  StrictMode,
+  type ButtonHTMLAttributes,
+  type FC,
+} from 'react';
 import {styled} from 'styled-components';
 
 const StyledButton = styled.button`
@@ -12,17 +17,7 @@ const StyledButton = styled.button`
   padding: 0.25rem 1rem;
   border: 0;
   font-size: inherit;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
+  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: inherit;
   color: white;
@@ -39,10 +34,10 @@ const StyledButton = styled.button`
 
 type Properties = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({type = 'button', ...rest}: Properties) => (
+const Button: FC<Properties> = ({type = 'button', ...rest}) => (
   <StrictMode>
     <StyledButton type={type} {...rest} />
   </StrictMode>
 );
 
-export default Button;
+export default memo(Button);
