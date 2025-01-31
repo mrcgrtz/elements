@@ -4,17 +4,7 @@
   padding: 0.25rem 1rem;
   border: 0;
   font-size: inherit;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
+  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: inherit;
   color: white;
@@ -27,5 +17,5 @@
   &:focus {
     background-color: dodgerblue;
   }
-`,Button=({type:type="button",...rest})=>react.createElement(react.StrictMode,null,react.createElement(StyledButton,_extends({type:type},rest)));var src_button=Button;Button.__docgenInfo={description:"",methods:[],displayName:"Button",props:{type:{defaultValue:{value:"'button'",computed:!1},required:!1}}};const meta={title:"Design System/Components",component:src_button,argTypes:{type:{options:["button","submit","reset"],control:{type:"radio"}}},args:{children:"Lorem ipsum",type:"button",disabled:!1}},ButtonStory=properties=>react.createElement(src_button,properties);ButtonStory.storyName="Button";var index_stories=meta;const __namedExportsOrder=["ButtonStory"];ButtonStory.parameters={...ButtonStory.parameters,docs:{...ButtonStory.parameters?.docs,source:{originalSource:"properties => <Button {...properties} />",...ButtonStory.parameters?.docs?.source}}}}}]);
-//# sourceMappingURL=button-stories-index-stories.4923031b.iframe.bundle.js.map
+`,Button=({type:type="button",...rest})=>react.createElement(react.StrictMode,null,react.createElement(StyledButton,_extends({type:type},rest)));var src_button=(0,react.memo)(Button);Button.__docgenInfo={description:"",methods:[],displayName:"Button",props:{type:{defaultValue:{value:"'button'",computed:!1},required:!1}}};const meta={title:"Design System/Components",component:src_button,argTypes:{type:{options:["button","submit","reset"],control:{type:"radio"}}},args:{children:"Lorem ipsum",type:"button",disabled:!1}},ButtonStory=properties=>react.createElement(src_button,properties);ButtonStory.storyName="Button";var index_stories=meta;const __namedExportsOrder=["ButtonStory"];ButtonStory.parameters={...ButtonStory.parameters,docs:{...ButtonStory.parameters?.docs,source:{originalSource:"properties => <Button {...properties} />",...ButtonStory.parameters?.docs?.source}}}}}]);
+//# sourceMappingURL=button-stories-index-stories.ecb7c3bd.iframe.bundle.js.map
