@@ -38,7 +38,7 @@
     "storybook": "^8.5.2",
     "styled-components": "^6.1.14",
     "stylelint": "^16.14.1",
-    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard": "^37.0.0",
     "stylis": "^4.3.5",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
