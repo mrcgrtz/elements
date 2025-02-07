@@ -13,7 +13,7 @@ const meta: Meta = {
 };
 
 export const HamburgerButtonStory: StoryFn<typeof HamburgerButton> = (
-  properties
+  properties,
 ) => <HamburgerButton {...properties} />;
 HamburgerButtonStory.storyName = 'Hamburger button';
 

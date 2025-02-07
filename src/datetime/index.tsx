@@ -113,7 +113,7 @@ const transformMinute = (minute: number) => minute * (360 / 60);
 const DateTime: FC<Properties> = ({dateTime, ...rest}) => {
   const f = useMemo(
     () => (as: string) => format(dateTime, as, {locale: de}),
-    [dateTime]
+    [dateTime],
   );
 
   const hourValue = Number(f(hour));

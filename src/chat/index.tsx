@@ -142,7 +142,7 @@ const Chat: FC<Properties> = ({history = []}) => {
         </Bubble>
       );
     },
-    []
+    [],
   );
 
   if (history.length === 0) {
