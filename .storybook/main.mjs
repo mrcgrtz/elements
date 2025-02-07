@@ -1,5 +1,5 @@
 /** @type {import('@storybook/core-common').StorybookConfig} */
-module.exports = {
+export default {
   stories: ['../src/**/*.stories.tsx'],
   framework: {
     name: '@storybook/react-webpack5',
