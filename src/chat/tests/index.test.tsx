@@ -65,17 +65,17 @@ const mockFullHistory = [
 ];
 
 describe('<Chat />', () => {
-  it('renders no chat by default', () => {
+  test('renders no chat by default', () => {
     const {container} = render(<Chat />);
     expect(container.firstChild).toBeNull();
   });
 
-  it('renders a basic chat', () => {
+  test('renders a basic chat', () => {
     const {container} = render(<Chat history={mockHistory} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('renders a full-featured chat', () => {
+  test('renders a full-featured chat', () => {
     const {container} = render(<Chat history={mockFullHistory} />);
     expect(container.firstChild).toMatchSnapshot();
   });

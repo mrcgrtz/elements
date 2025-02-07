@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Button /> renders a button 1`] = `
+exports[`<Button /> > renders a button 1`] = `
 .c0 {
   display: inline-block;
   margin: 0;

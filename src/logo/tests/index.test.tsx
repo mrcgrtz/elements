@@ -8,11 +8,11 @@ import {render} from '@testing-library/react';
 import Logo from '..';
 
 describe('<Logo />', () => {
-  it('renders a logo', () => {
+  test('renders a logo', () => {
     const {container} = render(<Logo />);
     expect(container.firstChild).toMatchSnapshot();
   });
-  it('renders a logo with a solid color', () => {
+  test('renders a logo with a solid color', () => {
     const {container} = render(<Logo solidColor="#BADA55" />);
     expect(container.firstChild).toMatchSnapshot();
   });

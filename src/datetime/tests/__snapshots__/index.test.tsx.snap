@@ -1,54 +1,54 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<DateTime /> on different times of the day renders a text for 0 o’clock 1`] = `"00:00 UhrNachts am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 0 o’clock 1`] = `"00:00 UhrNachts am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 1 o’clock 1`] = `"01:00 UhrNachts am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 1 o’clock 1`] = `"01:00 UhrNachts am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 2 o’clock 1`] = `"02:00 UhrNachts am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 2 o’clock 1`] = `"02:00 UhrNachts am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 3 o’clock 1`] = `"03:00 UhrNachts am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 3 o’clock 1`] = `"03:00 UhrNachts am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 4 o’clock 1`] = `"04:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 4 o’clock 1`] = `"04:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 5 o’clock 1`] = `"05:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 5 o’clock 1`] = `"05:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 6 o’clock 1`] = `"06:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 6 o’clock 1`] = `"06:00 UhrVerdammt früh am Morgen des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 7 o’clock 1`] = `"07:00 UhrMorgens am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 7 o’clock 1`] = `"07:00 UhrMorgens am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 8 o’clock 1`] = `"08:00 UhrMorgens am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 8 o’clock 1`] = `"08:00 UhrMorgens am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 9 o’clock 1`] = `"09:00 UhrMorgens am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 9 o’clock 1`] = `"09:00 UhrMorgens am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 10 o’clock 1`] = `"10:00 UhrAm frühen Vormittag des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 10 o’clock 1`] = `"10:00 UhrAm frühen Vormittag des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 11 o’clock 1`] = `"11:00 UhrVormittags am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 11 o’clock 1`] = `"11:00 UhrVormittags am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 12 o’clock 1`] = `"12:00 UhrZur Mittagszeit am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 12 o’clock 1`] = `"12:00 UhrZur Mittagszeit am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 13 o’clock 1`] = `"13:00 UhrZur Mittagszeit am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 13 o’clock 1`] = `"13:00 UhrZur Mittagszeit am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 14 o’clock 1`] = `"14:00 UhrAm frühen Nachmittag des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 14 o’clock 1`] = `"14:00 UhrAm frühen Nachmittag des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 15 o’clock 1`] = `"15:00 UhrNachmittags am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 15 o’clock 1`] = `"15:00 UhrNachmittags am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 16 o’clock 1`] = `"16:00 UhrNachmittags am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 16 o’clock 1`] = `"16:00 UhrNachmittags am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 17 o’clock 1`] = `"17:00 UhrAm späten Nachmittag des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 17 o’clock 1`] = `"17:00 UhrAm späten Nachmittag des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 18 o’clock 1`] = `"18:00 UhrAm frühen Abend des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 18 o’clock 1`] = `"18:00 UhrAm frühen Abend des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 19 o’clock 1`] = `"19:00 UhrAm frühen Abend des 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 19 o’clock 1`] = `"19:00 UhrAm frühen Abend des 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 20 o’clock 1`] = `"20:00 UhrAbends am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 20 o’clock 1`] = `"20:00 UhrAbends am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 21 o’clock 1`] = `"21:00 UhrAbends am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 21 o’clock 1`] = `"21:00 UhrAbends am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 22 o’clock 1`] = `"22:00 UhrSpätabends am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 22 o’clock 1`] = `"22:00 UhrSpätabends am 12. Februar 2020"`;
 
-exports[`<DateTime /> on different times of the day renders a text for 23 o’clock 1`] = `"23:00 UhrKurz vor Mitternacht am 12. Februar 2020"`;
+exports[`<DateTime /> > on different times of the day > renders a text for 23 o’clock 1`] = `"23:00 UhrKurz vor Mitternacht am 12. Februar 2020"`;
 
-exports[`<DateTime /> renders a date and time information 1`] = `
+exports[`<DateTime /> > renders a date and time information 1`] = `
 .c0 {
   font-family: system-ui,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
   font-size: 0.75rem;

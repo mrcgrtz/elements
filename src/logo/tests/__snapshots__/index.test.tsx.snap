@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Logo /> renders a logo 1`] = `
+exports[`<Logo /> > renders a logo 1`] = `
 .c0 {
   inline-size: 340px;
   block-size: 190px;
@@ -196,7 +196,7 @@ exports[`<Logo /> renders a logo 1`] = `
 </a>
 `;
 
-exports[`<Logo /> renders a logo with a solid color 1`] = `
+exports[`<Logo /> > renders a logo with a solid color 1`] = `
 .c0 {
   inline-size: 340px;
   block-size: 190px;
