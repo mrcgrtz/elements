@@ -8,9 +8,6 @@ export default {
   core: {
     builder: '@storybook/builder-vite',
   },
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-a11y',
-  ],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
   disableTelemetry: true,
 };
