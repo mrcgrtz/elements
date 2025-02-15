@@ -1,10 +1,11 @@
-import{r as a,R as o}from"./index-BZISi7jw.js";import{d as c}from"./styled-components.browser.esm-CyZL_iJg.js";import"./_commonjsHelpers-CqkleIqs.js";const d=c.button`
+import{r as a,R as o}from"./index-BZISi7jw.js";import{d as c}from"./styled-components.browser.esm-DMp0W6nh.js";import"./_commonjsHelpers-CqkleIqs.js";const d=c.button`
   display: inline-block;
   margin: 0;
   padding: 0.25rem 1rem;
   border: 0;
   font-size: inherit;
-  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family:
+    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: inherit;
   color: white;
