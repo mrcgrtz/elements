@@ -17,7 +17,8 @@ const StyledButton = styled.button`
   padding: 0.25rem 1rem;
   border: 0;
   font-size: inherit;
-  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family:
+    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: inherit;
   color: white;

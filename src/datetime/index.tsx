@@ -21,7 +21,8 @@ type Properties = {
 };
 
 const Wrapper = styled.time`
-  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family:
+    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 0.75rem;
   line-height: 1.5;

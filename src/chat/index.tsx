@@ -28,7 +28,8 @@ const List = styled.ol`
   flex-direction: column;
   padding: 0;
   list-style: none;
-  font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family:
+    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   line-height: 1.25;
 `;
