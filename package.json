@@ -50,5 +50,8 @@
     "start": "storybook dev -p 9009",
     "test": "vitest",
     "test:coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "browserslist-config-mrcgrtz": "^1.0.0"
   }
 }
