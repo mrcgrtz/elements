@@ -12,7 +12,7 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.0.12",
-    "@vitest/coverage-istanbul": "^3.0.9",
+    "@vitest/coverage-istanbul": "^3.1.2",
     "date-fns": "^4.1.0",
     "eslint-config-xo-react": "^0.27.0",
     "eslint-plugin-react": "^7.37.4",
