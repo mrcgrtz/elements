@@ -1,4 +1,4 @@
-import{r as d,R as e}from"./index-CgfFrydU.js";import{d as u}from"./styled-components.browser.esm-BDB1dcsv.js";import"./_commonjsHelpers-CqkleIqs.js";const z=u.svg`
+import{r as d,R as e}from"./index-CgfFrydU.js";import{d as u}from"./styled-components.browser.esm-BH0zAyod.js";import"./_commonjsHelpers-CqkleIqs.js";const z=u.svg`
   inline-size: 340px;
   block-size: 190px;
   vertical-align: bottom;
