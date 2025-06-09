@@ -199,7 +199,7 @@ exports[`<HamburgerButton /> > toggles the hamburger button on change 2`] = `
   transition-timing-function: ease;
   transform: rotate(225deg);
   transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-timing-function: cubic-bezier( 						0.215, 						0.61, 						0.355, 						1 					);
 }
 
 .c2::before {

@@ -5,11 +5,11 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import Button from '..';
+import Button from '../index.tsx';
 
 describe('<Button />', () => {
-  test('renders a button', () => {
-    const {container} = render(<Button />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
+	test('renders a button', () => {
+		const {container} = render(<Button />);
+		expect(container.firstChild).toMatchSnapshot();
+	});
 });

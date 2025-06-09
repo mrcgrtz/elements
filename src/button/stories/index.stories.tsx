@@ -1,25 +1,25 @@
 import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react';
-import Button from '..';
+import Button from '../index.tsx';
 
 const meta: Meta = {
-  title: 'Design System/Components',
-  component: Button,
-  argTypes: {
-    type: {
-      options: ['button', 'submit', 'reset'],
-      control: {type: 'radio'},
-    },
-  },
-  args: {
-    children: 'Lorem ipsum',
-    type: 'button',
-    disabled: false,
-  },
+	title: 'Design System/Components',
+	component: Button,
+	argTypes: {
+		type: {
+			options: ['button', 'submit', 'reset'],
+			control: {type: 'radio'},
+		},
+	},
+	args: {
+		children: 'Lorem ipsum',
+		type: 'button',
+		disabled: false,
+	},
 };
 
 export const ButtonStory: StoryFn<typeof Button> = (properties) => (
-  <Button {...properties} />
+	<Button {...properties} />
 );
 ButtonStory.storyName = 'Button';
 
