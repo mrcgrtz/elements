@@ -1,22 +1,22 @@
 import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react';
-import DateTime from '..';
+import DateTime from '../index.tsx';
 
 const meta: Meta = {
-  title: 'Design System/Components',
-  component: DateTime,
-  argTypes: {
-    dateTime: {
-      control: 'date',
-    },
-  },
-  args: {
-    dateTime: new Date(),
-  },
+	title: 'Design System/Components',
+	component: DateTime,
+	argTypes: {
+		dateTime: {
+			control: 'date',
+		},
+	},
+	args: {
+		dateTime: new Date(),
+	},
 };
 
 export const DateTimeStory: StoryFn<typeof DateTime> = (properties) => (
-  <DateTime {...properties} />
+	<DateTime {...properties} />
 );
 DateTimeStory.storyName = 'Date and time';
 

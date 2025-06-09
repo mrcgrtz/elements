@@ -3,158 +3,166 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {type FC, memo, StrictMode, useCallback} from 'react';
+import React, {type FC, StrictMode, useCallback} from 'react';
 import {styled} from 'styled-components';
 import {format, formatRelative} from 'date-fns';
-import {isoDate} from '../constants/date-formats';
+import {isoDate} from '../constants/date-formats.ts';
 
-/* eslint-disable react/no-unused-prop-types -- This is a false positive. */
 type ChatMessage = {
-  readonly content: string;
-  readonly name?: string;
-  readonly timestamp?: Date;
-  readonly isMe?: boolean;
-  readonly isEmoji?: boolean;
-  readonly isAction?: boolean;
+	readonly content: string;
+	readonly name?: string;
+	readonly timestamp?: Date;
+	readonly isMe?: boolean;
+	readonly isEmoji?: boolean;
+	readonly isAction?: boolean;
 };
-/* eslint-enable react/no-unused-prop-types */
 
 type Properties = {
-  readonly history?: ChatMessage[];
+	readonly history?: ChatMessage[];
 };
 
 const List = styled.ol`
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  list-style: none;
-  font-family:
-    system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  line-height: 1.25;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	list-style: none;
+	font-family:
+		system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol';
+	line-height: 1.25;
 `;
 
 const Action = styled.li`
-  align-self: center;
-  margin: 0.5rem 0;
-  text-align: center;
-  max-inline-size: 80%;
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: gray;
+	align-self: center;
+	margin: 0.5rem 0;
+	text-align: center;
+	max-inline-size: 80%;
+	font-size: 0.75rem;
+	font-weight: bold;
+	color: gray;
 
-  & i {
-    font-style: normal;
-  }
+	& i {
+		font-style: normal;
+	}
 `;
 
 const Bubble = styled.li<{$isMe: boolean}>`
-  position: relative;
-  align-self: ${(p) => (p.$isMe ? 'flex-end' : 'flex-start')};
-  padding: 0.5rem;
-  border-radius: 0.75rem;
-  outline: 0;
-  max-inline-size: 60%;
-  color: ${(p) => (p.$isMe ? 'white' : 'black')};
-  background-color: ${(p) => (p.$isMe ? 'dodgerblue' : 'gainsboro')};
-  box-sizing: border-box;
+	position: relative;
+	align-self: ${p => (p.$isMe ? 'flex-end' : 'flex-start')};
+	padding: 0.5rem;
+	border-radius: 0.75rem;
+	outline: 0;
+	max-inline-size: 60%;
+	color: ${p => (p.$isMe ? 'white' : 'black')};
+	background-color: ${p => (p.$isMe ? 'dodgerblue' : 'gainsboro')};
+	box-sizing: border-box;
 
-  & + li {
-    margin-block-start: 0.5rem;
-  }
+	& + li {
+		margin-block-start: 0.5rem;
+	}
 
-  &:active time {
-    display: block;
-  }
+	&:active time {
+		display: block;
+	}
 `;
 
 const EmojiBubble = styled(Bubble)`
-  padding: 0;
-  font-size: 4em;
-  background-color: transparent;
+	padding: 0;
+	font-size: 4em;
+	background-color: transparent;
 `;
 
 const Name = styled.span<{hidden?: boolean}>`
-  display: ${(p) => (p.hidden ? 'none' : 'block')};
-  margin-block-end: 0.25em;
-  font-size: 0.75rem;
-  font-weight: bold;
+	display: ${p => (p.hidden ? 'none' : 'block')};
+	margin-block-end: 0.25em;
+	font-size: 0.75rem;
+	font-weight: bold;
 `;
 
 const Quote = styled.q`
-  display: block;
-  quotes: none;
+	display: block;
+	quotes: none;
 `;
 
 const Time = styled.time<{$isMe: boolean}>`
-  display: none;
-  position: absolute;
-  inset-block-start: 100%;
-  inset-inline: ${(p) => (p.$isMe ? 'auto 0.666667em' : '0.666667em auto')};
-  margin-block-start: 0.25em;
-  text-align: ${(p) => (p.$isMe ? 'end' : 'start')};
-  font-size: 0.75rem;
-  color: gray;
-  opacity: 0.75;
-  white-space: nowrap;
+	display: none;
+	position: absolute;
+	inset-block-start: 100%;
+	inset-inline: ${p => (p.$isMe ? 'auto 0.666667em' : '0.666667em auto')};
+	margin-block-start: 0.25em;
+	text-align: ${p => (p.$isMe ? 'end' : 'start')};
+	font-size: 0.75rem;
+	color: gray;
+	opacity: 0.75;
+	white-space: nowrap;
 `;
 
 const Chat: FC<Properties> = ({history = []}) => {
-  const renderMessage = useCallback(
-    ({
-      content,
-      name,
-      timestamp,
-      isEmoji = false,
-      isMe = false,
-      isAction = false,
-    }: ChatMessage) => {
-      if (isAction) {
-        return <Action key={content}>{content}</Action>;
-      }
+	const renderMessage = useCallback(
+		({
+			content,
+			name,
+			timestamp,
+			isEmoji = false,
+			isMe = false,
+			isAction = false,
+		}: ChatMessage) => {
+			if (isAction) {
+				return <Action key={content}>{content}</Action>;
+			}
 
-      if (isEmoji) {
-        return (
-          <EmojiBubble
-            key={content}
-            $isMe={isMe}
-            tabIndex={timestamp ? 0 : undefined}
-          >
-            {name && <Name hidden>{name}</Name>}
-            <Quote>{content}</Quote>
-            {timestamp && (
-              <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
-                {formatRelative(timestamp, new Date())}
-              </Time>
-            )}
-          </EmojiBubble>
-        );
-      }
+			if (isEmoji) {
+				return (
+					<EmojiBubble
+						key={content}
+						$isMe={isMe}
+						tabIndex={timestamp ? 0 : undefined}
+					>
+						{name && <Name hidden>{name}</Name>}
+						<Quote>{content}</Quote>
+						{timestamp && (
+							<Time
+								$isMe={isMe}
+								dateTime={format(timestamp, isoDate)}
+							>
+								{formatRelative(timestamp, new Date())}
+							</Time>
+						)}
+					</EmojiBubble>
+				);
+			}
 
-      return (
-        <Bubble key={content} $isMe={isMe} tabIndex={timestamp ? 0 : undefined}>
-          {name && <Name>{name}</Name>}
-          <Quote>{content}</Quote>
-          {timestamp && (
-            <Time $isMe={isMe} dateTime={format(timestamp, isoDate)}>
-              {formatRelative(timestamp, new Date())}
-            </Time>
-          )}
-        </Bubble>
-      );
-    },
-    [],
-  );
+			return (
+				<Bubble
+					key={content}
+					$isMe={isMe}
+					tabIndex={timestamp ? 0 : undefined}
+				>
+					{name && <Name>{name}</Name>}
+					<Quote>{content}</Quote>
+					{timestamp && (
+						<Time
+							$isMe={isMe}
+							dateTime={format(timestamp, isoDate)}
+						>
+							{formatRelative(timestamp, new Date())}
+						</Time>
+					)}
+				</Bubble>
+			);
+		},
+		[],
+	);
 
-  if (history.length === 0) {
-    return null;
-  }
+	if (history.length === 0) {
+		return null;
+	}
 
-  return (
-    <StrictMode>
-      <List>{history.map((message) => renderMessage(message))}</List>
-    </StrictMode>
-  );
+	return (
+		<StrictMode>
+			<List>{history.map(message => renderMessage(message))}</List>
+		</StrictMode>
+	);
 };
 
-export default memo(Chat);
+export default Chat;
