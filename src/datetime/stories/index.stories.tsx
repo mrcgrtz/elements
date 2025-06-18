@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react';
-import DateTime from '../index.tsx';
+import DateTime from '..';
 
 const meta: Meta = {
 	title: 'Design System/Components',

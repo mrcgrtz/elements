@@ -1,6 +1,6 @@
 import React from 'react';
 import type {StoryFn, Meta} from '@storybook/react';
-import Logo from '../index.tsx';
+import Logo from '..';
 
 const meta: Meta = {
 	title: 'Design System/Logos',

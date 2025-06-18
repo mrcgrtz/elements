@@ -32,7 +32,7 @@ type Properties = {
 
 const Input = styled.input<{$position: Position}>`
 	position: absolute;
-	inset: ${p =>
+	inset: ${(p) =>
 		[
 			p.$position.blockStart ?? 'auto',
 			p.$position.inlineEnd ?? 'auto',
@@ -47,7 +47,7 @@ const Input = styled.input<{$position: Position}>`
 
 const Hamburger = styled.label<{$position: Position}>`
 	position: absolute;
-	inset: ${p =>
+	inset: ${(p) =>
 		[
 			p.$position.blockStart ?? 'auto',
 			p.$position.inlineEnd ?? 'auto',
@@ -76,7 +76,7 @@ const Lines = styled.span<LinesProperties>`
 	inset-block-start: 50%;
 	margin-block-start: -2px;
 	${LinesCommon}
-	${p =>
+	${(p) =>
 		p.$isX
 			? css`
 					transform: rotate(225deg);
@@ -96,7 +96,7 @@ const Lines = styled.span<LinesProperties>`
 	&::before {
 		content: '';
 		${LinesCommon}
-		${p =>
+		${(p) =>
 			p.$isX
 				? css`
 						inset-block-start: 0;
@@ -116,7 +116,7 @@ const Lines = styled.span<LinesProperties>`
 	&::after {
 		content: '';
 		${LinesCommon}
-		${p =>
+		${(p) =>
 			p.$isX
 				? css`
 						inset-block-end: 0;
@@ -145,13 +145,13 @@ const HamburgerButton: FC<Properties> = ({
 	const [checked, setChecked] = useState(false);
 
 	const handleChange = useCallback(() => {
-		setChecked(previous => !previous);
+		setChecked((previous) => !previous);
 	}, []);
 
 	return (
 		<StrictMode>
 			<Input
-				type='checkbox'
+				type="checkbox"
 				id={id}
 				$position={position}
 				checked={checked}

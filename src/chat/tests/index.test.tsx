@@ -5,7 +5,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import Chat from '../index.tsx';
+import Chat from '..';
 
 const mockHistory = [
 	{

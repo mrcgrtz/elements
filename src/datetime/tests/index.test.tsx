@@ -5,7 +5,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import DateTime from '../index.tsx';
+import DateTime from '..';
 
 describe('<DateTime />', () => {
 	test('renders a date and time information', () => {

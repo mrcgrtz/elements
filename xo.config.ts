@@ -9,12 +9,20 @@ const config: FlatXoConfig = [
 		rules: {
 			'import-x/extensions': [
 				'error',
-				'ignorePackages',
 				{
-					js: 'never',
-					jsx: 'never',
-					ts: 'never',
-					tsx: 'never',
+					ignorePackages: true,
+					patterns: {
+						js: 'never',
+						jsx: 'never',
+						ts: 'never',
+						tsx: 'never',
+					},
+				},
+			],
+			'react/function-component-definition': [
+				'error',
+				{
+					namedComponents: 'arrow-function',
 				},
 			],
 		},

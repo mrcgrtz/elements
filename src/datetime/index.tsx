@@ -14,7 +14,7 @@ import {
 	date,
 	day,
 	isoDateTime,
-} from '../constants/date-formats.ts';
+} from '../constants/date-formats';
 
 type Properties = {
 	readonly dateTime: Date | number;
@@ -128,41 +128,41 @@ const DateTime: FC<Properties> = ({dateTime, ...rest}) => {
 				title={`${f(day)}, der ${f(date)} um ${f(time)} Uhr`}
 			>
 				<Svg
-					xmlns='http://www.w3.org/2000/svg'
-					width='12'
-					height='12'
-					viewBox='0 0 12 12'
-					aria-hidden='true'
+					xmlns="http://www.w3.org/2000/svg"
+					width="12"
+					height="12"
+					viewBox="0 0 12 12"
+					aria-hidden="true"
 				>
 					<title>{f(time)} Uhr</title>
 					<circle
-						cx='6'
-						cy='6'
-						r='5.425'
-						stroke='currentColor'
-						strokeWidth='1.15'
-						fill='none'
+						cx="6"
+						cy="6"
+						r="5.425"
+						stroke="currentColor"
+						strokeWidth="1.15"
+						fill="none"
 					/>
 					<line
-						x1='6'
-						y1='6'
-						x2='6'
-						y2='4'
-						stroke='currentColor'
-						strokeLinecap='round'
-						strokeWidth='1.35'
-						fill='none'
+						x1="6"
+						y1="6"
+						x2="6"
+						y2="4"
+						stroke="currentColor"
+						strokeLinecap="round"
+						strokeWidth="1.35"
+						fill="none"
 						transform={`rotate(${transformHour(hourValue)} 6 6)`}
 					/>
 					<line
-						x1='6'
-						y1='6'
-						x2='6'
-						y2='2.5'
-						stroke='currentColor'
-						strokeLinecap='round'
-						strokeWidth='1.35'
-						fill='none'
+						x1="6"
+						y1="6"
+						x2="6"
+						y2="2.5"
+						stroke="currentColor"
+						strokeLinecap="round"
+						strokeWidth="1.35"
+						fill="none"
 						transform={`rotate(${transformMinute(minuteValue)} 6 6)`}
 					/>
 				</Svg>

@@ -5,7 +5,7 @@
 
 import React from 'react';
 import {render} from '@testing-library/react';
-import Logo from '../index.tsx';
+import Logo from '..';
 
 describe('<Logo />', () => {
 	test('renders a logo', () => {

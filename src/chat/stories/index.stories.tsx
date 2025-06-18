@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react';
-import Chat from '../index.tsx';
+import Chat from '..';
 
 const meta: Meta = {
 	title: 'Features/Chat',
