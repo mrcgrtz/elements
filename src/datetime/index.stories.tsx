@@ -1,6 +1,6 @@
 import React from 'react';
-import type {Meta, StoryFn} from '@storybook/react-vite';
-import DateTime from '..';
+import type {Meta, StoryFn} from '@storybook/react';
+import DateTime from '.';
 
 const meta = {
 	title: 'Design System/Components',
