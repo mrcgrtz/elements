@@ -1,6 +1,6 @@
 import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react';
-import HamburgerButton from '..';
+import HamburgerButton from '.';
 
 const meta: Meta = {
 	title: 'Design System/Components',
