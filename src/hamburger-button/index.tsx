@@ -41,7 +41,7 @@ const Input = styled.input<{$position: Position}>`
 		].join(' ')};
 	inline-size: 1px;
 	block-size: 1px;
-	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0);
 	overflow: hidden;
 `;
 
