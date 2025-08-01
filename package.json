@@ -42,7 +42,7 @@
     "format": "prettier --write .",
     "lint": "npm run-script lint:css && npm run-script lint:js",
     "lint:css": "stylelint --max-warnings 0 --custom-formatter=stylelint-formatter-pretty ./src/**/*.{ts,tsx}",
-    "lint:js": "xo --fix --max-warnings 0 ./src/**/*.{ts,tsx}",
+    "lint:js": "xo --max-warnings 0",
     "start": "storybook dev -p 9009",
     "test": "vitest",
     "test:coverage": "vitest --coverage"

@@ -50,7 +50,6 @@ const mockFullHistory = [
 		isMe: true,
 	},
 	{
-		name: 'Abbott',
 		content: '😁',
 		timestamp: new Date(1938, 2, 24, 12, 13, 0),
 		isMe: true,

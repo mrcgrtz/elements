@@ -10,7 +10,7 @@ export default defineConfig({
 			exclude: [
 				'./docs/**',
 				'./**/*.stories.{ts,tsx}',
-				'xo-config.ts',
+				'xo.config.mjs',
 				...coverageConfigDefaults.exclude,
 			],
 			thresholds: {

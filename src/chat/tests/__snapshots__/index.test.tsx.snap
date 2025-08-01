@@ -303,12 +303,6 @@ exports[`<Chat /> > renders a full-featured chat 1`] = `
     class="c5 c8"
     tabindex="0"
   >
-    <span
-      class="c9"
-      hidden=""
-    >
-      Abbott
-    </span>
     <q
       class="c3"
     >

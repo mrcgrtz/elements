@@ -16,7 +16,6 @@ describe('<DateTime />', () => {
 
 	describe('on different times of the day', () => {
 		for (const hour of Array.from({length: 24}).keys()) {
-			// eslint-disable-next-line @typescript-eslint/no-loop-func
 			test(`renders a text for ${hour} o’clock`, () => {
 				const mockDate = new Date(2020, 1, 12, hour, 0, 0);
 				const {container} = render(<DateTime dateTime={mockDate} />);
