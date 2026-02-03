@@ -1,4 +1,4 @@
-import{r as s,R as e}from"./iframe-IxjiARuB.js";import{d as p}from"./styled-components.browser.esm-C4BBX9TR.js";const d=p.svg`
+import{r as s,R as e}from"./iframe-C9Jt4Jds.js";import{d as p}from"./styled-components.browser.esm-BpsynDaM.js";const d=p.svg`
 	inline-size: 340px;
 	block-size: 190px;
 	vertical-align: bottom;
