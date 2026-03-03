@@ -1,4 +1,4 @@
-import{r as s,R as i}from"./iframe-Chw30A0v.js";import{d as r,l as t}from"./styled-components.browser.esm-C3cbgu5b.js";const g=r.input`
+import{r as s,R as i}from"./iframe-CFVg-4Qv.js";import{c as r,s as t}from"./styled-components.browser.esm-NWv7NKYP.js";const g=r.input`
 	position: absolute;
 	inset: ${e=>[e.$position.blockStart??"auto",e.$position.inlineEnd??"auto",e.$position.blockEnd??"auto",e.$position.inlineStart??"auto"].join(" ")};
 	inline-size: 1px;
@@ -75,7 +75,7 @@ import{r as s,R as i}from"./iframe-Chw30A0v.js";import{d as r,l as t}from"./styl
 								cubic-bezier(0.55, 0.055, 0.675, 0.19);
 					`}
 	}
-`,l=({label:e="Menü anzeigen",labelActive:d="Menü ausblenden",id:c="toggle",position:u})=>{const[o,p]=s.useState(!1),b=s.useCallback(()=>{p(m=>!m)},[]);return i.createElement(s.StrictMode,null,i.createElement(g,{type:"checkbox",id:c,$position:u,checked:o,onChange:b}),i.createElement(k,{htmlFor:c,"aria-label":o?d:e,$position:u},i.createElement(f,{$isX:o})))};l.__docgenInfo={description:"",methods:[],displayName:"HamburgerButton",props:{label:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'Menü anzeigen'",computed:!1}},labelActive:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'Menü ausblenden'",computed:!1}},id:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'toggle'",computed:!1}},position:{required:!0,tsType:{name:"signature",type:"object",raw:`{
+`,l=({label:e="Menü anzeigen",labelActive:p="Menü ausblenden",id:c="toggle",position:u})=>{const[o,d]=s.useState(!1),b=s.useCallback(()=>{d(m=>!m)},[]);return i.createElement(s.StrictMode,null,i.createElement(g,{type:"checkbox",id:c,$position:u,checked:o,onChange:b}),i.createElement(k,{htmlFor:c,"aria-label":o?p:e,$position:u},i.createElement(f,{$isX:o})))};l.__docgenInfo={description:"",methods:[],displayName:"HamburgerButton",props:{label:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'Menü anzeigen'",computed:!1}},labelActive:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'Menü ausblenden'",computed:!1}},id:{required:!1,tsType:{name:"string"},description:"",defaultValue:{value:"'toggle'",computed:!1}},position:{required:!0,tsType:{name:"signature",type:"object",raw:`{
 	blockStart?: string;
 	blockEnd?: string;
 	inlineStart?: string;
