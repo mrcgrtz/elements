@@ -35,7 +35,7 @@
     "vite": "^7.1.12",
     "vitest": "^4.1.0",
     "webpack": "^5.105.0",
-    "xo": "^1.2.3"
+    "xo": "^2.0.2"
   },
   "scripts": {
     "build": "storybook build -c .storybook -o docs",
