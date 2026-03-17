@@ -1,4 +1,4 @@
-import{r as y,R as t}from"./iframe-CFVg-4Qv.js";import{c as l}from"./styled-components.browser.esm-NWv7NKYP.js";import{n as C,d as v,e as D,f,g as M,i as b}from"./date-formats-PPPMtrGl.js";function g(e,u,n){const[o,a]=C(n?.in,e,u),c=M(),r=c.locale??D,d=c.weekStartsOn??c.locale?.options?.weekStartsOn??0,i=v(o,a);if(isNaN(i))throw new RangeError("Invalid time value");let s;i<-6?s="other":i<-1?s="lastWeek":i<0?s="yesterday":i<1?s="today":i<2?s="tomorrow":i<7?s="nextWeek":s="other";const x=r.formatRelative(s,o,a,{locale:r,weekStartsOn:d});return f(o,x,{locale:r,weekStartsOn:d})}const $=l.ol`
+import{r as y,R as t}from"./iframe-DTCmqzxx.js";import{c as l}from"./styled-components.browser.esm-nhyCKO65.js";import{n as E,d as v,e as C,f as k,g as D,i as x}from"./date-formats-PPPMtrGl.js";function M(e,f,n){const[s,o]=E(n?.in,e,f),c=D(),i=c.locale??C,d=c.weekStartsOn??c.locale?.options?.weekStartsOn??0,r=v(s,o);if(isNaN(r))throw new RangeError("Invalid time value");let a;r<-6?a="other":r<-1?a="lastWeek":r<0?a="yesterday":r<1?a="today":r<2?a="tomorrow":r<7?a="nextWeek":a="other";const u=i.formatRelative(a,s,o,{locale:i,weekStartsOn:d});return k(s,u,{locale:i,weekStartsOn:d})}const $=l.ol`
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -19,7 +19,7 @@ import{r as y,R as t}from"./iframe-CFVg-4Qv.js";import{c as l}from"./styled-comp
 	& i {
 		font-style: normal;
 	}
-`,E=l.li`
+`,w=l.li`
 	position: relative;
 	align-self: ${e=>e.$isMe?"flex-end":"flex-start"};
 	padding: 0.5rem;
@@ -37,19 +37,19 @@ import{r as y,R as t}from"./iframe-CFVg-4Qv.js";import{c as l}from"./styled-comp
 	&:active time {
 		display: block;
 	}
-`,A=l(E)`
+`,A=l(w)`
 	padding: 0;
 	font-size: 4em;
 	background-color: transparent;
-`,h=l.span`
+`,b=l.span`
 	display: ${e=>e.hidden?"none":"block"};
 	margin-block-end: 0.25em;
 	font-size: 0.75rem;
 	font-weight: bold;
-`,k=l.q`
+`,g=l.q`
 	display: block;
 	quotes: none;
-`,w=l.time`
+`,h=l.time`
 	display: none;
 	position: absolute;
 	inset-block-start: 100%;
@@ -60,7 +60,7 @@ import{r as y,R as t}from"./iframe-CFVg-4Qv.js";import{c as l}from"./styled-comp
 	color: gray;
 	opacity: 0.75;
 	white-space: nowrap;
-`,p=({history:e})=>{const u=y.useCallback(({content:n,name:o,timestamp:a,isEmoji:c=!1,isMe:r=!1,isAction:d=!1})=>d?t.createElement(S,{key:n},n):c?t.createElement(A,{key:n,$isMe:r,tabIndex:a?0:void 0},o?t.createElement(h,{hidden:!0},o):null,t.createElement(k,null,n),a?t.createElement(w,{$isMe:r,dateTime:f(a,b)},g(a,new Date)):null):t.createElement(E,{key:n,$isMe:r,tabIndex:a?0:void 0},o?t.createElement(h,null,o):null,t.createElement(k,null,n),a?t.createElement(w,{$isMe:r,dateTime:f(a,b)},g(a,new Date)):null),[]);return!Array.isArray(e)||e.length===0?null:t.createElement(y.StrictMode,null,t.createElement($,null,e.map(n=>u(n))))};p.__docgenInfo={description:"",methods:[],displayName:"Chat",props:{history:{required:!1,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{
+`,p=({history:e})=>{const f=y.useCallback(({content:n,name:s,timestamp:o,isEmoji:c=!1,isMe:i=!1,isAction:d=!1})=>{if(d)return t.createElement(S,{key:n},n);const r=o?M(o,new Date):void 0,a=o?k(o,x):void 0,u=o?0:void 0;return c?t.createElement(A,{key:n,$isMe:i,tabIndex:u},s?t.createElement(b,{hidden:!0},s):null,t.createElement(g,null,n),o?t.createElement(h,{$isMe:i,dateTime:a},r):null):t.createElement(w,{key:n,$isMe:i,tabIndex:u},s?t.createElement(b,null,s):null,t.createElement(g,null,n),o?t.createElement(h,{$isMe:i,dateTime:a},r):null)},[]);return!Array.isArray(e)||e.length===0?null:t.createElement(y.StrictMode,null,t.createElement($,null,e.map(n=>f(n))))};p.__docgenInfo={description:"",methods:[],displayName:"Chat",props:{history:{required:!1,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{
 	readonly content: string;
 	readonly name?: string;
 	readonly timestamp?: Date;
