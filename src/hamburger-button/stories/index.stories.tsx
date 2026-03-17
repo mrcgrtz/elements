@@ -12,9 +12,9 @@ const meta = {
 	},
 } satisfies Meta<typeof HamburgerButton>;
 
-export const HamburgerButtonStory: StoryFn<typeof meta> = (
-	properties,
-) => <HamburgerButton {...properties} />;
+export const HamburgerButtonStory: StoryFn<typeof meta> = (properties) => (
+	<HamburgerButton {...properties} />
+);
 HamburgerButtonStory.storyName = 'Hamburger button';
 
 export default meta;
