@@ -2,7 +2,7 @@ import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react-vite';
 import DateTime from '..';
 
-const meta: Meta = {
+const meta = {
 	title: 'Design System/Components',
 	component: DateTime,
 	argTypes: {
@@ -13,9 +13,9 @@ const meta: Meta = {
 	args: {
 		dateTime: new Date(),
 	},
-};
+} satisfies Meta<typeof DateTime>;
 
-export const DateTimeStory: StoryFn<typeof DateTime> = (properties) => (
+export const DateTimeStory: StoryFn<typeof meta> = (properties) => (
 	<DateTime {...properties} />
 );
 DateTimeStory.storyName = 'Date and time';

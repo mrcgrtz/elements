@@ -14,6 +14,12 @@ describe('<DateTime />', () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
+	test('does not render an invalid date and time information', () => {
+		const mockDate = new Date('invalid date');
+		const {container} = render(<DateTime dateTime={mockDate} />);
+		expect(container.firstChild).toBeNull();
+	});
+
 	describe('on different times of the day', () => {
 		for (const hour of Array.from({length: 24}).keys()) {
 			test(`renders a text for ${hour} o’clock`, () => {

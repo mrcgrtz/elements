@@ -2,7 +2,7 @@ import React from 'react';
 import type {StoryFn, Meta} from '@storybook/react-vite';
 import Logo from '..';
 
-const meta: Meta = {
+const meta = {
 	title: 'Design System/Logos',
 	component: Logo,
 	args: {
@@ -10,19 +10,19 @@ const meta: Meta = {
 		url: 'https://marcgoertz.de/',
 		urlRelations: ['start', 'me'],
 	},
-};
+	argTypes: {
+		solidColor: {
+			control: 'color',
+		},
+	},
+} satisfies Meta<typeof Logo>;
 
-const Template: StoryFn<typeof Logo> = (properties) => <Logo {...properties} />;
+const Template: StoryFn<typeof meta> = (properties) => <Logo {...properties} />;
 
 export const LogoStory = Template.bind({});
 LogoStory.storyName = 'Default logo';
 
 export const SolidColorLogoStory = Template.bind({});
-SolidColorLogoStory.argTypes = {
-	solidColor: {
-		control: 'color',
-	},
-};
 SolidColorLogoStory.args = {
 	solidColor: '#bada55',
 };

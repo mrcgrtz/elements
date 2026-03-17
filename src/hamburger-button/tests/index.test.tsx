@@ -23,8 +23,8 @@ describe('<HamburgerButton />', () => {
 			<HamburgerButton position={{blockEnd: '1em', inlineEnd: '1em'}} />,
 		);
 		expect(container).toMatchSnapshot();
-		const input = container.querySelector('input') as Element;
-		await user.click(input);
+		const input = container.querySelector('input');
+		await user.click(input!);
 		expect(container).toMatchSnapshot();
 	});
 });

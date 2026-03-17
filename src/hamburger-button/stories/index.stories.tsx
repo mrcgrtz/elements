@@ -2,7 +2,7 @@ import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react-vite';
 import HamburgerButton from '..';
 
-const meta: Meta = {
+const meta = {
 	title: 'Design System/Components',
 	component: HamburgerButton,
 	args: {
@@ -10,9 +10,9 @@ const meta: Meta = {
 		labelActive: 'Menü ausblenden',
 		position: {blockStart: '20px', inlineStart: '20px'},
 	},
-};
+} satisfies Meta<typeof HamburgerButton>;
 
-export const HamburgerButtonStory: StoryFn<typeof HamburgerButton> = (
+export const HamburgerButtonStory: StoryFn<typeof meta> = (
 	properties,
 ) => <HamburgerButton {...properties} />;
 HamburgerButtonStory.storyName = 'Hamburger button';

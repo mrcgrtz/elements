@@ -2,7 +2,7 @@ import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react-vite';
 import Chat from '..';
 
-const meta: Meta = {
+const meta = {
 	title: 'Features/Chat',
 	component: Chat,
 	args: {
@@ -51,9 +51,9 @@ const meta: Meta = {
 			},
 		],
 	},
-};
+} satisfies Meta<typeof Chat>;
 
-export const ChatStory: StoryFn<typeof Chat> = (properties) => (
+export const ChatStory: StoryFn<typeof meta> = (properties) => (
 	<Chat {...properties} />
 );
 ChatStory.storyName = 'Chat';

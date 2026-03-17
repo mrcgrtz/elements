@@ -3,7 +3,7 @@
  * @author Marc Görtz <https://marcgoertz.de/>
  */
 
-import React, {type FC, StrictMode, useMemo} from 'react';
+import React, {type FC, StrictMode, useCallback} from 'react';
 import {styled} from 'styled-components';
 import {format} from 'date-fns';
 import {de} from 'date-fns/locale/de';
@@ -112,10 +112,20 @@ const transformHour = (hour: number) => hour * (360 / 12);
 const transformMinute = (minute: number) => minute * (360 / 60);
 
 const DateTime: FC<Properties> = ({dateTime, ...rest}) => {
-	const f = useMemo(
-		() => (as: string) => format(dateTime, as, {locale: de}),
+	const f = useCallback(
+		(as: string) => {
+			try {
+				return format(dateTime, as, {locale: de});
+			} catch {
+				return undefined;
+			}
+		},
 		[dateTime],
 	);
+
+	if (f(hour) === undefined || f(minute) === undefined) {
+		return null;
+	}
 
 	const hourValue = Number(f(hour));
 	const minuteValue = Number(f(minute));

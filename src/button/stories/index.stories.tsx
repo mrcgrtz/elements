@@ -2,7 +2,7 @@ import React from 'react';
 import type {Meta, StoryFn} from '@storybook/react-vite';
 import Button from '..';
 
-const meta: Meta = {
+const meta = {
 	title: 'Design System/Components',
 	component: Button,
 	argTypes: {
@@ -16,9 +16,9 @@ const meta: Meta = {
 		type: 'button',
 		disabled: false,
 	},
-};
+} satisfies Meta<typeof Button>;
 
-export const ButtonStory: StoryFn<typeof Button> = (properties) => (
+export const ButtonStory: StoryFn<typeof meta> = (properties) => (
 	<Button {...properties} />
 );
 ButtonStory.storyName = 'Button';

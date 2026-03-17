@@ -113,21 +113,22 @@ const Chat: FC<Properties> = ({history}) => {
 				return <Action key={content}>{content}</Action>;
 			}
 
+			const formattedDate = timestamp
+				? formatRelative(timestamp, new Date())
+				: undefined;
+			const formattedIsoDate = timestamp
+				? format(timestamp, isoDate)
+				: undefined;
+			const tabIndex = timestamp ? 0 : undefined;
+
 			if (isEmoji) {
 				return (
-					<EmojiBubble
-						key={content}
-						$isMe={isMe}
-						tabIndex={timestamp ? 0 : undefined}
-					>
+					<EmojiBubble key={content} $isMe={isMe} tabIndex={tabIndex}>
 						{name ? <Name hidden>{name}</Name> : null}
 						<Quote>{content}</Quote>
 						{timestamp ? (
-							<Time
-								$isMe={isMe}
-								dateTime={format(timestamp, isoDate)}
-							>
-								{formatRelative(timestamp, new Date())}
+							<Time $isMe={isMe} dateTime={formattedIsoDate}>
+								{formattedDate}
 							</Time>
 						) : null}
 					</EmojiBubble>
@@ -135,19 +136,12 @@ const Chat: FC<Properties> = ({history}) => {
 			}
 
 			return (
-				<Bubble
-					key={content}
-					$isMe={isMe}
-					tabIndex={timestamp ? 0 : undefined}
-				>
+				<Bubble key={content} $isMe={isMe} tabIndex={tabIndex}>
 					{name ? <Name>{name}</Name> : null}
 					<Quote>{content}</Quote>
 					{timestamp ? (
-						<Time
-							$isMe={isMe}
-							dateTime={format(timestamp, isoDate)}
-						>
-							{formatRelative(timestamp, new Date())}
+						<Time $isMe={isMe} dateTime={formattedIsoDate}>
+							{formattedDate}
 						</Time>
 					) : null}
 				</Bubble>
