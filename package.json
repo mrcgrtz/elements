@@ -11,7 +11,7 @@
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.10",
-    "@vitest/coverage-istanbul": "^3.2.4",
+    "@vitest/coverage-istanbul": "^4.1.0",
     "date-fns": "^4.1.0",
     "eslint-plugin-storybook": "^10.2.13",
     "happy-dom": "^20.4.0",
@@ -33,7 +33,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^7.1.12",
-    "vitest": "^4.0.16",
+    "vitest": "^4.1.0",
     "webpack": "^5.105.0",
     "xo": "^1.2.3"
   },
