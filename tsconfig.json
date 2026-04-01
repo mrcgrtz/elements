@@ -1,12 +1,11 @@
 {
 	"compilerOptions": {
-		"target": "es5",
+		"target": "ESNext",
 		"jsx": "preserve",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"allowImportingTsExtensions": true,
 		"noEmit": true,
-		"downlevelIteration": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
