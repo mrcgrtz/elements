@@ -1,4 +1,4 @@
-import{R as o,r as s}from"./iframe-BT8oFb2x.js";import{c as a}from"./styled-components.browser.esm-DGYGoBYq.js";const i=a.button`
+import{R as o,r as s}from"./iframe-tDOYkxUq.js";import{u as a}from"./styled-components.browser.esm-C0iJRhft.js";const i=a.button`
 	display: inline-block;
 	margin: 0;
 	padding: 0.25rem 1rem;
