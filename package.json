@@ -34,7 +34,7 @@
     "typescript": "^6.0.2",
     "vite": "^8.0.5",
     "vitest": "^4.1.2",
-    "webpack": "^5.105.0",
+    "webpack": "^5.106.2",
     "xo": "^2.0.2"
   },
   "scripts": {
