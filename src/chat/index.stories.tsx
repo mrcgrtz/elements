@@ -1,6 +1,6 @@
 import React from 'react';
-import type {Meta, StoryFn} from '@storybook/react-vite';
-import Chat from '..';
+import type {Meta, StoryFn} from '@storybook/react';
+import Chat from '.';
 
 const meta = {
 	title: 'Features/Chat',
@@ -46,6 +46,11 @@ const meta = {
 				name: 'Abbott',
 				content: '😁',
 				timestamp: new Date(1938, 2, 24, 12, 13, 0),
+				isMe: true,
+				isEmoji: true,
+			},
+			{
+				content: '😒',
 				isMe: true,
 				isEmoji: true,
 			},

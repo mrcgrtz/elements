@@ -8,7 +8,7 @@ const config: StorybookConfig = {
 		builder: '@storybook/builder-vite',
 		disableTelemetry: true,
 	},
-	addons: ['@storybook/addon-a11y'],
+	addons: ['@storybook/addon-a11y', '@storybook/addon-vitest'],
 	async viteFinal(config) {
 		// Type mismatch between Storybook and Vite UserConfig
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
