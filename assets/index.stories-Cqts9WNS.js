@@ -1,4 +1,4 @@
-import{i as e,r as t,t as n}from"./iframe-C68-YwCX.js";import{i as r,n as i,t as a}from"./jsx-runtime-CI5zb2zs.js";import{c as o,i as s,l as c,r as l,s as u}from"./date-formats-CaPIIWtt.js";var d,f,p,m,h,g,_,v,y,b,x=t((()=>{d=e(n()),i(),u(),l(),f=a(),p=r.ol`
+import{i as e,r as t,t as n}from"./iframe-DeEL-WUH.js";import{i as r,r as i,t as a}from"./jsx-runtime-D0G04TEh.js";import{c as o,i as s,l as c,r as l,s as u}from"./date-formats-CBBKgDlK.js";var d,f,p,m,h,g,_,v,y,b,x=t((()=>{d=e(n()),r(),u(),l(),f=a(),p=i.ol`
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -7,7 +7,7 @@ import{i as e,r as t,t as n}from"./iframe-C68-YwCX.js";import{i as r,n as i,t as
 		system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 		'Segoe UI Symbol';
 	line-height: 1.25;
-`,m=r.li`
+`,m=i.li`
 	align-self: center;
 	margin: 0.5rem 0;
 	text-align: center;
@@ -19,7 +19,7 @@ import{i as e,r as t,t as n}from"./iframe-C68-YwCX.js";import{i as r,n as i,t as
 	& i {
 		font-style: normal;
 	}
-`,h=r.li`
+`,h=i.li`
 	position: relative;
 	align-self: ${e=>e.$isMe?`flex-end`:`flex-start`};
 	padding: 0.5rem;
@@ -37,19 +37,19 @@ import{i as e,r as t,t as n}from"./iframe-C68-YwCX.js";import{i as r,n as i,t as
 	&:active time {
 		display: block;
 	}
-`,g=r(h)`
+`,g=i(h)`
 	padding: 0;
 	font-size: 4em;
 	background-color: transparent;
-`,_=r.span`
+`,_=i.span`
 	display: ${e=>e.hidden?`none`:`block`};
 	margin-block-end: 0.25em;
 	font-size: 0.75rem;
 	font-weight: bold;
-`,v=r.q`
+`,v=i.q`
 	display: block;
 	quotes: none;
-`,y=r.time`
+`,y=i.time`
 	display: none;
 	position: absolute;
 	inset-block-start: 100%;
