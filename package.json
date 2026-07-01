@@ -17,7 +17,7 @@
     "happy-dom": "^20.9.0",
     "husky": "^9.1.7",
     "jest-styled-components": "^7.4.0",
-    "lint-staged": "^17.0.7",
+    "lint-staged": "^17.0.8",
     "postcss-styled-syntax": "^0.7.1",
     "prettier": "^3.9.4",
     "react": "^19.2.7",
