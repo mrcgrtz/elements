@@ -1,4 +1,4 @@
-import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-BV4X5NFp.js";import{i as r,n as i,r as a,t as o}from"./jsx-runtime-DqjY3JHv.js";var s,c,l,u,d,f,p,m=t((()=>{s=e(n()),r(),c=o(),l=a.input`
+import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-DY3dgUfN.js";import{i as r,n as i,r as a,t as o}from"./jsx-runtime-YBxQLbHZ.js";var s,c,l,u,d,f,p,m=t((()=>{s=e(n()),r(),c=o(),l=a.input`
 	position: absolute;
 	inset: ${e=>[e.$position.blockStart??`auto`,e.$position.inlineEnd??`auto`,e.$position.blockEnd??`auto`,e.$position.inlineStart??`auto`].join(` `)};
 	inline-size: 1px;
