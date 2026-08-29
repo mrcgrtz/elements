@@ -1,4 +1,4 @@
-import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-DY3dgUfN.js";import{i as r,r as i,t as a}from"./jsx-runtime-YBxQLbHZ.js";var o,s,c,l,u=t((()=>{o=e(n()),r(),s=a(),c=i.button`
+import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-BloULUPU.js";import{i as r,r as i,t as a}from"./jsx-runtime-qxM7EtLs.js";var o,s,c,l,u=t((()=>{o=e(n()),r(),s=a(),c=i.button`
 	display: inline-block;
 	margin: 0;
 	padding: 0.25rem 1rem;
