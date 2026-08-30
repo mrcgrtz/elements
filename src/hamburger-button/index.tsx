@@ -142,10 +142,10 @@ const HamburgerButton: FC<Properties> = ({
 	id = 'toggle',
 	position,
 }) => {
-	const [checked, setChecked] = useState(false);
+	const [isChecked, setIsChecked] = useState(false);
 
 	const handleChange = useCallback(() => {
-		setChecked((previous) => !previous);
+		setIsChecked((previous) => !previous);
 	}, []);
 
 	return (
@@ -154,15 +154,15 @@ const HamburgerButton: FC<Properties> = ({
 				type="checkbox"
 				id={id}
 				$position={position}
-				checked={checked}
+				checked={isChecked}
 				onChange={handleChange}
 			/>
 			<Hamburger
 				htmlFor={id}
-				aria-label={checked ? labelActive : label}
+				aria-label={isChecked ? labelActive : label}
 				$position={position}
 			>
-				<Lines $isX={checked} />
+				<Lines $isX={isChecked} />
 			</Hamburger>
 		</StrictMode>
 	);

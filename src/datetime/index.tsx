@@ -39,8 +39,8 @@ const Svg = styled.svg`
 `;
 
 // eslint-disable-next-line complexity
-const getTimeOfDay = (hour: string) => {
-	switch (Number(hour)) {
+const getTimeOfDay = (hours: string) => {
+	switch (Number(hours)) {
 		case 0:
 		case 1:
 		case 2:
@@ -108,8 +108,8 @@ const getTimeOfDay = (hour: string) => {
 	}
 };
 
-const transformHour = (hour: number) => hour * (360 / 12);
-const transformMinute = (minute: number) => minute * (360 / 60);
+const transformHour = (hours: number) => hours * (360 / 12);
+const transformMinute = (minutes: number) => minutes * (360 / 60);
 
 const DateTime: FC<Properties> = ({dateTime, ...rest}) => {
 	const f = useCallback(

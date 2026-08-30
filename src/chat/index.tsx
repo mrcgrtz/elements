@@ -124,7 +124,9 @@ const Chat: FC<Properties> = ({history}) => {
 			if (isEmoji) {
 				return (
 					<EmojiBubble key={content} $isMe={isMe} tabIndex={tabIndex}>
-						{name ? <Name hidden>{name}</Name> : null}
+						{name === undefined || name === '' ? null : (
+							<Name hidden>{name}</Name>
+						)}
 						<Quote>{content}</Quote>
 						{timestamp ? (
 							<Time $isMe={isMe} dateTime={formattedIsoDate}>
@@ -137,7 +139,9 @@ const Chat: FC<Properties> = ({history}) => {
 
 			return (
 				<Bubble key={content} $isMe={isMe} tabIndex={tabIndex}>
-					{name ? <Name>{name}</Name> : null}
+					{name === undefined || name === '' ? null : (
+						<Name>{name}</Name>
+					)}
 					<Quote>{content}</Quote>
 					{timestamp ? (
 						<Time $isMe={isMe} dateTime={formattedIsoDate}>

@@ -9,13 +9,10 @@ const config: StorybookConfig = {
 		disableTelemetry: true,
 	},
 	addons: ['@storybook/addon-a11y'],
-	async viteFinal(config) {
-		// Type mismatch between Storybook and Vite UserConfig
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-		const plugins = [...(config.plugins ?? []), react()];
+	async viteFinal(viteConfig) {
+		const plugins = [...(viteConfig.plugins ?? []), react()];
 
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
-		return {...config, plugins};
+		return {...viteConfig, plugins};
 	},
 };
 
