@@ -1,4 +1,4 @@
-import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-BloULUPU.js";import{i as r,r as i,t as a}from"./jsx-runtime-qxM7EtLs.js";import{c as o,i as s,r as c,s as l,u}from"./date-formats-CQfeBKFa.js";var d,f,p,m,h,g,_,v,y,b,x=t((()=>{d=e(n()),r(),l(),c(),f=a(),p=i.ol`
+import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./iframe-_G0MyWJq.js";import{i as r,r as i,t as a}from"./jsx-runtime-CDE3Gq03.js";import{c as o,i as s,r as c,s as l,u}from"./date-formats-CQfeBKFa.js";var d,f,p,m,h,g,_,v,y,b,x=t((()=>{d=e(n()),r(),l(),c(),f=a(),p=i.ol`
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -60,7 +60,7 @@ import{a as e,n as t}from"./rolldown-runtime-DaJ6WEGw.js";import{t as n}from"./i
 	color: gray;
 	opacity: 0.75;
 	white-space: nowrap;
-`,b=({history:e})=>{let t=(0,d.useCallback)(({content:e,name:t,timestamp:n,isEmoji:r=!1,isMe:i=!1,isAction:a=!1})=>{if(a)return(0,f.jsx)(m,{children:e},e);let c=n?o(n,new Date):void 0,l=n?u(n,s):void 0,d=n?0:void 0;return r?(0,f.jsxs)(g,{$isMe:i,tabIndex:d,children:[t?(0,f.jsx)(_,{hidden:!0,children:t}):null,(0,f.jsx)(v,{children:e}),n?(0,f.jsx)(y,{$isMe:i,dateTime:l,children:c}):null]},e):(0,f.jsxs)(h,{$isMe:i,tabIndex:d,children:[t?(0,f.jsx)(_,{children:t}):null,(0,f.jsx)(v,{children:e}),n?(0,f.jsx)(y,{$isMe:i,dateTime:l,children:c}):null]},e)},[]);return!Array.isArray(e)||e.length===0?null:(0,f.jsx)(d.StrictMode,{children:(0,f.jsx)(p,{children:e.map(e=>t(e))})})},b.__docgenInfo={description:``,methods:[],displayName:`Chat`,props:{history:{required:!1,tsType:{name:`Array`,elements:[{name:`signature`,type:`object`,raw:`{
+`,b=({history:e})=>{let t=(0,d.useCallback)(({content:e,name:t,timestamp:n,isEmoji:r=!1,isMe:i=!1,isAction:a=!1})=>{if(a)return(0,f.jsx)(m,{children:e},e);let c=n?o(n,new Date):void 0,l=n?u(n,s):void 0,d=n?0:void 0;return r?(0,f.jsxs)(g,{$isMe:i,tabIndex:d,children:[t===void 0||t===``?null:(0,f.jsx)(_,{hidden:!0,children:t}),(0,f.jsx)(v,{children:e}),n?(0,f.jsx)(y,{$isMe:i,dateTime:l,children:c}):null]},e):(0,f.jsxs)(h,{$isMe:i,tabIndex:d,children:[t===void 0||t===``?null:(0,f.jsx)(_,{children:t}),(0,f.jsx)(v,{children:e}),n?(0,f.jsx)(y,{$isMe:i,dateTime:l,children:c}):null]},e)},[]);return!Array.isArray(e)||e.length===0?null:(0,f.jsx)(d.StrictMode,{children:(0,f.jsx)(p,{children:e.map(e=>t(e))})})},b.__docgenInfo={description:``,methods:[],displayName:`Chat`,props:{history:{required:!1,tsType:{name:`Array`,elements:[{name:`signature`,type:`object`,raw:`{
 	readonly content: string;
 	readonly name?: string;
 	readonly timestamp?: Date;
