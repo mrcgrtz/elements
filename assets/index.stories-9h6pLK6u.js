@@ -1,0 +1,21 @@
+import{a as e,n as t}from"./rolldown-runtime-DkW27tQK.js";import{n}from"./iframe-BCADqBzY.js";import{i as r,r as i,t as a}from"./jsx-runtime-C-bQ4dNj.js";var o,s,c,l;function u(){return(u=t((()=>{o=e(n()),r(),s=a(),c=i.button`
+	display: inline-block;
+	margin: 0;
+	padding: 0.25rem 1rem;
+	border: 0;
+	font-size: inherit;
+	font-family:
+		system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol';
+	line-height: inherit;
+	color: white;
+	background-color: lightgrey;
+	box-sizing: border-box;
+	appearance: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: dodgerblue;
+	}
+`,l=({type:e=`button`,...t})=>(0,s.jsx)(o.StrictMode,{children:(0,s.jsx)(c,{type:e,...t})}),l.__docgenInfo={description:``,methods:[],displayName:`Button`,props:{type:{defaultValue:{value:`'button'`,computed:!1},required:!1}}}})))()}var d,f,p,m;function h(){return(h=t((()=>{n(),u(),d=a(),f={title:`Design System/Components`,component:l,argTypes:{type:{options:[`button`,`submit`,`reset`],control:{type:`radio`}}},args:{children:`Lorem ipsum`,type:`button`,disabled:!1}},p=e=>(0,d.jsx)(l,{...e}),p.storyName=`Button`,p.__docgenInfo={description:``,methods:[],displayName:`ButtonStory`},p.parameters={...p.parameters,docs:{...p.parameters?.docs,source:{originalSource:`properties => <Button {...properties} />`,...p.parameters?.docs?.source}}},m=[`ButtonStory`]})))()}h();export{p as ButtonStory,m as __namedExportsOrder,f as default};
