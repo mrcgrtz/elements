@@ -49,6 +49,6 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
     "browserslist-config-mrcgrtz": "^1.0.1",
-    "eslint-config-xo-react": "^0.31.0"
+    "eslint-config-xo-react": "^0.32.0"
   }
 }
