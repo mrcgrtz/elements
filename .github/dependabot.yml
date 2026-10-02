@@ -27,6 +27,8 @@ updates:
                 - '7.0.x'
       groups:
           # Families that must move in lockstep, majors included.
+          # Scoped wildcards such as '@scope/*' stopped matching in the
+          # 2026-09-30 run, so each scoped member is also listed literally.
           react:
               patterns:
                   - 'react'
@@ -37,6 +39,9 @@ updates:
               patterns:
                   - 'storybook'
                   - '@storybook/*'
+                  - '@storybook/addon-a11y'
+                  - '@storybook/builder-vite'
+                  - '@storybook/react-vite'
                   - 'eslint-plugin-storybook'
           stylelint:
               patterns:
@@ -45,10 +50,14 @@ updates:
           testing-library:
               patterns:
                   - '@testing-library/*'
+                  - '@testing-library/dom'
+                  - '@testing-library/react'
+                  - '@testing-library/user-event'
           vitest:
               patterns:
                   - 'vitest'
                   - '@vitest/*'
+                  - '@vitest/coverage-istanbul'
           # Everything else, majors excluded so auto-merge keeps working.
           js-production:
               dependency-type: 'production'
