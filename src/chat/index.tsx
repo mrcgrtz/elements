@@ -8,7 +8,6 @@ import {styled} from 'styled-components';
 import {format, formatRelative} from 'date-fns';
 import {isoDate} from '../constants/date-formats';
 
-/* eslint-disable react/no-unused-prop-types -- This is a false positive. */
 type ChatMessage = {
 	readonly content: string;
 	readonly name?: string;
@@ -17,7 +16,6 @@ type ChatMessage = {
 	readonly isEmoji?: boolean;
 	readonly isAction?: boolean;
 };
-/* eslint-enable react/no-unused-prop-types */
 
 type Properties = {
 	readonly history?: ChatMessage[];
