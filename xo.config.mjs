@@ -3,9 +3,13 @@ import react from 'eslint-config-xo-react';
 
 const javaScriptFiles = '**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}';
 
-/** @type {import('xo').FlatConfig} */
+/**
+ * @type {import('xo').FlatConfig}
+ */
 const config = [
-	...react(),
+	// `eslint-config-xo-react` owns the JSX formatting rules, so it needs the same
+	// `prettier` value as XO itself to stand down on the conflicting ones.
+	...react({prettier: 'compat'}),
 	{
 		// Prettier runs separately (`npm run format`, and via lint-staged), so XO
 		// only needs to stand down on the rules that would conflict with it.
@@ -22,28 +26,11 @@ const config = [
 	{
 		files: javaScriptFiles,
 		rules: {
-			'import-x/extensions': [
-				'error',
-				{
-					ignorePackages: true,
-					patterns: {
-						js: 'never',
-						jsx: 'never',
-						ts: 'never',
-						tsx: 'never',
-					},
-				},
-			],
-			'react/function-component-definition': [
-				'error',
-				{
-					namedComponents: 'arrow-function',
-				},
-			],
-			// `eslint-plugin-react` still calls `context.getSourceCode()`, which
-			// ESLint 10 removed, so this rule crashes. `forwardRef` is deprecated in
-			// React 19 anyway.
-			'react/forward-ref-uses-ref': 'off',
+			'jsdoc/require-asterisk-prefix': ['error', 'always'],
+			// Vite, Vitest and Storybook all resolve extensionless imports, so we
+			// keep them extensionless. XO turns `import-x/extensions` off for
+			// TypeScript projects and enforces extensions through this rule instead.
+			'n/file-extension-in-import': ['error', 'never'],
 		},
 	},
 	...storybook.configs['flat/recommended'].map((config) => ({

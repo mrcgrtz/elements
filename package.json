@@ -2,6 +2,20 @@
   "name": "@mrcgrtz/elements",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "scripts": {
+    "build": "storybook build -c .storybook -o docs",
+    "format": "prettier --write .",
+    "lint": "npm run-script lint:css && npm run-script lint:js",
+    "lint:css": "stylelint --max-warnings 0 --custom-formatter=stylelint-formatter-pretty ./src/**/*.{ts,tsx}",
+    "lint:js": "xo --max-warnings 0",
+    "start": "storybook dev -p 9009",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
   "dependencies": {
     "@storybook/addon-a11y": "^10.6.0",
     "@storybook/builder-vite": "^10.6.0",
@@ -34,17 +48,7 @@
     "vite": "^8.3.1",
     "vitest": "^4.1.11",
     "webpack": "^5.111.1",
-    "xo": "^3.0.2"
-  },
-  "scripts": {
-    "build": "storybook build -c .storybook -o docs",
-    "format": "prettier --write .",
-    "lint": "npm run-script lint:css && npm run-script lint:js",
-    "lint:css": "stylelint --max-warnings 0 --custom-formatter=stylelint-formatter-pretty ./src/**/*.{ts,tsx}",
-    "lint:js": "xo --max-warnings 0",
-    "start": "storybook dev -p 9009",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage"
+    "xo": "^5.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.1.1",
