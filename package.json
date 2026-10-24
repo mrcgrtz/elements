@@ -35,7 +35,7 @@
     "prettier": "^3.9.9",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "storybook": "^10.6.0",
+    "storybook": "^10.6.3",
     "styled-components": "^6.5.3",
     "stylelint": "^17.15.0",
     "stylelint-config-standard": "^40.0.0",
