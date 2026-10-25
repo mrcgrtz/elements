@@ -27,7 +27,7 @@
     "@vitest/coverage-istanbul": "^5.0.1",
     "date-fns": "^4.4.0",
     "eslint-plugin-storybook": "^10.6.0",
-    "happy-dom": "^20.14.5",
+    "happy-dom": "^21.0.4",
     "husky": "^9.1.7",
     "jest-styled-components": "^7.4.0",
     "lint-staged": "^17.6.0",
