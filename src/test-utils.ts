@@ -37,7 +37,24 @@ export const fixture = async <T extends Element>(
  * Returns the shadow root markup without Lit’s part markers, so snapshots
  * stay stable.
  */
-export const shadowHtml = (element: Element) =>
-	// Happy DOM doesn’t implement `ShadowRoot.getHTML()` yet.
-	// eslint-disable-next-line unicorn/prefer-dom-node-html-methods
-	(element.shadowRoot?.innerHTML ?? '').replaceAll(/<!--[^>]*?-->/gv, '');
+export const shadowHtml = (element: Element) => {
+	const copy = document.createElement('div');
+
+	for (const node of element.shadowRoot?.childNodes ?? []) {
+		copy.append(node.cloneNode(true));
+	}
+
+	// Lit marks its parts with comment nodes; drop them from the copy.
+	const walker = document.createTreeWalker(copy, NodeFilter.SHOW_COMMENT);
+	const comments: Comment[] = [];
+
+	while (walker.nextNode()) {
+		comments.push(walker.currentNode as Comment);
+	}
+
+	for (const comment of comments) {
+		comment.remove();
+	}
+
+	return copy.getHTML();
+};
