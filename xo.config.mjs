@@ -1,5 +1,4 @@
 import storybook from 'eslint-plugin-storybook';
-import react from 'eslint-config-xo-react';
 
 const javaScriptFiles = '**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}';
 
@@ -7,9 +6,6 @@ const javaScriptFiles = '**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}';
  * @type {import('xo').FlatConfig}
  */
 const config = [
-	// `eslint-config-xo-react` owns the JSX formatting rules, so it needs the same
-	// `prettier` value as XO itself to stand down on the conflicting ones.
-	...react({prettier: 'compat'}),
 	{
 		// Prettier runs separately (`npm run format`, and via lint-staged), so XO
 		// only needs to stand down on the rules that would conflict with it.
@@ -33,10 +29,27 @@ const config = [
 			'n/file-extension-in-import': ['error', 'never'],
 		},
 	},
+	{
+		files: ['src/*/index.ts', 'src/test-utils.ts'],
+		rules: {
+			// Custom elements register themselves when their module is imported,
+			// and the test helper registers its cleanup hook the same way.
+			'unicorn/no-top-level-side-effects': 'off',
+		},
+	},
 	...storybook.configs['flat/recommended'].map((config) => ({
-		files: '**/*.stories.tsx',
+		files: '**/*.stories.ts',
 		...config,
 	})),
+	{
+		files: '**/*.stories.ts',
+		rules: {
+			// Stories import an element’s module only to register it.
+			'import-x/no-unassigned-import': 'off',
+			// Storybook’s Component Story Format names stories in PascalCase.
+			'@typescript-eslint/naming-convention': 'off',
+		},
+	},
 ];
 
 export default config;

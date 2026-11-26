@@ -1,10 +1,15 @@
-import React from 'react';
-import type {Meta, StoryFn} from '@storybook/react-vite';
-import Chat from '..';
+import {html} from 'lit';
+import type {Meta, StoryObj} from '@storybook/web-components-vite';
+import '..';
+import type {ChatMessage} from '../types';
+
+type Arguments = {
+	history: ChatMessage[];
+};
 
 const meta = {
 	title: 'Features/Chat',
-	component: Chat,
+	component: 'mg-chat',
 	args: {
 		history: [
 			{
@@ -51,11 +56,11 @@ const meta = {
 			},
 		],
 	},
-} satisfies Meta<typeof Chat>;
+	render: ({history}) => html`<mg-chat .history=${history}></mg-chat>`,
+} satisfies Meta<Arguments>;
 
-export const ChatStory: StoryFn<typeof meta> = (properties) => (
-	<Chat {...properties} />
-);
-ChatStory.storyName = 'Chat';
+export const ChatStory: StoryObj<Arguments> = {
+	name: 'Chat',
+};
 
 export default meta;

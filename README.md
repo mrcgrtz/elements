@@ -1,13 +1,23 @@
 # [elements](https://mrcgrtz.github.io/elements/)
 
-> elements is my personal React components library.
+> elements is my personal Web Components library, built with [Lit](https://lit.dev/).
 
 [![Test Workflow](https://github.com/mrcgrtz/elements/actions/workflows/test.yml/badge.svg)](https://github.com/mrcgrtz/elements/actions/workflows/test.yml)
 [![Build Workflow](https://github.com/mrcgrtz/elements/actions/workflows/build.yml/badge.svg)](https://github.com/mrcgrtz/elements/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/mrcgrtz/elements/badge.svg?branch=main)](https://coveralls.io/github/mrcgrtz/elements?branch=main)
 [![MIT license](https://img.shields.io/github/license/mrcgrtz/elements.svg)](https://github.com/mrcgrtz/elements/blob/main/LICENSE.md)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Usage
+
+Import a single element, or `src/index.ts` to register all of them:
+
+```ts
+import './src/logo';
+```
+
+```html
+<mg-logo style="--logo-color: #bada55"></mg-logo>
+```
 
 ## Available scripts
 
