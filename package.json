@@ -36,7 +36,7 @@
     "postcss-styled-syntax": "^0.7.4",
     "prettier": "^3.10.1",
     "storybook": "^10.6.8",
-    "stylelint": "^17.16.0",
+    "stylelint": "^18.0.0",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-formatter-pretty": "^4.0.1",
     "stylelint-prettier": "^5.1.0",
