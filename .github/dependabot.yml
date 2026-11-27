@@ -34,6 +34,7 @@ updates:
                   - 'storybook'
                   - '@storybook/*'
                   - '@storybook/addon-a11y'
+                  - '@storybook/addon-vitest'
                   - '@storybook/builder-vite'
                   - '@storybook/web-components-vite'
                   - 'eslint-plugin-storybook'
@@ -41,6 +42,7 @@ updates:
               patterns:
                   - 'stylelint'
                   - 'stylelint-*'
+                  - 'postcss-styled-syntax'
           testing-library:
               patterns:
                   - '@testing-library/*'
@@ -50,6 +52,8 @@ updates:
               patterns:
                   - 'vitest'
                   - '@vitest/*'
+                  - '@vitest/browser'
+                  - '@vitest/browser-playwright'
                   - '@vitest/coverage-istanbul'
           # Everything else, majors excluded so auto-merge keeps working.
           js-production:
