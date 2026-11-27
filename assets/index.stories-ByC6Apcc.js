@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{n as t,r as n,s as r,u as i}from"./iframe-BMKO-Q4e.js";import{n as a,t as o}from"./define-DOvjeDoI.js";var s;function c(){return(c=e((()=>{t(),a(),s=class extends n{static{this.formAssociated=!0}static{this.shadowRootOptions={...n.shadowRootOptions,delegatesFocus:!0}}static{this.properties={type:{type:String,reflect:!0},disabled:{type:Boolean,reflect:!0},formDisabled:{state:!0}}}static{this.styles=i`
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{n as t,r as n,s as r,u as i}from"./iframe-DpjGMX0L.js";import{n as a,t as o}from"./define-DOvjeDoI.js";var s;function c(){return(c=e((()=>{t(),a(),s=class extends n{static{this.formAssociated=!0}static{this.shadowRootOptions={...n.shadowRootOptions,delegatesFocus:!0}}static{this.properties={type:{type:String,reflect:!0},disabled:{type:Boolean,reflect:!0},formDisabled:{state:!0}}}static{this.styles=i`
 		:host {
 			--button-branding: var(--branding, oklch(55% 0.2211 349.43deg));
 
