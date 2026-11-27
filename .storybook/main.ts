@@ -7,7 +7,15 @@ const config: StorybookConfig = {
 		builder: '@storybook/builder-vite',
 		disableTelemetry: true,
 	},
-	addons: ['@storybook/addon-a11y'],
+	addons: ['@storybook/addon-a11y', '@storybook/addon-vitest'],
+	tags: {
+		// Edge cases that exist to be tested, not browsed. They stay reachable
+		// through the sidebar’s tag filter.
+		'test-only': {
+			defaultFilterSelection: 'exclude',
+			excludeFromDocsStories: true,
+		},
+	},
 };
 
 export default config;

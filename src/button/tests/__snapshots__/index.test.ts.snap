@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`<mg-button> > renders a button 1`] = `
-"
-			<button part="button" type="button">
-				<slot></slot>
-			</button>
-		"
-`;

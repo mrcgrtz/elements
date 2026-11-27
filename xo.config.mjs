@@ -30,10 +30,9 @@ const config = [
 		},
 	},
 	{
-		files: ['src/*/index.ts', 'src/test-utils.ts'],
+		files: ['src/*/index.ts'],
 		rules: {
-			// Custom elements register themselves when their module is imported,
-			// and the test helper registers its cleanup hook the same way.
+			// Custom elements register themselves when their module is imported.
 			'unicorn/no-top-level-side-effects': 'off',
 		},
 	},
