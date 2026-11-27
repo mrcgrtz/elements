@@ -27,8 +27,8 @@ updates:
                 - '7.0.x'
       groups:
           # Families that must move in lockstep, majors included.
-          # Scoped wildcards such as '@scope/*' stopped matching in the
-          # 2026-09-30 run, so each scoped member is also listed literally.
+          # Wildcards such as '@scope/*' and 'stylelint-*' stopped matching in
+          # the 2026-09-30 run, so each member is also listed literally.
           storybook:
               patterns:
                   - 'storybook'
@@ -42,6 +42,10 @@ updates:
               patterns:
                   - 'stylelint'
                   - 'stylelint-*'
+                  - 'stylelint-config-standard'
+                  - 'stylelint-formatter-pretty'
+                  - 'stylelint-prettier'
+                  - 'stylelint-use-logical'
                   - 'postcss-styled-syntax'
           testing-library:
               patterns:
