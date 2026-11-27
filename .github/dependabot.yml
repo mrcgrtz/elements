@@ -29,19 +29,13 @@ updates:
           # Families that must move in lockstep, majors included.
           # Scoped wildcards such as '@scope/*' stopped matching in the
           # 2026-09-30 run, so each scoped member is also listed literally.
-          react:
-              patterns:
-                  - 'react'
-                  - 'react-dom'
-                  - '@types/react'
-                  - '@vitejs/plugin-react'
           storybook:
               patterns:
                   - 'storybook'
                   - '@storybook/*'
                   - '@storybook/addon-a11y'
                   - '@storybook/builder-vite'
-                  - '@storybook/react-vite'
+                  - '@storybook/web-components-vite'
                   - 'eslint-plugin-storybook'
           stylelint:
               patterns:
@@ -51,7 +45,6 @@ updates:
               patterns:
                   - '@testing-library/*'
                   - '@testing-library/dom'
-                  - '@testing-library/react'
                   - '@testing-library/user-event'
           vitest:
               patterns:
